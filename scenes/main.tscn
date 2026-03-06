@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://bltwifen2r4h2"]
+
+[ext_resource type="Script" uid="uid://dh4jc1gfxo0hh" path="res://src/CardManager.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://yv0ay28yfo7i" path="res://addons/kenney_particle_pack/magic_05.png" id="1_o6xl0"]
+[ext_resource type="Shader" uid="uid://ccll2v3se4ji2" path="res://shader/perspective.gdshader" id="2_tipki"]
+[ext_resource type="Script" uid="uid://bqqhufv72cxe2" path="res://src/PlayerHand.gd" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://0oahe0586qt7" path="res://scenes/card_slot.tscn" id="3_sugp2"]
+[ext_resource type="Texture2D" uid="uid://bysrinoswuv5h" path="res://assets/cardBack3.png" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://cnvd7bnn4782a" path="res://src/Deck.gd" id="4_tefeu"]
+[ext_resource type="Script" uid="uid://bauqq5r8lqw4g" path="res://src/InputManager.gd" id="6_o6xl0"]
+
+[sub_resource type="Gradient" id="Gradient_tefeu"]
+colors = PackedColorArray(0.31600004, 0.26, 0.5, 1, 0.32908657, 0.31736943, 0.7132813, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o6xl0"]
+noise_type = 2
+frequency = 0.0323
+cellular_distance_function = 2
+domain_warp_enabled = true
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 6.83
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tipki"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_o6xl0")
+color_ramp = SubResource("Gradient_tefeu")
+seamless = true
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tefeu"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_tipki"]
+colors = PackedColorArray(0.14117648, 0.12941177, 0.3137255, 1, 0.3266399, 0.32023513, 0.646875, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_85g3d"]
+gradient = SubResource("Gradient_tipki")
+
+[sub_resource type="Gradient" id="Gradient_choun"]
+offsets = PackedFloat32Array(0, 0.5, 0.6791045, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ya4ey"]
+gradient = SubResource("Gradient_choun")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tefeu"]
+emission_shape = 3
+emission_box_extents = Vector3(1000, 500, 1)
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+scale_min = 0.02
+scale_max = 0.099999994
+color_ramp = SubResource("GradientTexture1D_ya4ey")
+color_initial_ramp = SubResource("GradientTexture1D_85g3d")
+turbulence_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_o6xl0"]
+offsets = PackedFloat32Array(0.46629214, 0.6573034)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tipki"]
+gradient = SubResource("Gradient_o6xl0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(144, 192)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85g3d"]
+shader = ExtResource("2_tipki")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 10.000009024999997
+shader_parameter/inset = 0.0
+
+[node name="main" type="Node" unique_id=576835206]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=914280286]
+repeat_size = Vector2(1920, 1080)
+autoscroll = Vector2(20, 10)
+repeat_times = 2
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=1892675771]
+modulate = Color(0.43741697, 0.44921416, 0.5294118, 1)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("NoiseTexture2D_tipki")
+stretch_mode = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=813579340]
+material = SubResource("CanvasItemMaterial_tefeu")
+position = Vector2(960, 540)
+amount = 50
+texture = ExtResource("1_o6xl0")
+process_material = SubResource("ParticleProcessMaterial_tefeu")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=874241164]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_tipki")
+stretch_mode = 5
+
+[node name="board" type="Node2D" parent="." unique_id=986978765]
+z_index = 1
+
+[node name="zones" type="Node2D" parent="board" unique_id=785716877]
+use_parent_material = true
+position = Vector2(960, 752)
+
+[node name="frontzone_0" parent="board/zones" unique_id=1027367347 instance=ExtResource("3_sugp2")]
+use_parent_material = true
+position = Vector2(-208, -104)
+
+[node name="frontzone_1" parent="board/zones" unique_id=635654347 instance=ExtResource("3_sugp2")]
+use_parent_material = true
+position = Vector2(0, -104)
+
+[node name="frontzone_2" parent="board/zones" unique_id=1398255842 instance=ExtResource("3_sugp2")]
+use_parent_material = true
+position = Vector2(208, -104)
+
+[node name="backzone_0" parent="board/zones" unique_id=2034232668 instance=ExtResource("3_sugp2")]
+modulate = Color(0.53873813, 0.46922547, 0.8862745, 1)
+use_parent_material = true
+position = Vector2(-104, 104)
+
+[node name="backzone_1" parent="board/zones" unique_id=1971687031 instance=ExtResource("3_sugp2")]
+modulate = Color(0.53873813, 0.46922547, 0.8862745, 1)
+use_parent_material = true
+position = Vector2(104, 104)
+
+[node name="zones2" type="Node2D" parent="board" unique_id=231372984]
+modulate = Color(1, 0.71919274, 0.49967545, 1)
+use_parent_material = true
+position = Vector2(960, 336)
+rotation = -3.1415925
+
+[node name="frontzone_0" parent="board/zones2" unique_id=1700234111 instance=ExtResource("3_sugp2")]
+use_parent_material = true
+position = Vector2(-208, -104)
+
+[node name="frontzone_1" parent="board/zones2" unique_id=2045852796 instance=ExtResource("3_sugp2")]
+use_parent_material = true
+position = Vector2(0, -104)
+
+[node name="frontzone_2" parent="board/zones2" unique_id=1433891424 instance=ExtResource("3_sugp2")]
+use_parent_material = true
+position = Vector2(208, -104)
+
+[node name="backzone_0" parent="board/zones2" unique_id=1044219290 instance=ExtResource("3_sugp2")]
+modulate = Color(0.53873813, 0.46922547, 0.8862745, 1)
+use_parent_material = true
+position = Vector2(-104, 104)
+
+[node name="backzone_1" parent="board/zones2" unique_id=557119870 instance=ExtResource("3_sugp2")]
+modulate = Color(0.53873813, 0.46922547, 0.8862745, 1)
+use_parent_material = true
+position = Vector2(104, 104)
+
+[node name="Deck" type="Node2D" parent="board" unique_id=1172622981]
+position = Vector2(1352, 648)
+script = ExtResource("4_tefeu")
+
+[node name="Sprite2D" type="Sprite2D" parent="board/Deck" unique_id=1195727134]
+z_index = -1
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("4_jyhfs")
+
+[node name="Area2D" type="Area2D" parent="board/Deck" unique_id=767944736]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board/Deck/Area2D" unique_id=2140233797]
+shape = SubResource("RectangleShape2D_tbgi4")
+debug_color = Color(0, 0.5950001, 0.7, 0.23529412)
+
+[node name="CardManager" type="Node2D" parent="board" unique_id=186132690]
+script = ExtResource("1_0wfyh")
+metadata/_edit_lock_ = true
+
+[node name="PlayerHand" type="Node2D" parent="board" unique_id=1274119992]
+script = ExtResource("3_jyhfs")
+metadata/_edit_lock_ = true
+
+[node name="InputManager" type="Node2D" parent="board" unique_id=1728787254]
+script = ExtResource("6_o6xl0")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=969777158]
+material = SubResource("ShaderMaterial_85g3d")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_target = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1074159075]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+
+[connection signal="leftbutton_clicked" from="board/InputManager" to="board/CardManager" method="_on_input_manager_leftbutton_clicked"]
+[connection signal="leftbutton_released" from="board/InputManager" to="board/CardManager" method="_on_input_manager_leftbutton_released"]

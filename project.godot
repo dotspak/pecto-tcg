@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PectoTCG"
+run/main_scene="uid://bltwifen2r4h2"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="uid://dakp5lhwlip7n"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
+
+[gui]
+
+theme/custom="uid://wudrn7vqs8yg"
+theme/custom_font="uid://rhkjenklfug8"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://0oahe0586qt7"]
+
+[ext_resource type="Script" uid="uid://g3pfkidv0fs7" path="res://src/CardSlot.gd" id="1_mxh2e"]
+
+[sub_resource type="Gradient" id="Gradient_0wfyh"]
+offsets = PackedFloat32Array(0.78089887, 0.9831461, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sugp2"]
+gradient = SubResource("Gradient_0wfyh")
+width = 192
+height = 192
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(192, 192)
+
+[node name="CardSlot" type="Node2D" unique_id=1027367347]
+modulate = Color(0.6, 0.63529414, 1, 1)
+script = ExtResource("1_mxh2e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1767590067]
+texture = SubResource("GradientTexture2D_sugp2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1785577204]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=8702043]
+visible = false
+shape = SubResource("RectangleShape2D_0wfyh")
+debug_color = Color(0.70196074, 0.25942943, 0.61059046, 0.41960785)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
