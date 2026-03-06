@@ -1,0 +1,18 @@
+[gd_resource type="VisualShader" format=3 uid="uid://bgpbl130u36nt"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_vobio"]
+source = 5
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_2c2r1"]
+parameter_name = "cardTexture"
+texture_type = 1
+texture_filter = 2
+texture_repeat = 2
+
+[resource]
+flags/unshaded = true
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_vobio")
+nodes/fragment/2/position = Vector2(160, 160)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture2DParameter_2c2r1")
+nodes/fragment/3/position = Vector2(-180, 160)
+nodes/fragment/connections = PackedInt32Array(3, 0, 2, 2, 2, 0, 0, 0)

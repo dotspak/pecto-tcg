@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://e3negl5jruac"]
+
+[ext_resource type="Texture2D" uid="uid://cd477vmyhja2k" path="res://assets/playmats/playmat.png" id="1_lh4jj"]
+[ext_resource type="Texture2D" uid="uid://20vvotbjgp3c" path="res://assets/playmats/playmat2.png" id="2_gdgp2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tu88o"]
+sky_top_color = Color(0.46490952, 0.27023643, 0.54901963, 1)
+sky_horizon_color = Color(0.2698492, 0.24931116, 0.67058825, 1)
+use_debanding = false
+
+[sub_resource type="Sky" id="Sky_vxtxo"]
+sky_material = SubResource("ProceduralSkyMaterial_tu88o")
+
+[sub_resource type="Environment" id="Environment_eldh7"]
+background_mode = 1
+background_color = Color(0.26903558, 0.27316475, 0.44765627, 1)
+sky = SubResource("Sky_vxtxo")
+
+[sub_resource type="QuadMesh" id="QuadMesh_bgc7o"]
+size = Vector2(24, 14)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jf52h"]
+shading_mode = 0
+albedo_texture = ExtResource("1_lh4jj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oaa08"]
+shading_mode = 0
+albedo_texture = ExtResource("2_gdgp2")
+
+[node name="Node3D" type="Node3D" unique_id=886246224]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1355682629]
+environment = SubResource("Environment_eldh7")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=521235274]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1503171315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.25)
+mesh = SubResource("QuadMesh_bgc7o")
+surface_material_override/0 = SubResource("StandardMaterial3D_jf52h")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=943288004]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -7.25)
+mesh = SubResource("QuadMesh_bgc7o")
+surface_material_override/0 = SubResource("StandardMaterial3D_oaa08")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=852841801]
+transform = Transform3D(1, 0, 0, 0, 0.087155804, 0.9961947, 0, -0.9961947, 0.087155804, 0, 19, 2.5)
