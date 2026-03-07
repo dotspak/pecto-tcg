@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://e3negl5jruac"]
 
-[ext_resource type="Texture2D" uid="uid://cd477vmyhja2k" path="res://assets/playmats/playmat.png" id="1_lh4jj"]
-[ext_resource type="Texture2D" uid="uid://20vvotbjgp3c" path="res://assets/playmats/playmat2.png" id="2_gdgp2"]
+[ext_resource type="Texture2D" uid="uid://bkg8b5vdtq8tb" path="res://assets/playmats/playmat_game.png" id="1_lh4jj"]
+[ext_resource type="Texture2D" uid="uid://bf2xnlmsw2450" path="res://assets/playmats/playmat2_game.png" id="2_gdgp2"]
+[ext_resource type="Texture2D" uid="uid://c65r67w4mwxc2" path="res://addons/kenney_particle_pack/light_03.png" id="3_gdgp2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tu88o"]
 sky_top_color = Color(0.46490952, 0.27023643, 0.54901963, 1)
@@ -17,7 +18,7 @@ background_color = Color(0.26903558, 0.27316475, 0.44765627, 1)
 sky = SubResource("Sky_vxtxo")
 
 [sub_resource type="QuadMesh" id="QuadMesh_bgc7o"]
-size = Vector2(24, 14)
+size = Vector2(18, 10)
 orientation = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jf52h"]
@@ -28,23 +29,87 @@ albedo_texture = ExtResource("1_lh4jj")
 shading_mode = 0
 albedo_texture = ExtResource("2_gdgp2")
 
+[sub_resource type="Curve" id="Curve_gdgp2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.4923077, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.012924194), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_tu88o"]
+curve = SubResource("Curve_gdgp2")
+
+[sub_resource type="Gradient" id="Gradient_lh4jj"]
+interpolation_color_space = 2
+colors = PackedColorArray(0.20183563, 0.25802264, 0.5882813, 1, 1, 0.5674584, 0.9671905, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gdgp2"]
+gradient = SubResource("Gradient_lh4jj")
+
+[sub_resource type="Curve" id="Curve_lh4jj"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.09615385, 1), 0.0, 0.0, 0, 0, Vector2(0.8576923, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_gdgp2"]
+curve = SubResource("Curve_lh4jj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tu88o"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 13.0
+emission_ring_inner_radius = 10.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(0, 0, 1)
+spread = 0.0
+initial_velocity_min = 30.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 9.8)
+linear_accel_min = -58.530003
+linear_accel_max = -58.530003
+tangential_accel_min = 50.409996
+tangential_accel_max = 50.409996
+scale_min = 0.19999999
+scale_curve = SubResource("CurveTexture_gdgp2")
+color_initial_ramp = SubResource("GradientTexture1D_gdgp2")
+alpha_curve = SubResource("CurveTexture_tu88o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxtxo"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_gdgp2")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_eldh7"]
+material = SubResource("StandardMaterial3D_vxtxo")
+
 [node name="Node3D" type="Node3D" unique_id=886246224]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1355682629]
 environment = SubResource("Environment_eldh7")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=521235274]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.001)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1503171315]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.25)
 mesh = SubResource("QuadMesh_bgc7o")
 surface_material_override/0 = SubResource("StandardMaterial3D_jf52h")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=943288004]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -7.25)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -5.25)
 mesh = SubResource("QuadMesh_bgc7o")
 surface_material_override/0 = SubResource("StandardMaterial3D_oaa08")
 
 [node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=852841801]
-transform = Transform3D(1, 0, 0, 0, 0.087155804, 0.9961947, 0, -0.9961947, 0.087155804, 0, 19, 2.5)
+transform = Transform3D(1, 0, 0, 0, 0.087155804, 0.9961947, 0, -0.9961947, 0.087155804, 0, 15, 2)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1125811889]
+amount = 300
+preprocess = 5.0
+speed_scale = 0.2
+process_material = SubResource("ParticleProcessMaterial_tu88o")
+draw_pass_1 = SubResource("QuadMesh_eldh7")
