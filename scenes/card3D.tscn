@@ -28,24 +28,19 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="front" parent="visuals" unique_id=769171308 instance=ExtResource("1_3geie")]
 
-[node name="card" parent="visuals/front" index="0" unique_id=1663745918]
+[node name="card" parent="visuals/front" index="0" unique_id=2088273463]
 surface_material_override/0 = SubResource("ShaderMaterial_qsnh5")
 
 [node name="back" parent="visuals" unique_id=1316259670 instance=ExtResource("1_3geie")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
 
-[node name="card" parent="visuals/back" index="0" unique_id=1663745918]
+[node name="card" parent="visuals/back" index="0" unique_id=2088273463]
 surface_material_override/0 = SubResource("ShaderMaterial_5jar5")
 
 [node name="SubViewport" type="SubViewport" parent="visuals" unique_id=1427942152]
-snap_2d_transforms_to_pixel = true
-snap_2d_vertices_to_pixel = true
+disable_3d = true
 size = Vector2i(750, 1050)
-
-[node name="TextureRect" type="TextureRect" parent="visuals/SubViewport" unique_id=118418587]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("4_5jar5")
+render_target_update_mode = 1
 
 [node name="visuals" parent="visuals/SubViewport" unique_id=464871289 instance=ExtResource("5_xgpmj")]
 
