@@ -27,105 +27,106 @@ const KEYWORD_COLOR : Color = Color.ORANGE
 
 #region Text Parse Tags
 var TEXT_TAGS : Dictionary = {
-    "RITUAL:" : {},
-    "HEAL:" : {},
-    "FORCE" : {},
+	"RITUAL:" : {},
+	"HEAL:" : {},
+	"FORCE" : {},
 }
 
 var KEYWORDS : Dictionary = {
-    # positive keywords
-    "QUICK" : {},
-    "BLEED" : {},
-    "IMMORTAL" : {},
-    "SAFE" : {},
+	# positive keywords
+	"QUICK" : {},
+	"BLEED" : {},
+	"IMMORTAL" : {},
+	"SAFE" : {},
 
-    # negative keywords
-    "SICK" : {},
-    "FRAGILE" : {},
-    "STATIC" : {},
-    "DELAYED" : {},
-    "DOOM" : {},
-    "MUTED" : {},
+	# negative keywords
+	"SICK" : {},
+	"FRAGILE" : {},
+	"STATIC" : {},
+	"DELAYED" : {},
+	"DOOM" : {},
+	"MUTED" : {},
 }
 
 var TRIGGERS : Dictionary = {
-    "END:" : {},
-    "BEGIN:" : {},
-    "VICTOR:" : {},
-    "PERISH:" : {},
-    "ENTER:" : {},
-    "MOVE:" : {},
+	"END:" : {},
+	"BEGIN:" : {},
+	"VICTOR:" : {},
+	"PERISH:" : {},
+	"ENTER:" : {},
+	"MOVE:" : {},
 }
 #endregion
 
 #region Static Functions
 static func func_to_small_caps(string : String, fontsize : int = 1) -> String:
-    var words = string.strip_edges().to_upper().split(" ")
-    var parts : Array = []
-    for w in words:
-        if w.length() <= 1:
-            parts.append("[font_size=%d]%s[/font_size]" % [fontsize, w])
-        else:
-            var first = w[0]
-            var rest = w.substr(1)
-            parts.append("[font_size=%d]%s[/font_size][font_size=%d]%s[/font_size]" % [fontsize, first, floor(fontsize * 0.5), rest])
-    return " ".join(parts)
+	var words = string.strip_edges().to_upper().split(" ")
+	var parts : Array = []
+	for w in words:
+		if w.length() <= 1:
+			parts.append("[font_size=%d]%s[/font_size]" % [fontsize, w])
+		else:
+			var first = w[0]
+			var rest = w.substr(1)
+			parts.append("[font_size=%d]%s[/font_size][font_size=%d]%s[/font_size]" % [fontsize, first, floor(fontsize * 0.5), rest])
+	return " ".join(parts)
 
 
 static func parse_card_text(string : String) -> String:
-    return string
+	return string
 #endregion
 
-func _ready(): attempt_to_link()
+func _ready(): 
+	#attempt_to_link()
+	pass
 
 
 # attemps to link to the parent card for visuals
 func attempt_to_link() -> bool:
-    if linkedCard: return true
+	if linkedCard: return true
 
-    var potentialLinkedCard : Node = self
-    while !linkedCard:
-        potentialLinkedCard = potentialLinkedCard.get_parent()
-        if potentialLinkedCard is Card:
-            linkedCard = potentialLinkedCard
-            return true
-    return false
+	var potentialLinkedCard : Node = get_parent()
+	while !linkedCard:
+		if potentialLinkedCard is Card:
+			linkedCard = potentialLinkedCard
+			return true
+		potentialLinkedCard = potentialLinkedCard.get_parent()
+	return false
 
 
 func connect_to_card(card : Card) -> void:
-    if linkedCard: return
-    linkedCard = card
-    linkedCard.reset_stats()
+	if linkedCard: return
+	linkedCard = card
+	linkedCard.reset_stats()
 
 
 func update_force() -> void:
-    if !attempt_to_link(): return
-    forceText.text = str(linkedCard.force)
+	if !attempt_to_link(): return
+	forceText.text = str(linkedCard.force)
 
 
 func update_lvl() -> void:
-    if !attempt_to_link(): return
-    lvlText.text = str(linkedCard.LVL)
+	if !attempt_to_link(): return
+	lvlText.text = str(linkedCard.LVL)
 
 
 func update_type() -> void:
-    if !attempt_to_link(): return
-    for i : int in linkedCard.types.size():
-        var type : String = linkedCard.types[i].capitalize()
-        typeText.text += type + ("," if i+1 == linkedCard.types.size() else "")
+	if !attempt_to_link(): return
+	for i : int in linkedCard.types.size():
+		var type : String = linkedCard.types[i].capitalize()
+		typeText.text += type + ("," if i+1 == linkedCard.types.size() else "")
 
 
 func update_keywords() -> void:
-    if !attempt_to_link(): return
-    for i : int in linkedCard.keywords.size():
-        var keyword : String = str(linkedCard.keywords[i]).capitalize()
-        keywords.text += keyword + ("," if i+1 == linkedCard.keywords.size() else "")
+	if !attempt_to_link(): return
+	for i : int in linkedCard.keywords.size():
+		var keyword : String = str(linkedCard.keywords[i]).capitalize()
+		keywords.text += keyword + ("," if i+1 == linkedCard.keywords.size() else "")
 
 
 func update_cast() -> void:
-    if !attempt_to_link(): return
+	if !attempt_to_link(): return
 
 
 func update_skill() -> void:
-    if !attempt_to_link(): return
-
+	if !attempt_to_link(): return

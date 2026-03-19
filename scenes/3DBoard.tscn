@@ -237,3 +237,123 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 
 [node name="card40" parent="Node3D2" unique_id=423924023 instance=ExtResource("4_tu88o")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 6.6584225, 2.3841858e-07, -3.6328664)
+
+[node name="card41" parent="Node3D2" unique_id=1607392616 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.75, -2.25, -0.0010000984)
+
+[node name="card42" parent="Node3D2" unique_id=249146572 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 5.7945805, -2.25, -3.52281)
+
+[node name="card43" parent="Node3D2" unique_id=690391679 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.5602293, -2.25, 3.9335217)
+
+[node name="card44" parent="Node3D2" unique_id=2030064414 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2.8173475, -2.25, -2.5047874)
+
+[node name="card45" parent="Node3D2" unique_id=1488347777 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 12.645597, -2.25, 0.32916957)
+
+[node name="card46" parent="Node3D2" unique_id=263677508 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.5298862, -2.25, 5.391772)
+
+[node name="card47" parent="Node3D2" unique_id=1637524062 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.75, -2.25, 2.9430137)
+
+[node name="card48" parent="Node3D2" unique_id=533057610 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.8439026, -2.25, -0.0010000984)
+
+[node name="card49" parent="Node3D2" unique_id=859520333 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.2765541, -2.25, -0.0010000984)
+
+[node name="card50" parent="Node3D2" unique_id=520657133 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.47864628, -2.25, 2.8604708)
+
+[node name="card51" parent="Node3D2" unique_id=915466166 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.2490416, -2.2499995, -5.558856)
+
+[node name="card52" parent="Node3D2" unique_id=1993403056 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.76136, -2.2499995, -5.503828)
+
+[node name="card53" parent="Node3D2" unique_id=977869941 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.75, -2.25, -0.0010000984)
+
+[node name="card54" parent="Node3D2" unique_id=1185819092 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.29362, -2.25, -2.6148438)
+
+[node name="card55" parent="Node3D2" unique_id=2045401305 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.559271, -2.25, 2.9980412)
+
+[node name="card56" parent="Node3D2" unique_id=922398899 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.17599106, -2.25, -3.0275562)
+
+[node name="card57" parent="Node3D2" unique_id=2030736506 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -4.000455, -2.25, 1.1545937)
+
+[node name="card58" parent="Node3D2" unique_id=2072200973 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.795536, -2.2499995, -7.8700438)
+
+[node name="card59" parent="Node3D2" unique_id=460923122 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.4378548, -2.25, -4.0180645)
+
+[node name="card60" parent="Node3D2" unique_id=2105081669 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.8685894, -2.2500005, 6.382281)
+
+[node name="card61" parent="Node3D2" unique_id=581800235 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.4691534, -2.2500005, 6.1346536)
+
+[node name="card62" parent="Node3D2" unique_id=1283179878 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.088703, -2.25, 0.98950905)
+
+[node name="card63" parent="Node3D2" unique_id=413954953 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 8.931189, -2.25, -0.4412263)
+
+[node name="card64" parent="Node3D2" unique_id=876207875 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 7.1978016, -2.25, 4.676404)
+
+[node name="card65" parent="Node3D2" unique_id=2059657903 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 6.6750317, -2.25, 0.8519383)
+
+[node name="card66" parent="Node3D2" unique_id=1940008039 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.6389847, -2.25, 3.9060078)
+
+[node name="card67" parent="Node3D2" unique_id=1316219679 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.096277, -2.2499995, -5.641399)
+
+[node name="card68" parent="Node3D2" unique_id=1191197302 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -4.0829973, -2.2499995, -7.8975577)
+
+[node name="card69" parent="Node3D2" unique_id=1412090456 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.044122696, -2.2499995, -8.420327)
+
+[node name="card70" parent="Node3D2" unique_id=2075544473 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 6.0972347, -2.2499995, -7.1821904)
+
+[node name="card71" parent="Node3D2" unique_id=316571780 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -4.1380253, -2.2500005, 7.3727894)
+
+[node name="card72" parent="Node3D2" unique_id=767149100 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.384695, -2.2500005, 7.1526766)
+
+[node name="card73" parent="Node3D2" unique_id=412622430 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 5.987177, -2.2500005, 8.033129)
+
+[node name="card74" parent="Node3D2" unique_id=1487023264 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5393791, -2.2500005, 9.023638)
+
+[node name="card75" parent="Node3D2" unique_id=456085523 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 8.986219, -2.2500005, 7.8955584)
+
+[node name="card76" parent="Node3D2" unique_id=827730667 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.756615, -2.25, 3.4657817)
+
+[node name="card77" parent="Node3D2" unique_id=851230902 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.210119, -2.25, -2.1195893)
+
+[node name="card78" parent="Node3D2" unique_id=261208090 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.1712456, -2.25, -2.3672166)
+
+[node name="card79" parent="Node3D2" unique_id=518524163 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.75, -2.25, -0.0010000984)
+
+[node name="card80" parent="Node3D2" unique_id=1459058664 instance=ExtResource("4_tu88o")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 8.408422, -2.25, -3.6328664)
