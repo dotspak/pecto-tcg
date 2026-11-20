@@ -24,9 +24,6 @@ corner_radius_top_right = 48
 corner_radius_bottom_right = 48
 corner_radius_bottom_left = 48
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y3ai7"]
-blend_mode = 2
-
 [sub_resource type="Shader" id="Shader_4ay7h"]
 code = "shader_type canvas_item;
 
@@ -115,6 +112,9 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.5882353)
 gradient = SubResource("Gradient_jv68f")
 fill_from = Vector2(0, 0.62393165)
 fill_to = Vector2(1, 0.22649573)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y3ai7"]
+blend_mode = 2
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_ir3pi"]
 script = ExtResource("8_6lhvh")
@@ -233,18 +233,6 @@ layout_mode = 0
 offset_right = 750.0
 offset_bottom = 1050.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3h312")
-
-[node name="cardBackground" type="TextureRect" parent="cardShape" unique_id=1567508128]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="dots" type="TextureRect" parent="cardShape" unique_id=2123789797]
-modulate = Color(1, 1, 1, 0.11764706)
-material = SubResource("CanvasItemMaterial_y3ai7")
-layout_mode = 2
-texture = ExtResource("2_c7xu5")
-expand_mode = 1
-stretch_mode = 6
 
 [node name="visual" type="Control" parent="cardShape" unique_id=658870406]
 z_index = 1
@@ -641,7 +629,7 @@ polygon = PackedVector2Array(0, 861, 39, 880, 39, 1050, 0, 1050)
 [node name="Polygon2D3" type="Polygon2D" parent="cardShape/borderCutout" unique_id=1566285749]
 polygon = PackedVector2Array(39, 1012, 39, 1050, 711, 1050, 711, 1012)
 
-[node name="CardRef" type="Sprite2D" parent="." unique_id=258255836]
+[node name="CardRef" type="Sprite2D" parent="cardShape" unique_id=258255836]
 visible = false
 texture = ExtResource("15_j5mr0")
 centered = false
