@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0oo3nh8tyxfh"]
+[gd_scene format=3 uid="uid://d0oo3nh8tyxfh"]
 
 [ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_iwg30"]
-[ext_resource type="Texture2D" uid="uid://d6ixysc00hxh" path="res://assets/set1/monolith.png" id="2_7k3bj"]
+[ext_resource type="Texture2D" uid="uid://4tsfi8b8vdnw" path="res://assets/art/set1/moo.png" id="2_7k3bj"]
 
 [sub_resource type="Gradient" id="Gradient_363s6"]
 offsets = PackedFloat32Array(0, 0.3, 0.5, 0.7, 1)

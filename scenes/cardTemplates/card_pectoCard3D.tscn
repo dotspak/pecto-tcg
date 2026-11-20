@@ -1,37 +1,38 @@
-[gd_scene load_steps=40 format=4 uid="uid://buocg07fg5px0"]
+[gd_scene format=4 uid="uid://buocg07fg5px0"]
 
 [ext_resource type="PackedScene" uid="uid://dxpc2iac0hjpw" path="res://addons/card_3d/scenes/card_3d.tscn" id="1_0xa8b"]
 [ext_resource type="Script" uid="uid://b0fdm3p04aufi" path="res://PectoCard3D.gd" id="2_omhgn"]
-[ext_resource type="Texture2D" uid="uid://cdev3qnqbr6xp" path="res://assets/forceBG.png" id="3_aemr7"]
+[ext_resource type="Texture2D" uid="uid://bl88fg4v5w5nc" path="res://assets/forceicon4.png" id="3_aemr7"]
+[ext_resource type="FontFile" uid="uid://e00osudo2hxd" path="res://assets/fonts/ModernDOS8x16.ttf" id="4_aemr7"]
 [ext_resource type="FontFile" uid="uid://fpqgiu5d1pkr" path="res://assets/fonts/Higher Jump.ttf" id="4_sw0d4"]
 [ext_resource type="PackedScene" uid="uid://c4c6pl5m22jp2" path="res://scenes/cardTemplates/card_back.tscn" id="4_wt3j3"]
-[ext_resource type="FontFile" uid="uid://1kd62leqiy8y" path="res://assets/fonts/AveriaLibre-Bold.ttf" id="5_omhgn"]
+[ext_resource type="PackedScene" uid="uid://uqcqlr8xi5yc" path="res://scenes/cardTemplates/card_pectoCard.tscn" id="6_828uu"]
 [ext_resource type="Material" uid="uid://ceynxobiiuavo" path="res://assets/models/arrowMat.tres" id="7_aemr7"]
 [ext_resource type="Texture2D" uid="uid://busliy8tcl0cr" path="res://addons/kenney_particle_pack/star_09.png" id="7_wt3j3"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_aemr7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_828uu"]
 viewport_path = NodePath("backFace")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_828uu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uad0d"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
-albedo_texture = SubResource("ViewportTexture_aemr7")
+albedo_texture = SubResource("ViewportTexture_828uu")
 texture_filter = 0
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uad0d"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6dmal"]
 viewport_path = NodePath("frontFace")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dmal"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ch54t"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_uad0d")
+albedo_texture = SubResource("ViewportTexture_6dmal")
 texture_filter = 2
 disable_receive_shadows = true
 
@@ -41,8 +42,7 @@ render_priority = 2
 transparency = 1
 shading_mode = 0
 albedo_texture = ExtResource("3_aemr7")
-uv1_scale = Vector3(1.5, 1.5, 1.5)
-uv1_offset = Vector3(0.25, 0.1, 0.25)
+uv1_scale = Vector3(3, 2, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_aemr7"]
 resource_local_to_scene = true
@@ -640,32 +640,34 @@ _data = {
 &"loop": SubResource("Animation_6dmal")
 }
 
-[node name="PectoCard3D" instance=ExtResource("1_0xa8b")]
+[node name="PectoCard3D" unique_id=754540803 instance=ExtResource("1_0xa8b")]
 script = ExtResource("2_omhgn")
 
 [node name="CardBackMesh" parent="CardMesh" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_828uu")
+surface_material_override/0 = SubResource("StandardMaterial3D_uad0d")
 
 [node name="CardFrontMesh" parent="CardMesh" index="1"]
-surface_material_override/0 = SubResource("StandardMaterial3D_6dmal")
+surface_material_override/0 = SubResource("StandardMaterial3D_ch54t")
 
-[node name="forcceIcon" type="MeshInstance3D" parent="CardMesh" index="2"]
+[node name="forcceIcon" type="MeshInstance3D" parent="CardMesh" index="2" unique_id=1307603848]
 unique_name_in_owner = true
-transform = Transform3D(1.9999998, 0, 0, 0, 1.9999998, 0, 0, 0, 2, 0, -1.25, 0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.25, 0.25)
 visible = false
 mesh = SubResource("BoxMesh_aemr7")
 skeleton = NodePath("../..")
 
-[node name="forceLabel" type="Label3D" parent="CardMesh/forcceIcon" index="0"]
+[node name="forceLabel" type="Label3D" parent="CardMesh/forcceIcon" index="0" unique_id=1844540108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0)
 billboard = 1
 no_depth_test = true
 render_priority = 4
 outline_render_priority = 3
 text = "3"
-font = ExtResource("5_omhgn")
+font = ExtResource("4_aemr7")
 font_size = 96
+outline_size = 20
 
-[node name="lvlIcon" type="MeshInstance3D" parent="CardMesh" index="3"]
+[node name="lvlIcon" type="MeshInstance3D" parent="CardMesh" index="3" unique_id=2095565450]
 unique_name_in_owner = true
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.75, 1.25, 0.25)
 visible = false
@@ -673,7 +675,7 @@ material_overlay = SubResource("StandardMaterial3D_omhgn")
 mesh = SubResource("SphereMesh_sw0d4")
 skeleton = NodePath("../..")
 
-[node name="lvlLabel" type="Label3D" parent="CardMesh/lvlIcon" index="0"]
+[node name="lvlLabel" type="Label3D" parent="CardMesh/lvlIcon" index="0" unique_id=1541182157]
 unique_name_in_owner = true
 billboard = 1
 double_sided = false
@@ -686,7 +688,7 @@ font = ExtResource("4_sw0d4")
 font_size = 48
 outline_size = 24
 
-[node name="frontFace" type="SubViewport" parent="." index="2"]
+[node name="frontFace" type="SubViewport" parent="." index="2" unique_id=1653700216]
 unique_name_in_owner = true
 disable_3d = true
 transparent_bg = true
@@ -695,7 +697,9 @@ size = Vector2i(750, 1050)
 size_2d_override_stretch = true
 render_target_update_mode = 1
 
-[node name="backFace" type="SubViewport" parent="." index="3"]
+[node name="PectoCard" parent="frontFace" index="0" unique_id=537563881 instance=ExtResource("6_828uu")]
+
+[node name="backFace" type="SubViewport" parent="." index="3" unique_id=110852307]
 unique_name_in_owner = true
 transparent_bg = true
 handle_input_locally = false
@@ -703,19 +707,15 @@ gui_disable_input = true
 size = Vector2i(750, 1050)
 render_target_update_mode = 1
 
-[node name="cardBack" parent="backFace" index="0" instance=ExtResource("4_wt3j3")]
+[node name="cardBack" parent="backFace" index="0" unique_id=1466031593 instance=ExtResource("4_wt3j3")]
 
-[node name="iconAnimator" type="AnimationPlayer" parent="." index="4"]
-libraries = {
-&"": SubResource("AnimationLibrary_wt3j3")
-}
+[node name="iconAnimator" type="AnimationPlayer" parent="." index="4" unique_id=1330623926]
+libraries/ = SubResource("AnimationLibrary_wt3j3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
-libraries = {
-&"": SubResource("AnimationLibrary_828uu")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5" unique_id=1625009712]
+libraries/ = SubResource("AnimationLibrary_828uu")
 
-[node name="enterParticles" type="GPUParticles3D" parent="." index="6"]
+[node name="enterParticles" type="GPUParticles3D" parent="." index="6" unique_id=305933953]
 unique_name_in_owner = true
 emitting = false
 amount = 20
@@ -725,15 +725,13 @@ explosiveness = 0.93
 process_material = SubResource("ParticleProcessMaterial_vcqex")
 draw_pass_1 = SubResource("QuadMesh_55sn1")
 
-[node name="selectionArrow" type="MeshInstance3D" parent="." index="7"]
+[node name="selectionArrow" type="MeshInstance3D" parent="." index="7" unique_id=848237101]
 transform = Transform3D(-2.1855694e-08, 0.5, -6.5567086e-08, 0, -2.1855694e-08, -1.5000001, -0.5, -2.1855694e-08, 2.8660285e-15, 0, 0, 2)
 visible = false
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_roump")
 skeleton = NodePath("")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="selectionArrow" index="0"]
-libraries = {
-&"": SubResource("AnimationLibrary_02p12")
-}
-autoplay = "loop"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="selectionArrow" index="0" unique_id=1112385212]
+libraries/ = SubResource("AnimationLibrary_02p12")
+autoplay = &"loop"

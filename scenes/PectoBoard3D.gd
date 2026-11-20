@@ -190,14 +190,13 @@ func toggle_active(enable : bool = true) -> void:
 
 func get_card_coord(card3D : PectoCard3D) -> Vector2:
 	var coord : Vector2 = -Vector2.INF
-	if card3D.card.type != PectoCard.CARD_TYPE.Spell:
-		for y in range(2):
-			for x in range(3):
-				var z : GridSlot = get_slot_from_coord(Vector2(x,y))
-				if z && !z.cards.is_empty():
-					if z.cards[0] == card3D:
-						coord = Vector2(x,y)
-						return coord
+	for y in range(2):
+		for x in range(3):
+			var z : GridSlot = get_slot_from_coord(Vector2(x,y))
+			if z && !z.cards.is_empty():
+				if z.cards[0] == card3D:
+					coord = Vector2(x,y)
+					return coord
 	return coord
 
 

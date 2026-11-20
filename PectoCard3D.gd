@@ -62,36 +62,29 @@ func attack() -> void:
 	var targets : Array[Node] = []
 
 	# checks if the opposing zone is open
-	if card.type == 0:
-		if !opponent.get_card(coord):
-			if !card.has_keyword("muted"): targets.append(opponent)
-			if coord.x == 1:
-				# add both all back row as targets for center zone
-				for i in 2:
-					var t : PectoCard3D = opponent.get_card(Vector2(i, 1))
-					if t: targets.append(t)
-			else:
-				var t : PectoCard3D = opponent.get_card(Vector2(coord.x / 2, 1))
+	if !opponent.get_card(coord):
+		if !card.has_keyword("muted"): targets.append(opponent)
+		if coord.x == 1:
+			# add both all back row as targets for center zone
+			for i in 2:
+				var t : PectoCard3D = opponent.get_card(Vector2(i, 1))
 				if t: targets.append(t)
-		
-		# standard attack logic
 		else:
-			print("handling a standard unit attack")
-			targets.append(opponent.get_card(coord))
-
-			# first pass checks if a unit was found
-			if targets.is_empty:
-				targets.pop_front()
-				coord.y = 1
-
-				if !card.has_keyword("muted"): targets.append(opponent)
-				targets.append(opponent.get_card(coord))
+			var t : PectoCard3D = opponent.get_card(Vector2(coord.x / 2, 1))
+			if t: targets.append(t)
 	
-	# icon backstab logic
-	elif card.type == 0:
-		if coord.y == 1:
-			var t : PectoCard3D = opponent.get_card(Vector2(coord.x, 1))
-			if !t: targets.append(opponent)
+	# standard attack logic
+	else:
+		print("handling a standard unit attack")
+		targets.append(opponent.get_card(coord))
+
+		# first pass checks if a unit was found
+		if targets.is_empty:
+			targets.pop_front()
+			coord.y = 1
+
+			if !card.has_keyword("muted"): targets.append(opponent)
+			targets.append(opponent.get_card(coord))
 	
 	if targets.is_empty(): return
 

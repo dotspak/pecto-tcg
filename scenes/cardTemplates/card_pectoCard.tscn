@@ -1,13 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://uqcqlr8xi5yc"]
+[gd_scene format=3 uid="uid://uqcqlr8xi5yc"]
 
 [ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_y3ai7"]
+[ext_resource type="Texture2D" uid="uid://c5mpr0gs53fah" path="res://assets/art/set1/ashMoth2.png" id="2_1p4pg"]
 
-[node name="PectoCard" type="Control"]
+[node name="PectoCard" type="Control" unique_id=537563881]
 custom_minimum_size = Vector2(750, 1050)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 750.0
+offset_bottom = 1050.0
 script = ExtResource("1_y3ai7")
-cardName = "Dummy"
-force = 0
-text = "insert dummy text here!"
-skillText = ""
+cardName = "Creation From Nothing"
+lvl = 0
+types = Array[String](["bug", "object"])
+keywords = Array[String](["bleed", "dingle"])
+text = "RITUAL: This is a ritual.
+ENTER: Enter trigger
+SEEK 3 for a Golem or Ghost."
+activationText = "SKILL: This is my crazy skill activation ceremony."
+art = ExtResource("2_1p4pg")

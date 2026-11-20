@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://do6yql4uw2cjr"]
+[gd_scene format=3 uid="uid://do6yql4uw2cjr"]
 
 [ext_resource type="Script" uid="uid://bu8m635jkfcgu" path="res://scenes/PectoBoard3D.gd" id="1_sic6o"]
 [ext_resource type="Script" uid="uid://bgkontnk0cnl" path="res://addons/card_3d/scripts/drag_controller.gd" id="2_8ykwa"]
@@ -10,11 +10,9 @@
 [ext_resource type="Script" uid="uid://dsyors6p1ph7" path="res://addons/card_3d/scripts/card_layouts/pile_card_layout.gd" id="8_fx3vf"]
 [ext_resource type="Script" uid="uid://drpbrbrd8kfxn" path="res://addons/card_3d/scripts/card_collection/drag_strategy.gd" id="9_qclna"]
 [ext_resource type="Shape3D" uid="uid://cicwtlugivwj4" path="res://addons/card_3d/shapes_3d/default_card_collection_3d_drop_zone_shape_3d.tres" id="10_klrw8"]
-[ext_resource type="PackedScene" uid="uid://bwuojsrmun3sm" path="res://scenes/play_zone.tscn" id="10_nc1hs"]
 [ext_resource type="Script" uid="uid://jkfm6q5w8u83" path="res://addons/card_3d/scripts/card_collection/drop_zone_editor_tool.gd" id="11_mtypg"]
-[ext_resource type="Script" uid="uid://dkckfib3cljd1" path="res://src/pectoPlayZoneStrat.gd" id="13_8ykwa"]
 
-[sub_resource type="Resource" id="Resource_1r01h"]
+[sub_resource type="Resource" id="Resource_tug2f"]
 resource_local_to_scene = true
 script = ExtResource("4_1r01h")
 can_select = false
@@ -22,23 +20,7 @@ can_remove = false
 can_reorder = false
 metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
 
-[sub_resource type="Resource" id="Resource_6bc8p"]
-resource_local_to_scene = true
-script = ExtResource("4_1r01h")
-can_select = false
-can_remove = false
-can_reorder = false
-metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
-
-[sub_resource type="Resource" id="Resource_fy6ix"]
-resource_local_to_scene = true
-script = ExtResource("4_1r01h")
-can_select = false
-can_remove = false
-can_reorder = false
-metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
-
-[sub_resource type="Resource" id="Resource_svpld"]
+[sub_resource type="Resource" id="Resource_dx0my"]
 resource_local_to_scene = true
 script = ExtResource("4_1r01h")
 can_select = false
@@ -47,6 +29,30 @@ can_reorder = false
 metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
 
 [sub_resource type="Resource" id="Resource_nc1hs"]
+resource_local_to_scene = true
+script = ExtResource("4_1r01h")
+can_select = false
+can_remove = false
+can_reorder = false
+metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
+
+[sub_resource type="Resource" id="Resource_sic6o"]
+resource_local_to_scene = true
+script = ExtResource("4_1r01h")
+can_select = false
+can_remove = false
+can_reorder = false
+metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
+
+[sub_resource type="Resource" id="Resource_8ykwa"]
+resource_local_to_scene = true
+script = ExtResource("4_1r01h")
+can_select = false
+can_remove = false
+can_reorder = false
+metadata/_custom_type_script = "uid://c6xj7aq0a3xj7"
+
+[sub_resource type="Resource" id="Resource_nx7c6"]
 resource_local_to_scene = true
 script = ExtResource("4_1r01h")
 can_select = false
@@ -74,30 +80,17 @@ metadata/_custom_type_script = "uid://dsyors6p1ph7"
 script = ExtResource("8_fx3vf")
 metadata/_custom_type_script = "uid://dsyors6p1ph7"
 
-[sub_resource type="Resource" id="Resource_8ykwa"]
+[sub_resource type="Resource" id="Resource_1r01h"]
 resource_local_to_scene = true
 script = ExtResource("6_fy6ix")
 arc_angle_deg = 20.0
 arc_radius = 35.0
 
-[sub_resource type="Resource" id="Resource_25awo"]
+[sub_resource type="Resource" id="Resource_6bc8p"]
 resource_local_to_scene = true
 script = ExtResource("9_qclna")
 can_insert = false
 metadata/_custom_type_script = "uid://drpbrbrd8kfxn"
-
-[sub_resource type="Resource" id="Resource_nx7c6"]
-script = ExtResource("8_fx3vf")
-metadata/_custom_type_script = "uid://dsyors6p1ph7"
-
-[sub_resource type="Resource" id="Resource_sic6o"]
-resource_local_to_scene = true
-script = ExtResource("13_8ykwa")
-can_select = false
-can_remove = false
-can_reorder = false
-can_insert = false
-metadata/_custom_type_script = "uid://dkckfib3cljd1"
 
 [sub_resource type="Gradient" id="Gradient_sww3w"]
 offsets = PackedFloat32Array(0.92517006, 1)
@@ -161,50 +154,57 @@ transparency = 1
 albedo_color = Color(0.49019608, 0.54901963, 0.92941177, 1)
 albedo_texture = SubResource("GradientTexture2D_suyxu")
 
-[node name="PectoBoard" type="Node3D"]
+[node name="PectoBoard" type="Node3D" unique_id=1151939626]
 script = ExtResource("1_sic6o")
 
-[node name="DragController" type="Node3D" parent="."]
+[node name="DragController" type="Node3D" parent="." unique_id=1175403122]
 unique_name_in_owner = true
 script = ExtResource("2_8ykwa")
 metadata/_custom_type_script = "uid://bgkontnk0cnl"
 
-[node name="front_0" parent="DragController" node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
+[node name="0" parent="DragController" unique_id=104257462 node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -2, 0)
 linkedSlot = NodePath("../../slotMeshes/front_0")
 highlight_on_hover = true
-drag_strategy = SubResource("Resource_1r01h")
+drag_strategy = SubResource("Resource_tug2f")
 
-[node name="front_1" parent="DragController" node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
+[node name="1" parent="DragController" unique_id=87463921 node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 linkedSlot = NodePath("../../slotMeshes/front_1")
 highlight_on_hover = true
-drag_strategy = SubResource("Resource_6bc8p")
+drag_strategy = SubResource("Resource_dx0my")
 
-[node name="front_2" parent="DragController" node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
+[node name="2" parent="DragController" unique_id=1915922608 node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 0)
 linkedSlot = NodePath("../../slotMeshes/front_2")
 highlight_on_hover = true
-drag_strategy = SubResource("Resource_fy6ix")
-
-[node name="back_0" parent="DragController" node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -6, 0)
-linkedSlot = NodePath("../../slotMeshes/back_0")
-highlight_on_hover = true
-drag_strategy = SubResource("Resource_svpld")
-
-[node name="back_1" parent="DragController" node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -6, 0)
-linkedSlot = NodePath("../../slotMeshes/back_2")
-highlight_on_hover = true
 drag_strategy = SubResource("Resource_nc1hs")
 
-[node name="Deck" type="Node3D" parent="DragController"]
+[node name="3" parent="DragController" unique_id=240049207 node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -6, 0)
+linkedSlot = NodePath("../../slotMeshes/back_0")
+highlight_on_hover = true
+drag_strategy = SubResource("Resource_sic6o")
+
+[node name="4" parent="DragController" unique_id=2080477430 node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
+linkedSlot = NodePath("../../slotMeshes/back_1")
+highlight_on_hover = true
+drag_strategy = SubResource("Resource_8ykwa")
+
+[node name="5" parent="DragController" unique_id=1667634778 node_paths=PackedStringArray("linkedSlot") instance=ExtResource("3_nx7c6")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -6, 0)
+linkedSlot = NodePath("../../slotMeshes/back_1")
+highlight_on_hover = true
+drag_strategy = SubResource("Resource_nx7c6")
+
+[node name="Deck" type="Node3D" parent="DragController" unique_id=1023903991]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -4, 0)
 script = ExtResource("7_25awo")
@@ -212,18 +212,18 @@ card_layout_strategy = SubResource("Resource_tttxe")
 drag_strategy = SubResource("Resource_ti0og")
 metadata/_custom_type_script = "uid://bhsbphug3lcqi"
 
-[node name="DropZone" type="StaticBody3D" parent="DragController/Deck"]
+[node name="DropZone" type="StaticBody3D" parent="DragController/Deck" unique_id=1634467511]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DragController/Deck/DropZone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DragController/Deck/DropZone" unique_id=3243752]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 1.6)
 shape = ExtResource("10_klrw8")
 
-[node name="DropZoneEditorTool" type="Node" parent="DragController/Deck" node_paths=PackedStringArray("_card_collection_3d", "_drop_zone_collision_shape_3d")]
+[node name="DropZoneEditorTool" type="Node" parent="DragController/Deck" unique_id=2128009024 node_paths=PackedStringArray("_card_collection_3d", "_drop_zone_collision_shape_3d")]
 script = ExtResource("11_mtypg")
 _card_collection_3d = NodePath("..")
 _drop_zone_collision_shape_3d = NodePath("../DropZone/CollisionShape3D")
 
-[node name="Discard" type="Node3D" parent="DragController"]
+[node name="Discard" type="Node3D" parent="DragController" unique_id=1761859373]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 0)
 script = ExtResource("7_25awo")
@@ -231,18 +231,18 @@ card_layout_strategy = SubResource("Resource_g72on")
 drag_strategy = SubResource("Resource_ti0og")
 metadata/_custom_type_script = "uid://bhsbphug3lcqi"
 
-[node name="DropZone" type="StaticBody3D" parent="DragController/Discard"]
+[node name="DropZone" type="StaticBody3D" parent="DragController/Discard" unique_id=93311610]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DragController/Discard/DropZone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DragController/Discard/DropZone" unique_id=983880051]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 1.6)
 shape = ExtResource("10_klrw8")
 
-[node name="DropZoneEditorTool" type="Node" parent="DragController/Discard" node_paths=PackedStringArray("_card_collection_3d", "_drop_zone_collision_shape_3d")]
+[node name="DropZoneEditorTool" type="Node" parent="DragController/Discard" unique_id=878081829 node_paths=PackedStringArray("_card_collection_3d", "_drop_zone_collision_shape_3d")]
 script = ExtResource("11_mtypg")
 _card_collection_3d = NodePath("..")
 _drop_zone_collision_shape_3d = NodePath("../DropZone/CollisionShape3D")
 
-[node name="Void" type="Node3D" parent="DragController"]
+[node name="Void" type="Node3D" parent="DragController" unique_id=776762854]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -6, 0)
 script = ExtResource("7_25awo")
@@ -250,69 +250,68 @@ card_layout_strategy = SubResource("Resource_bg0yk")
 drag_strategy = SubResource("Resource_ti0og")
 metadata/_custom_type_script = "uid://bhsbphug3lcqi"
 
-[node name="DropZone" type="StaticBody3D" parent="DragController/Void"]
+[node name="DropZone" type="StaticBody3D" parent="DragController/Void" unique_id=490111843]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DragController/Void/DropZone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DragController/Void/DropZone" unique_id=2030513616]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 1.6)
 shape = ExtResource("10_klrw8")
 
-[node name="DropZoneEditorTool" type="Node" parent="DragController/Void" node_paths=PackedStringArray("_card_collection_3d", "_drop_zone_collision_shape_3d")]
+[node name="DropZoneEditorTool" type="Node" parent="DragController/Void" unique_id=598831311 node_paths=PackedStringArray("_card_collection_3d", "_drop_zone_collision_shape_3d")]
 script = ExtResource("11_mtypg")
 _card_collection_3d = NodePath("..")
 _drop_zone_collision_shape_3d = NodePath("../DropZone/CollisionShape3D")
 
-[node name="Hand" parent="DragController" instance=ExtResource("5_6bc8p")]
+[node name="Hand" parent="DragController" unique_id=1976573400 instance=ExtResource("5_6bc8p")]
 unique_name_in_owner = true
 transform = Transform3D(1.693531, 0, 0.14816476, 0, 1.7, 0, -0.14816476, 0, 1.693531, 2, -13, 10)
-card_layout_strategy = SubResource("Resource_8ykwa")
-drag_strategy = SubResource("Resource_25awo")
+card_layout_strategy = SubResource("Resource_1r01h")
+drag_strategy = SubResource("Resource_6bc8p")
 
-[node name="PlayZone" parent="DragController" instance=ExtResource("10_nc1hs")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -3.5, 7)
-visible = false
-card_layout_strategy = SubResource("Resource_nx7c6")
-drag_strategy = SubResource("Resource_sic6o")
+[node name="slotMeshes" type="Node3D" parent="." unique_id=463578016]
 
-[node name="slotMeshes" type="Node3D" parent="."]
-
-[node name="front_0" type="MeshInstance3D" parent="slotMeshes"]
+[node name="front_0" type="MeshInstance3D" parent="slotMeshes" unique_id=371016599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -2, 0)
 material_override = SubResource("StandardMaterial3D_ti0og")
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 
-[node name="front_1" type="MeshInstance3D" parent="slotMeshes"]
+[node name="front_1" type="MeshInstance3D" parent="slotMeshes" unique_id=142468160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 material_override = SubResource("StandardMaterial3D_bg0yk")
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 
-[node name="front_2" type="MeshInstance3D" parent="slotMeshes"]
+[node name="front_2" type="MeshInstance3D" parent="slotMeshes" unique_id=1768309458]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_3xrod")
 
-[node name="back_0" type="MeshInstance3D" parent="slotMeshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -6, 0)
+[node name="back_0" type="MeshInstance3D" parent="slotMeshes" unique_id=630795473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -6, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_05s0e")
 
-[node name="back_2" type="MeshInstance3D" parent="slotMeshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -6, 0)
+[node name="back_1" type="MeshInstance3D" parent="slotMeshes" unique_id=33002844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 0)
 material_override = SubResource("StandardMaterial3D_j0cvo")
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 
-[node name="deck" type="MeshInstance3D" parent="slotMeshes"]
+[node name="back_2" type="MeshInstance3D" parent="slotMeshes" unique_id=177111347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -6, 0)
+material_override = SubResource("StandardMaterial3D_j0cvo")
+mesh = SubResource("PlaneMesh_1i8jf")
+skeleton = NodePath("../..")
+
+[node name="deck" type="MeshInstance3D" parent="slotMeshes" unique_id=1713778581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -4, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_svpld")
 
-[node name="deckCount" type="Label3D" parent="slotMeshes/deck"]
+[node name="deckCount" type="Label3D" parent="slotMeshes/deck" unique_id=1597392150]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8131065, 0.5)
 visible = false
@@ -322,13 +321,13 @@ text = "20"
 font_size = 196
 outline_size = 10
 
-[node name="discard" type="MeshInstance3D" parent="slotMeshes"]
+[node name="discard" type="MeshInstance3D" parent="slotMeshes" unique_id=1326975974]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yt3ua")
 
-[node name="discardCount" type="Label3D" parent="slotMeshes/discard"]
+[node name="discardCount" type="Label3D" parent="slotMeshes/discard" unique_id=171140559]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8131065, 0.5)
 visible = false
@@ -338,13 +337,13 @@ text = "0"
 font_size = 196
 outline_size = 10
 
-[node name="void" type="MeshInstance3D" parent="slotMeshes"]
+[node name="void" type="MeshInstance3D" parent="slotMeshes" unique_id=1479328571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -6, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yt3ua")
 
-[node name="voidCount" type="Label3D" parent="slotMeshes/void"]
+[node name="voidCount" type="Label3D" parent="slotMeshes/void" unique_id=432868349]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8131065, 0.5)
 visible = false
@@ -355,4 +354,3 @@ font_size = 196
 outline_size = 10
 
 [connection signal="card_selected" from="DragController/Hand" to="." method="_on_hand_card_selected"]
-[connection signal="card_added" from="DragController/PlayZone" to="." method="_on_play_zone_card_added"]

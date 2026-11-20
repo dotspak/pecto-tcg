@@ -19,8 +19,9 @@ var updateButton = func():
 @export_tool_button("Reset Card")
 var resetButton = reset_card_data
 
-enum CARD_TYPE{Unit, Icon, Spell, Token}
+var isToken : bool = false
 enum RARITY{Basic, Rare, Superrare, Divinerare}
+enum ACTIVATION_TYPE{None, Skill, Spell, Reusable, Assist}
 
 #endregion
 
@@ -28,11 +29,6 @@ enum RARITY{Basic, Rare, Superrare, Divinerare}
 var cardVisuals : CardVisuals
 
 @export_group("info")
-@export var type : CARD_TYPE = CARD_TYPE.Unit : 
-	set(val):
-		type = val
-		update_card_visuals()
-				
 @export var cardName : String = "Abstract Wizard" :
 	set(val):
 		cardName = val
@@ -48,12 +44,12 @@ var cardVisuals : CardVisuals
 		lvl = clamp(val, 0, 99)
 		update_card_visuals()
 
-@export var subtype : Array :
+@export var types : Array[String] :
 	set(val):
-		subtype = val
+		types = val
 		update_card_visuals()
 
-@export var keywords : Array = [] :
+@export var keywords : Array[String] = [] :
 	set(val):
 		for k : String in val: k = k.to_lower()
 		keywords = val
@@ -64,30 +60,15 @@ var cardVisuals : CardVisuals
 		text = val
 		update_card_visuals()
 		
-@export var skillName : String = "":
+@export_multiline var activationText : String = "Dummy text goes here!" :
 	set(val):
-		skillName = val
-		update_card_visuals()
-
-@export_multiline var skillText : String = "Dummy text goes here!" :
-	set(val):
-		skillText = val
-		update_card_visuals()
-
-@export var isSkillContinuous : bool = false:
-	set(val):
-		isSkillContinuous = val
+		activationText = val
 		update_card_visuals()
 			
 @export_group("visual")
 @export var art : Texture:
 	set(val):
 		art = val
-		update_card_visuals()
-			
-@export var bg : Texture :
-	set(val):
-		bg = val
 		update_card_visuals()
 			
 @export var foil : bool = false:
@@ -100,18 +81,6 @@ var cardVisuals : CardVisuals
 		rarity = val
 		update_card_visuals()
 
-@export var shadowColor : Color = Color("6f6f6f") :
-	set(val):
-		shadowColor = val
-		update_card_visuals()
-
-@export_enum("multiply", "screen", "darken", "lighten", "difference",
-	"exclusion", "overlay", "hard_light", "soft_light",
-	"color_dodge", "linear_dodge", "color_burn", "linear_burn") var shadowBlendMode : int = 0 :
-		set(val):
-			shadowBlendMode = val
-			update_card_visuals()
-	
 #endregion
 
 #region Logic
@@ -125,11 +94,11 @@ signal perish(card : PectoCard, condition : String)
 signal activeStatusChanged(status : bool)
 
 var inPlay : bool = false
-var active : bool = true :
+var isReady : bool = true :
 	set(val):
-		if val != active:
-			active = val
-			activeStatusChanged.emit(active)
+		if val != isReady:
+			isReady = val
+			activeStatusChanged.emit(isReady)
 
 func _ready():
 	custom_minimum_size = Vector2(750, 1050)
@@ -152,8 +121,8 @@ func _enter() -> void:
 	inPlay = true
 	enter.emit(self)
 	
-	if keywords.has("delayed"): active = false
-	else: active = true
+	if keywords.has("delayed"): isReady = false
+	else: isReady = true
 
 
 func _perish(condition : String) -> void:
@@ -215,7 +184,7 @@ func acquire_target(amount : int, targettablePlayers = ["self", "opponent"],
 
 	# filter out cards that can't be targetted
 	for card3D : PectoCard3D in possibleTargets:
-		match card3D.card.type:
+		match card3D.card.types:
 			0: if !filter.has("u"): possibleTargets.erase(card3D)
 			1: if !filter.has("i"): possibleTargets.erase(card3D)
 			2: if !filter.has("s"): possibleTargets.erase(card3D)
@@ -265,8 +234,7 @@ static func get_card_data(card : PectoCard) -> Dictionary:
 
 func update_card_data(_updateScenePath : bool = false) -> void:
 	cardName = data["name"]
-	type = data["type"]
-	subtype = data["subtype"]
+	types = data["types"]
 
 	lvl = data["lvl"]
 	force = data["force"]
@@ -276,9 +244,7 @@ func update_card_data(_updateScenePath : bool = false) -> void:
 
 	if data["skill"]:
 		var skillData : Dictionary = db["skills"][data["skill"]]
-		skillName = skillData["name"]
-		skillText = skillData["text"]
-		isSkillContinuous = skillData["type"]
+		activationText = skillData["text"]
 
 	if FileAccess.file_exists("res://assets/set1/" + data["art"]):
 		art = load("res://assets/set1/" + data["art"])
@@ -286,45 +252,33 @@ func update_card_data(_updateScenePath : bool = false) -> void:
 
 func reset_card_data() -> void:
 	ID = ""
-	
 	cardName = "Dummy"
-	type = CARD_TYPE.Unit
-	subtype = []
-
-	lvl = 1
-	force = 0
-
+	types = []
+	lvl = 0
+	force = 1
 	keywords = []
 	text = "insert dummy text here!"
-
-	skillName = ""
-	skillText = ""
-	isSkillContinuous = false
-
+	activationText = ""
 	art = null
+
 
 func update_card_visuals() -> void:
 	var visuals : CardVisuals = cardVisuals
 	if !visuals: return
 	
-	visuals.type = type
 	visuals.cardName = cardName
 
 	visuals.force = force
 	visuals.lvl = lvl
 
-	visuals.subtype = subtype
+	visuals.types = types
 	visuals.keywords = keywords
 	visuals.text = text
 
-	visuals.skillName = skillName
-	visuals.skillText = skillText
-	visuals.isSkillContinuous = isSkillContinuous
+	visuals.activationText = activationText
 
 	visuals.art = art
-	visuals.bg = bg
-	visuals.shadowColor = shadowColor
-	visuals.shadowBlendMode = shadowBlendMode
+	visuals.show()
 
 #endregion
 

@@ -22,8 +22,8 @@ func can_insert_card(card3D: PectoCard3D, to_collection: CardCollection3D, from_
 
 func can_swap_cards(cardToMove : PectoCard3D, prevCard : PectoCard3D) -> bool:
 	return !prevCard || (
-		cardToMove.card.active && !cardToMove.card.has_keyword("static") && cardToMove.card.type != PectoCard.CARD_TYPE.Spell &&
-		prevCard.card.active && !prevCard.card.has_keyword("static") && cardToMove.card.type != PectoCard.CARD_TYPE.Spell)
+		cardToMove.card.active && !cardToMove.card.has_keyword("static") &&
+		prevCard.card.active && !prevCard.card.has_keyword("static"))
 
 
 func movement_phase_mode() -> void:

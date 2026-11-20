@@ -1,10 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://b82p64sv3xjup"]
+[gd_scene format=3 uid="uid://b82p64sv3xjup"]
 
 [ext_resource type="Script" uid="uid://krrob1jjjfjs" path="res://src/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://do6yql4uw2cjr" path="res://scenes/playerBoard.tscn" id="1_lnu2h"]
 [ext_resource type="FontFile" uid="uid://fpqgiu5d1pkr" path="res://assets/fonts/Higher Jump.ttf" id="2_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bsidin4i266kj" path="res://assets/levelIcon.png" id="3_iywne"]
-[ext_resource type="Texture2D" uid="uid://d6ixysc00hxh" path="res://assets/set1/monolith.png" id="4_gee14"]
+[ext_resource type="Texture2D" uid="uid://4tsfi8b8vdnw" path="res://assets/art/set1/moo.png" id="4_gee14"]
 [ext_resource type="FontFile" uid="uid://d0fdt2wdmpnnu" path="res://assets/fonts/MedodicaRegular.otf" id="4_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://c8qk8km7h4a3b" path="res://assets/icon_pullOut.png" id="5_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://cdev3qnqbr6xp" path="res://assets/forceBG.png" id="5_dinhu"]

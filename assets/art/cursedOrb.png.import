@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hokfqkirtuk4"
-path="res://.godot/imported/CursedOrb.png-baaa425dbda6e6e4bba3ff8e092b7300.ctex"
+uid="uid://jjp4n7p5rk2q"
+path="res://.godot/imported/cursedOrb.png-21a9f57aed4eebfc556865ebfb3c1810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/set1/CursedOrb.png"
-dest_files=["res://.godot/imported/CursedOrb.png-baaa425dbda6e6e4bba3ff8e092b7300.ctex"]
+source_file="res://assets/art/cursedOrb.png"
+dest_files=["res://.godot/imported/cursedOrb.png-21a9f57aed4eebfc556865ebfb3c1810.ctex"]
 
 [params]
 
