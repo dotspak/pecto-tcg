@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfu25xp4a17wo"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fqdgb"]
+[ext_resource type="Texture2D" uid="uid://bskvib385p5a8" path="res://assets/set1/mortalityAgent.png" id="2_si6su"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_nevux"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_pkwat"]
+
+[node name="mortalityAgent" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fqdgb")
+ID = "mortalityAgent"
+cardName = "Mortality Agent"
+lvl = 2
+subtype = ["Ghost"]
+text = "{trigger:cast} Both players reveal the top card of their deck and add it to their hand. If you draw a Ghost card, you may draw an additional card."
+art = ExtResource("2_si6su")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_nevux")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_pkwat")

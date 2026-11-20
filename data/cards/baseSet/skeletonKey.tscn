@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq1rq1p878fim"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_dkao8"]
+[ext_resource type="Texture2D" uid="uid://m3wdofu1emks" path="res://assets/set1/skeletonKey.png" id="2_y4h1p"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_ltx3t"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_3nfjr"]
+
+[node name="skeletonKey" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dkao8")
+ID = "skeletonKey"
+type = 2
+cardName = "Skeleton Key"
+force = 0
+lvl = 5
+text = "{trigger:cast} Sacrifice an active card you control: draw cards equal to its {force:?} (max 3)."
+art = ExtResource("2_y4h1p")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_ltx3t")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_3nfjr")

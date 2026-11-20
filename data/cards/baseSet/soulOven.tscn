@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd10v28urun7p"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_g7jav"]
+[ext_resource type="Texture2D" uid="uid://dt5ryeloyb7hp" path="res://assets/set1/soulOven.png" id="2_bhxl0"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_q4qpt"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_lfkqb"]
+
+[node name="soulOven" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_g7jav")
+ID = "soulOven"
+type = 1
+cardName = "Soul Oven"
+force = 3
+lvl = 4
+subtype = ["Golem", "Structure"]
+keywords = ["static", "muted"]
+text = "Soul Oven cannot gain {force:?}."
+skillName = "Fool's gold"
+skillText = "Lose {force:1}: Sacrifice an active unit you control. Add a soul counter to Soul Oven."
+isSkillContinuous = true
+art = ExtResource("2_bhxl0")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_q4qpt")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_lfkqb")

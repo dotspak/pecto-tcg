@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5tuq4v3g0r5x"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_67gef"]
+[ext_resource type="Texture2D" uid="uid://bpq1oth0ydqrv" path="res://assets/set1/banishWatcher.png" id="2_odf5n"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_30t05"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_3wquy"]
+
+[node name="banishWatcher" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_67gef")
+ID = "banishWatcher"
+cardName = "Banish Watcher"
+force = 2
+lvl = 2
+subtype = ["Celestial"]
+keywords = ["warden"]
+text = "When a card enters your void target unit you control gains {force:1}."
+art = ExtResource("2_odf5n")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_30t05")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_3wquy")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2wxtp7yp0xok"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8vugi"]
+[ext_resource type="Texture2D" uid="uid://db4lho34eke2h" path="res://assets/set1/flock.png" id="2_jtdow"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_jfuuu"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_vi4uf"]
+
+[node name="flock" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8vugi")
+ID = "flock"
+type = 2
+cardName = "Flock"
+force = 0
+lvl = 4
+text = "{trigger:cast} Create up to 2 Crow {force:1} tokens and draw a card."
+art = ExtResource("2_jtdow")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_jfuuu")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_vi4uf")

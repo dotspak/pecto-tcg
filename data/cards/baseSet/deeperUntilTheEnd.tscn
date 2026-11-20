@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyetw2jish5ba"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_428f6"]
+[ext_resource type="Texture2D" uid="uid://8q8mcldrsj83" path="res://assets/set1/digDeeper.png" id="2_7pmwk"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_niial"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_6vuic"]
+
+[node name="deeperUntilTheEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_428f6")
+ID = "deeperUntilTheEnd"
+type = 2
+cardName = "Deeper Until The End"
+force = 0
+lvl = 4
+text = "{trigger:cast} Discard cards from the top of your deck up to the number of cards you control, then void Deeper Until the End. 
+{trigger:begin} If Deeper Until the End is in your void: discard a card: return Deeper Until the End to your hand."
+art = ExtResource("2_7pmwk")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_niial")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_6vuic")

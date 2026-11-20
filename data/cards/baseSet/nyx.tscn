@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://lnb2kpcsvuwu"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_s81k8"]
+[ext_resource type="Texture2D" uid="uid://tthyfjf7gpxy" path="res://assets/set1/nyx.png" id="2_0b47g"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_q1ik2"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_wc5wq"]
+
+[node name="nyx" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s81k8")
+ID = "nyx"
+cardName = "Nyx"
+force = 2
+lvl = 3
+subtype = ["Magic", "Monster"]
+keywords = ["quick"]
+text = "{cost:As an additional cost, sacrifice a card you control.}"
+skillName = "Reunion"
+skillText = "For every other card named Nyx you control, sacrifice them and add their {force:?} and attached cards to this one."
+isSkillContinuous = true
+art = ExtResource("2_0b47g")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_q1ik2")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_wc5wq")

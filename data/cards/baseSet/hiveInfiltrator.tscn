@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjgrpgptpamb2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_y1bft"]
+[ext_resource type="Texture2D" uid="uid://km53bpch5w13" path="res://assets/set1/hiveInfiltrator.png" id="2_gpq72"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_idw3p"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_j3f4c"]
+
+[node name="hiveInfiltrator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_y1bft")
+ID = "hiveInfiltrator"
+cardName = "Hive Infiltrator"
+force = 2
+lvl = 5
+subtype = ["Ghost", "Bug"]
+keywords = ["static"]
+text = "{cost:As an additional cost, sacrifice a card you control.}"
+art = ExtResource("2_gpq72")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_idw3p")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_j3f4c")

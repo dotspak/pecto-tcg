@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://do3jfrmdfki1h"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_n5mh1"]
+[ext_resource type="Texture2D" uid="uid://dicw3k8q3lftk" path="res://assets/set1/sandCube.png" id="2_uwcua"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_rpplh"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_kp3jo"]
+
+[node name="sandCube" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n5mh1")
+ID = "sandCube"
+cardName = "Sand Cube"
+force = 0
+subtype = ["Magic", "Golem"]
+keywords = ["fragile", "warden"]
+text = "{trigger:perish} If Sand Cube moved to block a unit, the blocked unit gins {key:fragile}."
+art = ExtResource("2_uwcua")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_rpplh")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_kp3jo")

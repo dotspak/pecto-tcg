@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://im6jpqhq3luy"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_yxby8"]
+[ext_resource type="Texture2D" uid="uid://bc0tdoelp6fc0" path="res://assets/set1/falseGolem.png" id="2_gwfii"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_ca7dy"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_ntkl8"]
+
+[node name="falseGolem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yxby8")
+ID = "falseGolem"
+cardName = "False Golem"
+force = 0
+lvl = 3
+subtype = ["Magic", "Golem"]
+keywords = ["delayed"]
+text = "{trigger:enter} Void a unit in your discard. False Golem gains the text and {force:?} of the voided unit (any {trigger:enter} effects retrigger). If there are no applicable cards, False Golem becomes {force:0}."
+art = ExtResource("2_gwfii")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_ca7dy")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ntkl8")

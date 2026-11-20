@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cww47wgbqkp1"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_wodpx"]
+[ext_resource type="Texture2D" uid="uid://bdfjuhjqilcnc" path="res://assets/set1/churn.png" id="2_r621x"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_l4cb1"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_ye35r"]
+
+[node name="churn" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wodpx")
+ID = "churn"
+type = 2
+cardName = "Churn"
+force = 0
+text = "{trigger:cast} Reveal the top 3 cards of your deck. You may add up to 3 cards of different types to your hand. You cannot play them this turn. Void the remaining cards."
+art = ExtResource("2_r621x")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_l4cb1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ye35r")

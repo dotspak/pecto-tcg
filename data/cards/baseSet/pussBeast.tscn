@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddt25t6aomu1t"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_825ay"]
+[ext_resource type="Texture2D" uid="uid://j44eemji55v0" path="res://assets/set1/pussBeast.png" id="2_88l1q"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_8r722"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_kvj18"]
+
+[node name="pussBeast" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_825ay")
+ID = "pussBeast"
+cardName = "Puss Beast"
+subtype = ["Monster"]
+keywords = ["effect"]
+text = ""
+skillName = "Congeal"
+skillText = "Other Monster cards you control gain {force:2} until the end of the turn."
+art = ExtResource("2_88l1q")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_8r722")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_kvj18")

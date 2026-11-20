@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bklf6ym3ctfap"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_mi24p"]
+[ext_resource type="Texture2D" uid="uid://3t3u36m86xq4" path="res://assets/set1/moonAngel.png" id="2_1ogwm"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_j0ytg"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_jt03n"]
+
+[node name="moonAngel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mi24p")
+ID = "moonAngel"
+cardName = "Moon Angel"
+force = 4
+lvl = 4
+subtype = ["Magic", "Celestial"]
+keywords = ["delayed"]
+text = "When a unit perishes, add a soul counter to Moon Angel."
+skillName = "Piercing Light"
+skillText = "Remove all soul counters from cards you control: deal damage equal to the number of soul counters removed to all opposing cards."
+art = ExtResource("2_1ogwm")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_j0ytg")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_jt03n")

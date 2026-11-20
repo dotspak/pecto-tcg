@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://drccdyim0gr0q"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_x4y1f"]
+[ext_resource type="Texture2D" uid="uid://bq1uhscert8nv" path="res://assets/set1/borderOfLife.png" id="2_qfxvn"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_v2qm0"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_271du"]
+
+[node name="borderOfLife" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x4y1f")
+ID = "borderOfLife"
+type = 2
+cardName = "Border of Life"
+force = 0
+lvl = 4
+keywords = ["effect"]
+text = "Effected card is {key:immortal} and {key:safe}. If the effected card perishes, you may attach Border of Life to another card you control. If you do not contol any cards, void Border of Life."
+art = ExtResource("2_qfxvn")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_v2qm0")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_271du")

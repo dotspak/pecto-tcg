@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqbyycd3txe5b"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_jrvvq"]
+[ext_resource type="Texture2D" uid="uid://7k21bbnkjtg6" path="res://assets/set1/honeyBee.png" id="2_0avn0"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_irvyx"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_47c8g"]
+
+[node name="helpfulHoneyBee" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jrvvq")
+ID = "helpfulHoneyBee"
+cardName = "Helpful Honey bee"
+lvl = 3
+subtype = ["Bug"]
+text = "When Helpful Honey Bee enters the discard, draw 2 cards."
+art = ExtResource("2_0avn0")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_irvyx")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_47c8g")

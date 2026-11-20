@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ukbnusbg72l"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_hx2qg"]
+[ext_resource type="Texture2D" uid="uid://kiseheqgldhw" path="res://assets/set1/melt.png" id="2_pyvjr"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_fijpg"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_sfapk"]
+
+[node name="melt" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hx2qg")
+ID = "melt"
+type = 2
+cardName = "Melt"
+force = 0
+lvl = 3
+keywords = ["instant"]
+text = "{trigger:cast} Discard your hand. Draw an additional card during your next 2 draw phases."
+art = ExtResource("2_pyvjr")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_fijpg")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_sfapk")

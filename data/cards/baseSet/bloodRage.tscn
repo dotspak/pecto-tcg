@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm2gfte0dg8ma"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_c6clm"]
+[ext_resource type="Texture2D" uid="uid://b2fncwne8ooed" path="res://assets/set1/bloodRage.png" id="2_02hgr"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_dxgkx"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_osshu"]
+
+[node name="bloodRage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_c6clm")
+ID = "bloodRage"
+type = 2
+cardName = "Blood Rage"
+force = 0
+lvl = 2
+keywords = ["instant"]
+text = "{trigger:cast} Target active unit you control becomes inactive and deals damage equal to their {force:?} to a target card then loses {force:2}."
+art = ExtResource("2_02hgr")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_dxgkx")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_osshu")

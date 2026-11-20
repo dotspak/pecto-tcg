@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp6nejdt1a2go"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_winoq"]
+[ext_resource type="Texture2D" uid="uid://qw08d7a8olk6" path="res://assets/set1/flowerWrangler.png" id="2_oqqdf"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_id4sa"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_dbcvm"]
+
+[node name="flowerWrangler" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_winoq")
+ID = "flowerWrangler"
+cardName = "Flower Wrangler"
+force = 3
+lvl = 3
+subtype = ["Bug"]
+text = "{trigger:enter} Target card your opponent controls gains {key:Static} and {key:sick}."
+art = ExtResource("2_oqqdf")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_id4sa")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_dbcvm")

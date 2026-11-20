@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://daf2p1do5byyo"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_bqr4c"]
+[ext_resource type="Texture2D" uid="uid://0dnn84k0gfaf" path="res://assets/set1/cardDispenser.png" id="2_gop1u"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_jfl87"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_omyqs"]
+
+[node name="cardDispenser" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bqr4c")
+ID = "cardDispenser"
+type = 1
+cardName = "Card Dispenser"
+force = 2
+lvl = 2
+subtype = ["Object"]
+keywords = ["effect", "static"]
+text = ""
+skillName = "payout"
+skillText = "Lose 1 LVL: Draw 2 cards."
+art = ExtResource("2_gop1u")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_jfl87")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_omyqs")

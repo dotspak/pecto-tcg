@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://etrqcy7nom3r"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_xx2hk"]
+[ext_resource type="Texture2D" uid="uid://cbcfoau6bs2mk" path="res://assets/set1/cure.png" id="2_p2pnv"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_k7qao"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_cb2sj"]
+
+[node name="theCure" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xx2hk")
+ID = "theCure"
+type = 2
+cardName = "The Cure?"
+force = 0
+lvl = 3
+keywords = ["instant"]
+text = "{trigger:cast} Choose a player. Cards that player controls gain {key:sick}."
+art = ExtResource("2_p2pnv")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_k7qao")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_cb2sj")

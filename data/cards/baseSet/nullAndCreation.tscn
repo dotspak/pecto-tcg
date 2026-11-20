@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://vamyl5rmvuxm"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_s0dj0"]
+[ext_resource type="Texture2D" uid="uid://dgnsm1efpxw0h" path="res://assets/set1/nullAndCreation.png" id="2_k6pcy"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_715dy"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_1eo2w"]
+
+[node name="nullAndCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s0dj0")
+ID = "nullAndCreation"
+type = 2
+cardName = "Null and Creation"
+force = 0
+lvl = 5
+keywords = ["instant"]
+text = "{trigger:cast} All cards your opponents control gain {key:doom} until the end of the turn. For every card affected, add {force:1} to a card you control."
+skillName = "upside"
+skillText = "If a card you control has {key:doom}, draw a card."
+art = ExtResource("2_k6pcy")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_715dy")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_1eo2w")

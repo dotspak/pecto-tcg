@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddin4tvt2j7nv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_th3s7"]
+[ext_resource type="Texture2D" uid="uid://c5e4iubdond3o" path="res://assets/set1/conjoined.png" id="2_ttglv"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_otn55"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_4uvcb"]
+
+[node name="conjoined" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_th3s7")
+ID = "conjoined"
+cardName = "Conjoined"
+force = 3
+lvl = 3
+subtype = ["Plague", "Monster"]
+keywords = ["effect", "sick"]
+text = ""
+skillName = "New Part"
+skillText = "Create a Mold {force:1} token, then attach a unit from your hand to it. Mold gains the text of the attached unit (the attached unit goes to the discard when Mold perishes)."
+art = ExtResource("2_ttglv")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_otn55")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_4uvcb")

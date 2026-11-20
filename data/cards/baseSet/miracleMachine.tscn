@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctow3dpuptnpe"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_tphhv"]
+[ext_resource type="Texture2D" uid="uid://wen0dqhihct7" path="res://assets/set1/miracleMachine.png" id="2_on3p2"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_1rjns"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_wfjsc"]
+
+[node name="miracleMachine" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tphhv")
+ID = "miracleMachine"
+cardName = "Miracle Machine"
+force = 0
+lvl = 4
+subtype = ["Magic", "Structure"]
+keywords = ["static"]
+text = "If a unit you control were to perish, you may void a card from your hand: return the unit to your hand instead. If you do, gain 2 matter counters."
+skillName = "Blender"
+skillText = "Remove a matter counter: deal 1 damage to a target front row card."
+isSkillContinuous = true
+art = ExtResource("2_on3p2")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_1rjns")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_wfjsc")

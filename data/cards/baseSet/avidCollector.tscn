@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://clplkaq4aynw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fo7ni"]
+[ext_resource type="Texture2D" uid="uid://cry2eghfmubsc" path="res://assets/set1/avidCollector.png" id="2_5i2ya"]
+
+[node name="avidCollector" type="Control"]
+custom_minimum_size = Vector2(750, 1050)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fo7ni")
+ID = "avidCollector"
+type = 2
+cardName = "Avid Collector"
+force = 0
+lvl = 3
+text = "{trigger:cast} Sacrifice any number of tokens you control: draw cards equal to the number of tokens sacrificed."
+skillName = "collecting"
+skillText = "Create an Object {force:0}/{key:static} token."
+art = ExtResource("2_5i2ya")
+shadowColor = Color(0.49837473, 0.17197731, 0.7328125, 1)

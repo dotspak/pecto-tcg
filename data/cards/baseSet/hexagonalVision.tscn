@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://wboa48lqbuoj"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6rm2g"]
+[ext_resource type="Texture2D" uid="uid://botgw73rhko75" path="res://assets/set1/hexagonalVision.png" id="2_tq2qn"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_3eo3c"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_7vpy4"]
+
+[node name="hexagonalVision" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6rm2g")
+ID = "hexagonalVision"
+type = 2
+cardName = "Hexagonal Vision"
+force = 0
+keywords = ["instant"]
+text = "{trigger:cast} Search your deck for a LVL 1 unit. Reveal it, then add it to your hand."
+art = ExtResource("2_tq2qn")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_3eo3c")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_7vpy4")

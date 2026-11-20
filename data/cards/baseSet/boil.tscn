@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkyjr8d5q8lyv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3toap"]
+[ext_resource type="Texture2D" uid="uid://bax1p7fewhscw" path="res://assets/set1/boil.png" id="2_fg1p3"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_18wnd"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_eankg"]
+
+[node name="boil" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3toap")
+ID = "boil"
+type = 2
+cardName = "Boil"
+force = 0
+lvl = 3
+text = "{trigger:cast} Target unit and any adjacent units take 1 damage."
+art = ExtResource("2_fg1p3")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_18wnd")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_eankg")

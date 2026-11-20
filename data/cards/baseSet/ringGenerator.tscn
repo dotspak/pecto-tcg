@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2dqp2ayberew"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_57n5g"]
+[ext_resource type="Texture2D" uid="uid://cvbelahbx20vv" path="res://assets/set1/ringGenerator.png" id="2_jgeuy"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_s7k7r"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_pm7xy"]
+
+[node name="ringGenerator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_57n5g")
+ID = "ringGenerator"
+type = 1
+cardName = "Ring Generator"
+subtype = ["Celestial", "Structure"]
+keywords = ["static"]
+text = "When a card enters your void, target unit you control gains {force:1}."
+art = ExtResource("2_jgeuy")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_s7k7r")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_pm7xy")

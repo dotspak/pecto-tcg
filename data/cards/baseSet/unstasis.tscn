@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://brgf10swk8mp2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3llyd"]
+[ext_resource type="Texture2D" uid="uid://dik4eslpmgtsx" path="res://assets/set1/unstasis.png" id="2_0hhdd"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_h0uwj"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_t2iox"]
+
+[node name="unstasis" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3llyd")
+ID = "unstasis"
+type = 2
+cardName = "Unstasis"
+force = 0
+lvl = 3
+keywords = ["effect"]
+text = "The effects of {key:static} are nullified for the effected card."
+art = ExtResource("2_0hhdd")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_h0uwj")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_t2iox")

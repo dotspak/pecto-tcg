@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://clj1jr4gc8abg"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_cwy3d"]
+[ext_resource type="Texture2D" uid="uid://cg50rrvekicyi" path="res://assets/set1/repented.png" id="2_x5umj"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_17dl6"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_dvpei"]
+
+[node name="repented" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cwy3d")
+ID = "repented"
+cardName = "Repented"
+force = 2
+lvl = 3
+subtype = ["Ghost", "Magic"]
+text = "When Repented deals damage, deal 1 damage to all front row cards your opponent controls."
+art = ExtResource("2_x5umj")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_17dl6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_dvpei")

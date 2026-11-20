@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwxbjwcaeayfk"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3dkat"]
+[ext_resource type="Texture2D" uid="uid://dc8dxqxxplafi" path="res://assets/set1/tightSpot.png" id="2_oute2"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_n1lr0"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_ylgmt"]
+
+[node name="tightSpot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3dkat")
+ID = "tightSpot"
+type = 1
+cardName = "Tight Spot"
+lvl = 3
+subtype = ["Structure"]
+keywords = ["static"]
+text = "When an opponent moves a card, that card takes 1 damage."
+art = ExtResource("2_oute2")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_n1lr0")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ylgmt")

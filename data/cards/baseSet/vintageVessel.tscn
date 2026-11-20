@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://oren57t4faym"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_n67ce"]
+[ext_resource type="Texture2D" uid="uid://c78or0a5rdrja" path="res://assets/set1/vintageVessel.png" id="2_d751f"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_nsjwn"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_2dcp4"]
+
+[node name="vintageVessel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n67ce")
+ID = "vintageVessel"
+type = 1
+cardName = "Vintage Vessel"
+force = 2
+lvl = 2
+subtype = ["Object"]
+keywords = ["effect", "warden"]
+text = "When an opposing unit perishes, add a soul counter to Vintage Vessel and then you may create a clone of it as a Memory {force:1} token with all of its text."
+art = ExtResource("2_d751f")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_nsjwn")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_2dcp4")

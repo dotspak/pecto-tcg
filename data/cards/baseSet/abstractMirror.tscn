@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwi8nsoonw8ow"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6jrl7"]
+[ext_resource type="Texture2D" uid="uid://c4d3n2pr0o54o" path="res://assets/set1/abstractMirror.png" id="2_sdcsf"]
+
+[sub_resource type="Gradient" id="Gradient_6jrl7"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.6039216, 0.53333336, 0.47843137, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sdcsf"]
+gradient = SubResource("Gradient_6jrl7")
+
+[node name="abstractMirror" type="Control"]
+custom_minimum_size = Vector2(750, 1050)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6jrl7")
+ID = "abstractMirror"
+type = 2
+cardName = "Abstract Mirror"
+force = 0
+keywords = ["instant"]
+text = "{trigger:cast} Choose a subtype. Target unit in play becomes the chosen subtype."
+art = ExtResource("2_sdcsf")
+bg = SubResource("GradientTexture1D_sdcsf")
+shadowColor = Color(0.99607843, 1, 1, 1)

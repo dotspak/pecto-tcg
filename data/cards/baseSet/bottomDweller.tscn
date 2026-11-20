@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://fmjq7cqdf4gl"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fims3"]
+[ext_resource type="Texture2D" uid="uid://cubv8v1u2wvwi" path="res://assets/set1/bottomDweller.png" id="2_2mncl"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_81yt1"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_odl33"]
+
+[node name="bottomDweller" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fims3")
+ID = "bottomDweller"
+cardName = "Bottom Dweller"
+force = 2
+subtype = ["Ghost"]
+text = "{trigger:enter} Discard up to 2 cards from your hand."
+art = ExtResource("2_2mncl")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_81yt1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_odl33")

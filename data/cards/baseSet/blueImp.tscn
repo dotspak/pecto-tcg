@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfg27iqq4g84c"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_y0mp7"]
+[ext_resource type="Texture2D" uid="uid://csamgh47crvvh" path="res://assets/set1/blueImp.png" id="2_aah8x"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_b8x80"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_kxssw"]
+
+[node name="blueImp" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_y0mp7")
+ID = "blueImp"
+cardName = "Blue Imp"
+lvl = 2
+subtype = ["Monster"]
+text = "{trigger:breach} Target player discards cards from the top of their deck up to the damage dealt (you choose the amount discarded). You may move Blue Imp to an open back zone."
+art = ExtResource("2_aah8x")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_b8x80")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_kxssw")

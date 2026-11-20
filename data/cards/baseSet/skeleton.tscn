@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4m0gluvap3iy"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5l5ga"]
+[ext_resource type="Texture2D" uid="uid://g2g7pphioyus" path="res://assets/set1/Skeleton.png" id="2_gicrn"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_etvb2"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_cjrwo"]
+
+[node name="skeleton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5l5ga")
+ID = "skeleton"
+cardName = "Skeleton"
+force = 3
+subtype = ["Monster"]
+keywords = ["muted", "bleed", "fragile"]
+text = "If Skeleton has at least {force:5}, remove {key:fragile}."
+art = ExtResource("2_gicrn")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_etvb2")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_cjrwo")

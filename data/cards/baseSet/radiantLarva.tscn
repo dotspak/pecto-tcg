@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgg6kvy6a5opi"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_eo16x"]
+[ext_resource type="Texture2D" uid="uid://ccedwmcui7qqa" path="res://assets/set1/radiantLarva.png" id="2_a818m"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_5atnc"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_o1k2n"]
+
+[node name="radiantLarva" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_eo16x")
+ID = "radiantLarva"
+cardName = "Radiant Larva"
+lvl = 3
+subtype = ["Bug"]
+keywords = ["delayed"]
+text = "You may cast Radiant Larva if it enters the discard without perishing."
+art = ExtResource("2_a818m")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_5atnc")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_o1k2n")

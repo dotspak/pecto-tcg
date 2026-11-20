@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://27uvvfdi8bxw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_jn1o7"]
+[ext_resource type="Texture2D" uid="uid://t0i6644qs2x5" path="res://assets/set1/bloodRock.png" id="2_3ff64"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_g14mm"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_ryhc7"]
+
+[node name="bloodRock" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jn1o7")
+ID = "bloodRock"
+cardName = "Blood Rock"
+subtype = ["Shapeshifter"]
+keywords = ["bleed"]
+text = "Units you control with {key:bleed} deal 1 extra combat damage to the opponent."
+art = ExtResource("2_3ff64")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_g14mm")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ryhc7")

@@ -1,0 +1,1015 @@
+[gd_scene load_steps=53 format=3 uid="uid://b82p64sv3xjup"]
+
+[ext_resource type="Script" uid="uid://krrob1jjjfjs" path="res://src/game.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://do6yql4uw2cjr" path="res://scenes/playerBoard.tscn" id="1_lnu2h"]
+[ext_resource type="FontFile" uid="uid://fpqgiu5d1pkr" path="res://assets/fonts/Higher Jump.ttf" id="2_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://bsidin4i266kj" path="res://assets/levelIcon.png" id="3_iywne"]
+[ext_resource type="Texture2D" uid="uid://d6ixysc00hxh" path="res://assets/set1/monolith.png" id="4_gee14"]
+[ext_resource type="FontFile" uid="uid://d0fdt2wdmpnnu" path="res://assets/fonts/MedodicaRegular.otf" id="4_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://c8qk8km7h4a3b" path="res://assets/icon_pullOut.png" id="5_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://cdev3qnqbr6xp" path="res://assets/forceBG.png" id="5_dinhu"]
+[ext_resource type="Texture2D" uid="uid://yv0ay28yfo7i" path="res://addons/kenney_particle_pack/magic_05.png" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://d0oo3nh8tyxfh" path="res://data/cards/baseSet/monolith.tscn" id="6_kvuet"]
+[ext_resource type="Texture2D" uid="uid://cbj46tvlq801k" path="res://assets/icon_confirm.png" id="12_264po"]
+[ext_resource type="Texture2D" uid="uid://c0ohl5etrs7l0" path="res://assets/icon_pass.png" id="12_rysoc"]
+[ext_resource type="Texture2D" uid="uid://blkrus3hcauee" path="res://assets/icon_cancel.png" id="13_1kice"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ca42v"]
+blend_mode = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rysoc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_width_left = 55
+border_width_right = 55
+border_color = Color(0.43529412, 0.43529412, 0.43529412, 1)
+border_blend = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_u5sy4"]
+font = ExtResource("4_kvpfn")
+font_size = 96
+font_color = Color(0.91, 0.91, 0.91, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dinhu"]
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gee14"]
+font = ExtResource("2_lbhrr")
+font_size = 24
+font_color = Color(0.91, 0.91, 0.91, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.2010927, 0.5673567, 0.8666667, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
+font = ExtResource("4_kvpfn")
+font_size = 48
+font_color = Color(0.91, 0.91, 0.91, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0.2010927, 0.5673567, 0.8666667, 1)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.14, 0.1134, 0.1134, 0.5882353)
+shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvuet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0tnpc"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="Gradient" id="Gradient_0tnpc"]
+offsets = PackedFloat32Array(0, 0.2208589, 0.84662575, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vtaks"]
+gradient = SubResource("Gradient_0tnpc")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnb83"]
+bg_color = Color(0, 0, 0, 0.5882353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvpfn"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5newe"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.34476003, 0.72, 0.33840004, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37s47"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.10351929, 0.21718752, 0.10148949, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bt5mj"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.34509805, 0.72156864, 0.3372549, 0.5882353)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1j6l"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.101960786, 0.21568628, 0.101960786, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_264po"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.6703125, 0.0071793674, 0.09547941, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kice"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.19765627, 0.0023117722, 0.027741231, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl11u"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.67058825, 0.007843138, 0.09411765, 0.5882353)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhx41"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.19607843, 0.003921569, 0.02745098, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 10
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="Animation" id="Animation_ca42v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ir15t"]
+resource_name = "show"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rysoc"]
+_data = {
+&"RESET": SubResource("Animation_ca42v"),
+&"show": SubResource("Animation_ir15t")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca42v"]
+draw_center = false
+border_width_left = 2
+border_width_right = 2
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+expand_margin_left = 10.0
+expand_margin_top = 80.0
+expand_margin_right = 10.0
+expand_margin_bottom = 80.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lbhrr"]
+size = Vector2(100, 100)
+
+[sub_resource type="Gradient" id="Gradient_ca42v"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0.32993197, 1)
+colors = PackedColorArray(0.16559999, 0.1495, 0.23, 1, 0.26207998, 0.24080001, 0.56, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rysoc"]
+noise_type = 4
+frequency = 0.0221
+fractal_lacunarity = 2.52
+fractal_gain = 1.3
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ssvqc"]
+noise = SubResource("FastNoiseLite_rysoc")
+color_ramp = SubResource("Gradient_ca42v")
+seamless = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p57ef"]
+albedo_texture = SubResource("NoiseTexture2D_ssvqc")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="Gradient" id="Gradient_p57ef"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.5425532, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.49973413, 0.53253466, 0.8226563, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u5sy4"]
+gradient = SubResource("Gradient_p57ef")
+
+[sub_resource type="Gradient" id="Gradient_gee14"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0tnpc"]
+gradient = SubResource("Gradient_gee14")
+
+[sub_resource type="Curve" id="Curve_iywne"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_p57ef"]
+curve = SubResource("Curve_iywne")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p57ef"]
+lifetime_randomness = 0.3
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 20.0
+emission_ring_inner_radius = 15.0
+emission_ring_cone_angle = 90.0
+angle_min = -720.0
+angle_max = 720.0
+initial_velocity_min = -5.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 9.8)
+scale_min = 2.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_p57ef")
+color = Color(1, 1, 1, 0.2)
+color_ramp = SubResource("GradientTexture1D_0tnpc")
+color_initial_ramp = SubResource("GradientTexture1D_u5sy4")
+hue_variation_min = -0.100000024
+hue_variation_max = 0.09999997
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5sy4"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("5_iywne")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_gee14"]
+material = SubResource("StandardMaterial3D_u5sy4")
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_lbhrr")
+
+[node name="cardViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(5000, 2500)
+
+[node name="vbox" type="VBoxContainer" parent="cardViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1050.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="units" type="HBoxContainer" parent="cardViewport/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="offsites" type="HBoxContainer" parent="cardViewport/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="spells" type="HBoxContainer" parent="cardViewport/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="tokens" type="HBoxContainer" parent="cardViewport/vbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="mainHUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="shadow" type="Panel" parent="UI/mainHUD"]
+visible = false
+material = SubResource("CanvasItemMaterial_ca42v")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/mainHUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="opponentHUD" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="playerName" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD"]
+clip_contents = true
+layout_mode = 2
+text = "fissy"
+
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/playerName"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD"]
+layout_mode = 2
+
+[node name="opponentLife" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_dinhu")
+
+[node name="life2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/opponentLife"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_u5sy4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/opponentLife"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
+
+[node name="influenceIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("3_iywne")
+expand_mode = 1
+
+[node name="floatIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/influenceIcon"]
+visible = false
+modulate = Color(0.5431912, 0.7049651, 1, 1)
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 128.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("3_iywne")
+expand_mode = 1
+
+[node name="floatingLVL2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/influenceIcon/floatIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_gee14")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="totalLVL2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/influenceIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+theme_override_font_sizes/font_size = 48
+text = "1"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="playerHUD" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="playerName" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD"]
+clip_contents = true
+layout_mode = 2
+text = "dotspak"
+
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/playerName"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD"]
+layout_mode = 2
+
+[node name="lifeIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_dinhu")
+
+[node name="life" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/lifeIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_u5sy4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/lifeIcon"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
+
+[node name="influenceIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("3_iywne")
+expand_mode = 1
+
+[node name="floatIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/influenceIcon"]
+visible = false
+modulate = Color(0.5431912, 0.7049651, 1, 1)
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("3_iywne")
+expand_mode = 1
+
+[node name="floatingLVL" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/influenceIcon/floatIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_gee14")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="totalLVL" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/influenceIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+theme_override_font_sizes/font_size = 48
+text = "1"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="searchPanel" type="PanelContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Control" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel/MarginContainer/Control"]
+layout_mode = 1
+offset_right = 4520.0
+offset_bottom = 2104.0
+scale = Vector2(0.211, 0.211)
+columns = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="infoPanel" type="PanelContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kvuet")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="infoName" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0tnpc")
+bbcode_enabled = true
+text = "Monolith {force:2} - [color=red]LVL 3[/color]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+clip_children = 1
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_vtaks")
+
+[node name="infoArt" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gee14")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="infoType" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer/TextureRect"]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+offset_bottom = 29.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qnb83")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="infoKeyword" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Sealed"
+fit_content = true
+autowrap_mode = 2
+
+[node name="infoText" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kvpfn")
+bbcode_enabled = true
+text = "yoyoyo so what the heck is going on here anyways?I'm not quite sure what to think of all these shenanagins."
+fit_content = true
+autowrap_mode = 2
+
+[node name="infoSkill" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kvpfn")
+bbcode_enabled = true
+text = "yoyoyo so what the heck is going on here anyways?I'm not quite sure what to think of all these shenanagins."
+fit_content = true
+autowrap_mode = 2
+
+[node name="card" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="cardContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/card"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6, 0.6)
+alignment = 2
+
+[node name="monolith" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/card/cardContainer" instance=ExtResource("6_kvuet")]
+layout_mode = 2
+
+[node name="pullOutInfo" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel"]
+z_index = 2
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("5_0tnpc")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="pass" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="interactButtons" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="confirmButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/interactButtons"]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5newe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_37s47")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bt5mj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e1j6l")
+icon = ExtResource("12_264po")
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="cancelButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/interactButtons"]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_264po")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1kice")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pl11u")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bhx41")
+icon = ExtResource("13_1kice")
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="draw" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+visible = false
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Draw Card"
+
+[node name="passButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(256, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "Pass Turn"
+icon = ExtResource("12_rysoc")
+alignment = 2
+expand_icon = true
+
+[node name="turnCounter" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 32
+text = "Turn Count: 0"
+
+[node name="turnLabel" type="Label" parent="UI/mainHUD/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0.4667135, 0.684831, 1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "Your Turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/mainHUD/MarginContainer/turnLabel"]
+libraries = {
+&"": SubResource("AnimationLibrary_rysoc")
+}
+
+[node name="border" type="Panel" parent="UI/mainHUD/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
+metadata/_edit_lock_ = true
+
+[node name="guiPrompts" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="cardButtons" type="CenterContainer" parent="UI/guiPrompts"]
+unique_name_in_owner = true
+layout_mode = 1
+mouse_filter = 2
+use_top_left = true
+
+[node name="fader" type="ColorRect" parent="UI"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Table" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -2)
+mesh = SubResource("PlaneMesh_lbhrr")
+surface_material_override/0 = SubResource("StandardMaterial3D_p57ef")
+metadata/_edit_lock_ = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 0, 40)
+shadow_enabled = true
+shadow_opacity = 0.75
+shadow_blur = 6.15
+metadata/_edit_lock_ = true
+
+[node name="playerBoard" parent="." instance=ExtResource("1_lnu2h")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="opponentBoard" parent="." instance=ExtResource("1_lnu2h")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, -4, 0, 0)
+boardSide = 1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -2, -1, 20)
+projection = 1
+current = true
+size = 26.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.98480743, 0.17364812, 0, -0.17364812, 0.98480743, 0, 3.4777722, -14.829194)
+visible = false
+amount = 100
+lifetime = 2.0
+speed_scale = 0.5
+process_material = SubResource("ParticleProcessMaterial_p57ef")
+draw_pass_1 = SubResource("QuadMesh_gee14")
+
+[connection signal="pressed" from="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/pullOutInfo" to="." method="hide_info_box"]
+[connection signal="pressed" from="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/draw" to="playerBoard" method="draw_card"]
+[connection signal="cardSelected" from="playerBoard" to="." method="_on_player_card_selected"]
+[connection signal="floatingLVLChanged" from="playerBoard" to="." method="update_floatingLVl"]
+[connection signal="handCardSelected" from="playerBoard" to="." method="_on_player_board_hand_card_selected"]
+[connection signal="lifeChanged" from="playerBoard" to="." method="update_life"]
+[connection signal="lvlChanged" from="playerBoard" to="." method="update_lvl"]
+[connection signal="lifeChanged" from="opponentBoard" to="." method="_on_opponent_board_life_changed"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpu0jsbiny1je"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_mrhmf"]
+[ext_resource type="Texture2D" uid="uid://bfp23yjafhbes" path="res://assets/set1/rainDemon.png" id="2_3epkb"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_5qr0i"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_h0dn8"]
+
+[node name="rainDemon" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mrhmf")
+ID = "rainDemon"
+cardName = "Rain Demon"
+lvl = 2
+subtype = ["Monster"]
+text = ""
+skillName = "downpour"
+skillText = "Discard 2 cards from your hand: deal damage to a front row card in play equal to the lowest LVL of the cards discarded."
+art = ExtResource("2_3epkb")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_5qr0i")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_h0dn8")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cebwh0p3yx14p"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_s4kij"]
+[ext_resource type="Texture2D" uid="uid://dvt2mhv7m7vuc" path="res://assets/set1/arcaneEye.png" id="2_4k3oi"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_t2u17"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_e1d85"]
+
+[node name="arcaneEye" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s4kij")
+ID = "arcaneEye"
+type = 1
+cardName = "Arcane Eye"
+subtype = ["Celestial", "Object"]
+text = ""
+skillName = "peer"
+skillText = "Reveal the top card of your deck. If the card's LVL is greater or equal to your current LVL, you may set it. Otherwise, void it or send it to the bottom of your deck."
+art = ExtResource("2_4k3oi")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_t2u17")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_e1d85")

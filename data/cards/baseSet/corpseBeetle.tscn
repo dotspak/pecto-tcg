@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dotqblqh6k0"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_uj3oe"]
+[ext_resource type="Texture2D" uid="uid://bomn0t0wod8yd" path="res://assets/set1/corpseBeetle2.png" id="2_a8s7w"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_h5fde"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_gy12x"]
+
+[node name="corpseBeetle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uj3oe")
+ID = "corpseBeetle"
+cardName = "Corpse Beetle"
+force = 2
+lvl = 3
+subtype = ["Bug", "Monster"]
+text = "When Corpse Beetle enters your discard you may sacrifice a card you control."
+skillName = "Skinner"
+skillText = "Sacrifice a card you control: gain {force:2}."
+art = ExtResource("2_a8s7w")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_h5fde")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_gy12x")

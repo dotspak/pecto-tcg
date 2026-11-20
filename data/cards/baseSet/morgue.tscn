@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://h4awfpcs8ycb"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_4hmnu"]
+[ext_resource type="Texture2D" uid="uid://t25aa35ryklk" path="res://assets/set1/morgue.png" id="2_pp7e4"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_5m02r"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_2hm4g"]
+
+[node name="morgue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4hmnu")
+ID = "morgue"
+type = 1
+cardName = "Morgue"
+lvl = 2
+subtype = ["Ghost", "Structure"]
+keywords = ["static"]
+text = ""
+skillName = "Rediscover"
+skillText = "Shuffle your discard: add the top card of your discard pile to your hand."
+art = ExtResource("2_pp7e4")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_5m02r")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_2hm4g")

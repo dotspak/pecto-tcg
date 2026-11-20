@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpttq02a75twk"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_vtb87"]
+[ext_resource type="Texture2D" uid="uid://vruywdcd3alk" path="res://assets/set1/horror.png" id="2_720dt"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_mxkey"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_h8fto"]
+
+[node name="horrorFromAbove" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vtb87")
+ID = "horrorFromAbove"
+cardName = "Horror From Above"
+force = 0
+lvl = 4
+subtype = ["Dark", "Monster"]
+keywords = ["bleed", "doom"]
+text = "Horror From Above's {force:?} is equal to the number of times you've played it this turn times 2."
+art = ExtResource("2_720dt")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_mxkey")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_h8fto")

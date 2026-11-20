@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk5r5uwsfx28y"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_cqf8q"]
+[ext_resource type="Texture2D" uid="uid://gcjygm1tri1b" path="res://assets/set1/doorToNowhere.png" id="2_2wn4h"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_00jg3"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_mhhwy"]
+
+[node name="doorToNowhere" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cqf8q")
+ID = "doorToNowhere"
+type = 1
+cardName = "Door to Nowhere"
+force = 3
+lvl = 3
+subtype = ["Structure", "God"]
+keywords = ["static"]
+text = "When a non-token unit you control perishes, you may choose to send it to your discard, deck, void, or hand. If you return it to your hand, you cannot play it until you end a turn."
+art = ExtResource("2_2wn4h")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_00jg3")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_mhhwy")

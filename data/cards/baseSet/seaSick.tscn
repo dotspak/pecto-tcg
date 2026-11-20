@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnvm85n3fklkj"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_blygs"]
+[ext_resource type="Texture2D" uid="uid://b2bfagvlcfddj" path="res://assets/set1/seaSick.png" id="2_7u75b"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_leh6b"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_lyvlg"]
+
+[node name="seaSick" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_blygs")
+ID = "seaSick"
+type = 2
+cardName = "Sea Sick"
+force = 0
+lvl = 3
+keywords = ["instant"]
+text = "{trigger:cast} Target unit LVL 3 or less becomes a Fish {force:0}/{key:static} token."
+art = ExtResource("2_7u75b")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_leh6b")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_lyvlg")

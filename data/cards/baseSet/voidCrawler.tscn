@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://n6f4fmmbm5w4"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_r45vo"]
+[ext_resource type="Texture2D" uid="uid://6bgniltlfsjj" path="res://assets/set1/voidCrawler.png" id="2_p4chj"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_ndg3w"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_wflhh"]
+
+[node name="voidCrawler" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r45vo")
+ID = "voidCrawler"
+cardName = "Void Crawler"
+force = 2
+subtype = ["Celestial", "Bug"]
+text = "When Void Crawler enters your discard, you may use {skill:void talk}. For each card voided: deal 1 damage to target card your opponent controls."
+skillName = "void talk"
+skillText = "Void up to 1 card from your deck and up to 1 card from your hand."
+art = ExtResource("2_p4chj")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_ndg3w")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_wflhh")

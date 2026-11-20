@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvv8i5rpj1j5e"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5pgib"]
+[ext_resource type="Texture2D" uid="uid://d1tcio1f3gexh" path="res://assets/set1/carve.png" id="2_j7n7n"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_s2pcb"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_bxmn1"]
+
+[node name="carve" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5pgib")
+ID = "carve"
+type = 2
+cardName = "Carve"
+force = 0
+lvl = 2
+text = "{trigger:cast} Target card takes 2 damage and gains {key:bleed}."
+art = ExtResource("2_j7n7n")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_s2pcb")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_bxmn1")

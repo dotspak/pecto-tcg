@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5owa5o4cog28"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6yic7"]
+[ext_resource type="Texture2D" uid="uid://b6ym87drftc1i" path="res://assets/set1/soulLantern.png" id="2_7b8y6"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_70kjj"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_2cx4q"]
+
+[node name="soulLantern" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6yic7")
+ID = "soulLantern"
+cardName = "Soul Lantern"
+force = 0
+subtype = ["Magic", "Object"]
+text = "Whenever a non-token unit perishes, add a soul counter and attach the top card of your deck to Soul Lantern.
+{trigger:perish} Add attached cards to your hand."
+art = ExtResource("2_7b8y6")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_70kjj")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_2cx4q")

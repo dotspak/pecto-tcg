@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://0qt7x35ph0tn"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fi0d6"]
+[ext_resource type="Texture2D" uid="uid://cjvrwcqpd7fbi" path="res://assets/set1/shinyCrow.png" id="2_p4q1n"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_50vce"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_eb8do"]
+
+[node name="shinyCrow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fi0d6")
+ID = "shinyCrow"
+cardName = "Shiny Crow"
+force = 3
+lvl = 4
+subtype = ["Magic", "Crow"]
+keywords = ["effect"]
+text = "When a Crow enters your control, deal 1 damage to a target card your opponent controls."
+art = ExtResource("2_p4q1n")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_50vce")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_eb8do")

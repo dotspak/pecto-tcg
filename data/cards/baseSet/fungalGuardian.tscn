@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn6goblrs5lu5"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_uh1cg"]
+[ext_resource type="Texture2D" uid="uid://st3w3a50k1bp" path="res://assets/set1/fungalGuardian.png" id="2_xwlk8"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_ln601"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_oswpb"]
+
+[node name="fungalGuardian" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uh1cg")
+ID = "fungalGuardian"
+cardName = "Fungal Guardian"
+force = 2
+lvl = 2
+subtype = ["Plague", "Warrior"]
+keywords = ["warden"]
+text = "{trigger:perish} Cards your opponent controls gain {key:sick}."
+art = ExtResource("2_xwlk8")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_ln601")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_oswpb")

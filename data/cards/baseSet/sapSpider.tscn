@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbin5880rc6uw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_iy4p2"]
+[ext_resource type="Texture2D" uid="uid://b635d5got685e" path="res://assets/set1/sapSpider.png" id="2_wh28b"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_7er8r"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_efua1"]
+
+[node name="sapSpider" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iy4p2")
+ID = "sapSpider"
+cardName = "Sap Spider"
+force = 0
+lvl = 3
+subtype = ["Monster"]
+keywords = ["instant", "bleed"]
+text = ""
+skillName = "Sucker"
+skillText = "Sap Spider swaps {force:?} with target unit your opponent controls."
+art = ExtResource("2_wh28b")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_7er8r")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_efua1")

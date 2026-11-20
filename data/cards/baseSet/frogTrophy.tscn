@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://5lbiitfp7ama"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_glbu3"]
+[ext_resource type="Texture2D" uid="uid://yvhflc8nq0w8" path="res://assets/set1/frogTrophy.png" id="2_emwx2"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_xxyr6"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_qsl5q"]
+
+[node name="frogTrophy" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_glbu3")
+ID = "frogTrophy"
+type = 1
+cardName = "Frog Trophy"
+force = 3
+lvl = 3
+subtype = ["Frog", "Object"]
+keywords = ["instant"]
+text = "Does not deal damage when attacked. When Frog Trophy moves, target card gains {key:fragile} until Frog Trophy perishes."
+skillName = "wither"
+skillText = "Lose {force:1}: Cards with {key:fragile} take 1 damage."
+art = ExtResource("2_emwx2")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_xxyr6")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_qsl5q")

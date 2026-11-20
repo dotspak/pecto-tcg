@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxnbb3xr7lfor"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_blxhr"]
+[ext_resource type="Texture2D" uid="uid://cqjagdksplbuw" path="res://assets/set1/Wetaphemasis.png" id="2_k82x2"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_r1unu"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_53k13"]
+
+[node name="wetaphemesis" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_blxhr")
+ID = "wetaphemesis"
+cardName = "Wetaphemesis"
+force = 2
+lvl = 5
+subtype = ["Bug", "God"]
+keywords = ["bleed", "doom", "safe"]
+text = "Gain {force:2} when a Bug enters your discard."
+skillName = "Exoburial"
+skillText = "Return a Bug from your discard to your hand."
+isSkillContinuous = true
+art = ExtResource("2_k82x2")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_r1unu")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_53k13")

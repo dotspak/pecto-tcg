@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://by1fruuh6dbiw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_u2xl4"]
+[ext_resource type="Texture2D" uid="uid://dmd4ino28s6p8" path="res://assets/set1/rockThrow.png" id="2_7lrr5"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_1dqvo"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_8mbpo"]
+
+[node name="rockThrow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u2xl4")
+ID = "rockThrow"
+type = 2
+cardName = "Rock Throw"
+force = 0
+lvl = 3
+text = "When a Golem enters your discard, target unit you control gains {force:1}.
+{trigger:cast} You may discard any number of Golems in your hand or void any number of Golems in your discard. For each card discarded/voided this way, deal 3 damage to a target card or draw a card."
+art = ExtResource("2_7lrr5")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_1dqvo")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_8mbpo")

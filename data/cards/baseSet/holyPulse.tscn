@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://omcr4gtwrm1e"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_kwi7h"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="2_comhk"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="3_vbtkw"]
+
+[node name="holyPulse" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kwi7h")
+ID = "holyPulse"
+type = 2
+cardName = "Holy Pulse"
+force = 0
+lvl = 4
+text = "{trigger:cast} Draw cards equal to the number of immortal cards you control."
+skillName = "immortalize"
+skillText = "Target unit you control gains {key:immortal}."
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("2_comhk")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vbtkw")

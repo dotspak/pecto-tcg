@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1q1m6n2j746k"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_4p7fs"]
+[ext_resource type="Texture2D" uid="uid://cgux2enhwprs5" path="res://assets/set1/theMoon.png" id="2_x3a8r"]
+
+[node name="theMoon" type="Control"]
+custom_minimum_size = Vector2(750, 1050)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4p7fs")
+ID = "theMoon"
+cardName = "The Moon"
+force = 7
+lvl = 5
+subtype = ["God"]
+keywords = ["delayed", "bleed"]
+text = "{cost:As an additional cost, sacrifice a card you control.}"
+skillName = "Truth of The Moon"
+skillText = "Cards you control gain {key:immortal} until the start of your next turn."
+art = ExtResource("2_x3a8r")

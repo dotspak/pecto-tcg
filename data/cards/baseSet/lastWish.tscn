@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1lkch7a0lrdr"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ycw21"]
+[ext_resource type="Texture2D" uid="uid://ck6ptdy0mm2b2" path="res://assets/set1/lastWish.png" id="2_eo32k"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_c45b2"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_1qtws"]
+
+[node name="lastWish" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ycw21")
+ID = "lastWish"
+type = 2
+cardName = "Last Wish"
+force = 0
+lvl = 5
+text = "{trigger:enter} All players choose a card they control. Sacrifice any card not chosen. For the remaining cards, set their LVL to 1, then set both player's LVL to 1. Neither player can attack until the start of your next turn."
+art = ExtResource("2_eo32k")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_c45b2")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_1qtws")

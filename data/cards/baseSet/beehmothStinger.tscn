@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://mbkbdpgtwhxe"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8adqp"]
+[ext_resource type="Texture2D" uid="uid://cps2myhaykb7l" path="res://assets/set1/beehemothStinger.png" id="2_qtfs0"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_wkydh"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_3hfte"]
+
+[node name="beehmothStinger" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8adqp")
+ID = "beehmothStinger"
+type = 2
+cardName = "Beehmoth Stinger"
+force = 0
+lvl = 4
+keywords = ["effect"]
+text = "Effected card gains {force:1}. Gain {force:2} instead if the effected card is a bug."
+skillName = "War Cry"
+skillText = "Bugs you control gain {key:quick} until the end of the turn."
+art = ExtResource("2_qtfs0")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_wkydh")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_3hfte")

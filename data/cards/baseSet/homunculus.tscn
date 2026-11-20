@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj2ef6krxs16k"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_7rtfk"]
+[ext_resource type="Texture2D" uid="uid://dbb6kcypisnf" path="res://assets/set1/homunculus.png" id="2_ujoy0"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_b6y80"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_xjc4n"]
+
+[node name="homunculus" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7rtfk")
+ID = "homunculus"
+cardName = "Homunculus"
+force = 2
+lvl = 2
+subtype = ["Monster"]
+keywords = ["static"]
+text = "When you draw a card, add a matter counter to Homunculus."
+skillName = "Surge"
+skillText = "Remove a matter counter: Gain {force:1} or deal 1 damage to a target card."
+isSkillContinuous = true
+art = ExtResource("2_ujoy0")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_b6y80")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_xjc4n")

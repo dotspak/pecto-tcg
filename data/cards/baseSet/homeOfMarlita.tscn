@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1m5guxwq3uof"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_m5l0g"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="2_vrjl4"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="3_qlr7m"]
+
+[node name="homeOfMarlita" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m5l0g")
+ID = "homeOfMarlita"
+type = 1
+cardName = "Home of Marlita"
+subtype = ["Marlita", "Structure"]
+keywords = ["static"]
+text = ""
+skillName = "Welcome Home"
+skillText = "Sacrifice Home of Marlita: Recycle your deck, then search your deck for a Marlita Card."
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("2_vrjl4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_qlr7m")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d10dk0l83a2rg"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_u7qo5"]
+[ext_resource type="Texture2D" uid="uid://b04x168vwbv3f" path="res://assets/set1/phaseBeast.png" id="2_dvxd1"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_bjsk4"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_a37ei"]
+
+[node name="phaseBeast" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u7qo5")
+ID = "phaseBeast"
+cardName = "Phase Beast"
+force = 4
+lvl = 5
+subtype = ["Ghost", "Monster"]
+keywords = ["delayed", "bleed"]
+text = "If Phase Beast were to take damage, you may discard a card from your hand to ignore the damage dealt and take 1 damage instead. Phase Beast becomes inactive."
+art = ExtResource("2_dvxd1")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_bjsk4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_a37ei")

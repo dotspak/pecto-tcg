@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://4cw63v6x4gxq"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_x1u8o"]
+[ext_resource type="Texture2D" uid="uid://yy1fopegqorf" path="res://assets/set1/spookedGolem.png" id="2_vb7pv"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_31jvm"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_mjd17"]
+
+[node name="spookedGolem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x1u8o")
+ID = "spookedGolem"
+cardName = "Spooked Golem"
+lvl = 2
+subtype = ["Magic", "Golem"]
+text = "{trigger:enter} Shuffle a unit your opponent controls into their deck.
+{trigger:end} Shuffle Spooked Golem into your deck."
+skillName = "Magic Link"
+skillText = "Search your deck for a card with {skill:Magic Link} and reveal it, or set a card from your hand with {skill:Magic Link}."
+art = ExtResource("2_vb7pv")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_31jvm")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_mjd17")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0rqwoy0hhcs1"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_iro4k"]
+[ext_resource type="Texture2D" uid="uid://bp2mffsvmtkyc" path="res://assets/set1/comingOfMarlita.png" id="2_k30aw"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_e3ngh"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_itw61"]
+
+[node name="comingOfMarlita" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iro4k")
+ID = "comingOfMarlita"
+type = 2
+cardName = "Coming of Marlita"
+force = 0
+lvl = 3
+keywords = ["instant"]
+text = "{trigger:cast} Draw a card. If you control a Marlita, draw an additional card."
+art = ExtResource("2_k30aw")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_e3ngh")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_itw61")

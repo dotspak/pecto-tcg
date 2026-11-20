@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfbealx4gpncx"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3204s"]
+[ext_resource type="Texture2D" uid="uid://s2ukefk7je74" path="res://assets/set1/LesserCrow.png" id="2_3j2o7"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_itse5"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_qnd4q"]
+
+[node name="lesserCrow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3204s")
+ID = "lesserCrow"
+cardName = "Lesser Crow"
+force = 0
+subtype = ["Crow"]
+text = ""
+skillName = "Flock"
+skillText = "Search your deck for a Crow. Reveal it, then add it to your hand."
+art = ExtResource("2_3j2o7")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_itse5")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_qnd4q")

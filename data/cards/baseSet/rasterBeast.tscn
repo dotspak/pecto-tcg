@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://y7b6xpeipmmj"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_t67ec"]
+[ext_resource type="Texture2D" uid="uid://cjs8vdrvnuod2" path="res://assets/set1/rasterBeast.png" id="2_2ngr4"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_ml7cn"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_vqfhx"]
+
+[node name="rasterBeast" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t67ec")
+ID = "rasterBeast"
+cardName = "Raster Beast"
+force = 3
+lvl = 3
+subtype = ["Magic", "Monster"]
+keywords = ["warden"]
+text = "Whenever Raster Beast loses {force:?}, you may distribute the lost {force:?} among other cards you control in any way you want."
+art = ExtResource("2_2ngr4")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_ml7cn")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_vqfhx")

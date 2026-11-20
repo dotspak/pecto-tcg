@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkl00t3bd18mu"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_parfl"]
+[ext_resource type="Texture2D" uid="uid://bfht63k7euarr" path="res://assets/set1/chesireCat.png" id="2_ykvyx"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_wvf53"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_odq4j"]
+
+[node name="cheshireCat" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_parfl")
+ID = "cheshireCat"
+cardName = "Cheshire Cat"
+force = 2
+lvl = 3
+subtype = ["Magic", "Monster"]
+keywords = ["instant", "static"]
+text = ""
+skillName = "Evil Grin"
+skillText = "Choose a card type (cannot chose token). Discard cards from the top of your deck until you discard a card of the chosen type or your deck runs out of cards. Add the card of the chosen type to your hand."
+art = ExtResource("2_ykvyx")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_wvf53")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_odq4j")

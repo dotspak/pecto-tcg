@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd2ecqbdb0lve"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_j8fqb"]
+[ext_resource type="Texture2D" uid="uid://dug7uhn2n3d5" path="res://assets/set1/swarm.png" id="2_0nttg"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_w0qng"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_44c5h"]
+
+[node name="swarm" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j8fqb")
+ID = "swarm"
+type = 2
+cardName = "Swarm"
+force = 0
+lvl = 4
+text = "{trigger:cast} Return up to 3 units from your discard pile to your hand. You cannot play them this turn."
+art = ExtResource("2_0nttg")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_w0qng")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_44c5h")

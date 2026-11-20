@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjyqqmvwhsch6"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_aiswe"]
+[ext_resource type="Texture2D" uid="uid://kun5rp8472lm" path="res://assets/set1/arbiter.png" id="2_nibb5"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_t1xxy"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_s7vbt"]
+
+[node name="arbiter" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_aiswe")
+ID = "arbiter"
+cardName = "Arbiter"
+force = 2
+lvl = 2
+subtype = ["Object", "Monster"]
+keywords = ["quick"]
+text = "{trigger:victor} Add 1-3 Soul counters to Arbiter."
+skillName = "Self Search"
+skillText = "Search your deck for a card with LVL equal to the amount of soul counters on Arbiter. Reveal it, then add it to your hand."
+art = ExtResource("2_nibb5")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_t1xxy")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_s7vbt")

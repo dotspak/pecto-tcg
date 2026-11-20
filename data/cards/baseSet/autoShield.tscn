@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cra0l6185t1rv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_l6mty"]
+[ext_resource type="Texture2D" uid="uid://cu3kcs10qkxsx" path="res://assets/set1/barrierInsert.png" id="2_k7tdt"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_s5qoi"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_rcyej"]
+
+[node name="autoShield" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l6mty")
+ID = "autoShield"
+type = 2
+cardName = "Auto-Shield"
+force = 0
+keywords = ["effect"]
+text = "Effected card gains {key:immortal} during your turns."
+art = ExtResource("2_k7tdt")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_s5qoi")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_rcyej")

@@ -8,30 +8,34 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="PectoTCG"
-run/main_scene="uid://bltwifen2r4h2"
+config/name="PectoTCG(old)"
+config/tags=PackedStringArray("cards")
+run/main_scene="uid://b82p64sv3xjup"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="uid://dakp5lhwlip7n"
+config/icon="uid://coerrsomw6nu1"
+
+[autoload]
+
+GameManager="*res://src/global/game_manager.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/card_tools/plugin.cfg")
 
 [gui]
 
-theme/custom="uid://wudrn7vqs8yg"
-theme/custom_font="uid://rhkjenklfug8"
-
-[physics]
-
-3d/physics_engine="Jolt Physics"
-
-[rendering]
-
-rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+theme/custom="uid://dklws6or0v1o2"

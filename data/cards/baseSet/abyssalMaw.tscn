@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b00ysyuh8jj2n"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8rf2f"]
+[ext_resource type="Texture2D" uid="uid://cd6hnroc06q4k" path="res://assets/set1/abyssMouth.png" id="2_6hunw"]
+
+[sub_resource type="Gradient" id="Gradient_8rf2f"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.33828127, 0.11080234, 0.10726899, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6hunw"]
+gradient = SubResource("Gradient_8rf2f")
+
+[node name="abyssalMaw" type="Control"]
+custom_minimum_size = Vector2(750, 1050)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8rf2f")
+ID = "abyssalMaw"
+type = 1
+cardName = "Abyssal Maw"
+force = 0
+lvl = 3
+subtype = ["Structure", "God"]
+keywords = ["muted"]
+text = "{trigger:end} Attack a front row card an opponent controls or deal 2 damage to an opponent that controls no front row cards."
+skillName = "Feed The Maw"
+skillText = "Sacrifice a card you control: gain {force:3}."
+art = ExtResource("2_6hunw")
+bg = SubResource("GradientTexture1D_6hunw")
+shadowColor = Color(0, 0.45156252, 0.0017951378, 1)

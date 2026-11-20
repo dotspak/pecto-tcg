@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://4nw78v2nysg0"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5brvt"]
+[ext_resource type="Texture2D" uid="uid://p78ax0gtk33q" path="res://assets/set1/buildingBoudler.png" id="2_6xj5x"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_66qd2"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_hxpqw"]
+
+[node name="buildingBoulder" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5brvt")
+ID = "buildingBoulder"
+cardName = "Building Boulder"
+force = 2
+subtype = ["Golem"]
+keywords = ["effect", "warden"]
+text = "{trigger:end} You gain 1 LVL."
+art = ExtResource("2_6xj5x")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_66qd2")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_hxpqw")

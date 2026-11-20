@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://hyhgpu6ghcfl"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_r2g51"]
+[ext_resource type="Texture2D" uid="uid://bc60mxwqejv11" path="res://assets/set1/trickyOrb.png" id="2_xl2t5"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_g1nwk"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_y0f8b"]
+
+[node name="trickyOrb" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r2g51")
+ID = "trickyOrb"
+type = 1
+cardName = "Tricky Orb"
+force = 2
+lvl = 3
+subtype = ["Object"]
+keywords = ["warden"]
+text = "Whenever Tricky Orb moves, deal 1 damage to a back row card an opponent controls."
+art = ExtResource("2_xl2t5")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_g1nwk")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_y0f8b")

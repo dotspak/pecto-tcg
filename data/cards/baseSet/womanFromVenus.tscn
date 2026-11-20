@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf525vskvq7do"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_sraee"]
+[ext_resource type="Texture2D" uid="uid://dowq8pqlmcx1s" path="res://assets/set1/venusWoman.png" id="2_xxagf"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_8ch3h"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_c0sc5"]
+
+[node name="womanFromVenus" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sraee")
+ID = "womanFromVenus"
+cardName = "Woman from Venus"
+subtype = ["Celestial"]
+text = "Woman From Venus has {key:Quick} when attacking. If Woman From Venus were to enter your void, you may set it instead as {force:3}."
+art = ExtResource("2_xxagf")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_8ch3h")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_c0sc5")

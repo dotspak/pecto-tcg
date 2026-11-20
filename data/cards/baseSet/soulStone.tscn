@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5qw21pbhyw7l"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_wwr15"]
+[ext_resource type="Texture2D" uid="uid://cc6qgfi7bws70" path="res://assets/set1/soulStone2.png" id="2_ony0a"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_wpmjv"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_ltjvo"]
+
+[node name="soulStone" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wwr15")
+ID = "soulStone"
+type = 1
+cardName = "Soul Stone"
+force = 0
+subtype = ["Ghost", "Golem"]
+keywords = ["delayed"]
+text = "Whenever a card is cast, Soul Stone gains {force:1}."
+art = ExtResource("2_ony0a")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_wpmjv")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ltjvo")

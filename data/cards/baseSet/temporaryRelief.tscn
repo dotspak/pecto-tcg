@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://7edaq5errnjd"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_grl76"]
+[ext_resource type="Texture2D" uid="uid://ci75lh72epsur" path="res://assets/set1/temporaryRelief.png" id="2_74ewl"]
+[ext_resource type="PackedScene" uid="uid://c3kn87u2lnjlx" path="res://scenes/cardTemplates/card_visuals.tscn" id="3_rsc2v"]
+[ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="4_6724a"]
+
+[node name="temporaryRelief" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_grl76")
+ID = "temporaryRelief"
+type = 1
+cardName = "Temporary Relief"
+force = 0
+lvl = 3
+subtype = ["Plague", "Object"]
+keywords = ["static"]
+text = "If a card you control were to take sick damage, that card instead gains {force:1}."
+art = ExtResource("2_74ewl")
+
+[node name="cardVisuals" type="Control" parent="." instance=ExtResource("3_rsc2v")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_6724a")
