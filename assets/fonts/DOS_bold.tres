@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" format=3 uid="uid://dyc3a6ucgwv6p"]
+
+[ext_resource type="FontFile" uid="uid://e00osudo2hxd" path="res://assets/fonts/ModernDOS8x16.ttf" id="1_vnutb"]
+
+[resource]
+base_font = ExtResource("1_vnutb")
+variation_embolden = 0.8

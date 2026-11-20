@@ -10,12 +10,10 @@ anchors_preset = 0
 offset_right = 750.0
 offset_bottom = 1050.0
 script = ExtResource("1_y3ai7")
-cardName = "Creation From Nothing"
+cardName = "Cursed Orb"
 lvl = 0
 types = Array[String](["bug", "object"])
-keywords = Array[String](["bleed", "dingle"])
-text = "RITUAL: This is a ritual.
-ENTER: Enter trigger
-SEEK 3 for a Golem or Ghost."
-activationText = "SKILL: This is my crazy skill activation ceremony."
+keywords = Array[String](["bleed"])
+text = "BEGIN: If you control at least 2 cards named Ash Moth: Deal 1 damage to all opponents.}"
+activationText = "REUSE: Discard 1: clone Ash Moth without any text. Cannot be used as a response."
 art = ExtResource("2_1p4pg")

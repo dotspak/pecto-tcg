@@ -13,8 +13,10 @@ const DIVINERARE_ICON : Texture = preload("uid://d1kafd45aa4e")
 const FORCE_ICON_PATH: String = "res://assets/forceicon4.png"
 const PASSIVE_ICON_PATH: String = "res://assets/passiveIcon.png"
 
-const SKILL_COLOR : Color = Color("e44298")
-const FSKILL_COLOR : Color = Color("16a98fff")
+const GRAD_SKILL : GradientTexture2D = null
+const GRAD_SPELL : GradientTexture2D = null
+const GRAD_REUSE : GradientTexture2D = null
+const GRAD_ASSIST : GradientTexture2D = null
 
 const KEYWORD_COLOR : Color = Color.ORANGE
 
@@ -23,11 +25,25 @@ const LABEL_SKILL : String = "[color=#ffe4a8]★S[font_size=18]KILL [i](You may 
 const LABEL_SPELL : String = "[color=#c7c8ff]↯S[font_size=18]PELL [i](Discard this card from play at any time to activate this effect.)"
 const LABEL_REUSE : String = "[color=#f8d1ff]🗘R[font_size=18]EUSABLE [i](You may activate this effect if this card is ready.)"
 const LABEL_ASSIST : String = "[color=#ffe1e1]❤A[font_size=18]SSIST [i](Only activate this effect when expending this card to play a card.)"
-	
-var TEXT_TAGS : Dictionary = {
-	"trigger": {"color" : "orange", "icon" : "➥"},
-	"force" : {"color" : "e44298", "icon" : ""},
-	"key" : {"color" : KEYWORD_COLOR.to_html(), "icon" : ""}}
+
+# Activation Settings
+const ACTIVATION_SETTINGS = {
+	"SKILL" : {
+		"gradient" : "res://assets/activate_skillGrad.tres", 
+		"label" : "[color=#ffe4a8]★S[font_size=18]KILL [i](You may expend this ready card to activate this effect.)",},
+	"SPELL" : {
+		"gradient" : "res://assets/activate_spellGrad.tres", 
+		"label" : "[color=#c7c8ff]↯S[font_size=18]PELL [i](Discard this card from play at any time to activate this effect.)",
+	},
+	"REUSE" : {
+		"gradient" : "res://assets/activate_reuseGrad.tres", 
+		"label" : "[color=#f8d1ff]🗘R[font_size=18]EUSABLE [i](You may activate this effect if this card is ready.)",
+	},
+	"ASSIST" : {
+		"gradient" : "res://assets/activate_assistGrad.tres",
+		"label" : "[color=#ffe1e1]❤A[font_size=18]SSIST [i](Only activate this effect when expending this card to play a card.)",
+	}
+}
 
 #region Variables
 
@@ -68,7 +84,7 @@ var text : String = "Dummy text goes here!" :
 		if is_node_ready():
 			var parsed : String = parse_card_text(text)
 			%cardText.text = parsed
-			%textContainer.visible = parsed != ""
+			%cardText.visible = parsed != ""
 
 var activationText : String = "Dummy text goes here!" :
 	set(val):
@@ -127,14 +143,13 @@ func update_skill_box() -> void:
 	activation_regex.compile(r"^\s*([A-Z]+):[ \t]*")
 
 	var header := activation_regex.search(activationText)
-	if header == null: return
-
-	match header.get_string(1):
-		"SKILL": %activationLabel.text = LABEL_SKILL
-		"SPELL": %activationLabel.text = LABEL_SPELL
-		"REUSE": %activationLabel.text = LABEL_REUSE
-		"ASSIST": %activationLabel.text = LABEL_ASSIST
-		_: return
+	if header != null && ACTIVATION_SETTINGS.keys().has(header.get_string(1)):
+		%activationLabel.text = ACTIVATION_SETTINGS[header.get_string(1)]["label"]
+		var panel := %skillContainer.get_theme_stylebox("panel").duplicate() as StyleBoxTexture
+		panel.texture = load(ACTIVATION_SETTINGS[header.get_string(1)]["gradient"])
+		%skillContainer.add_theme_stylebox_override("panel", panel)
+	else: 
+		return
 
 	var effect_text := activationText.substr(header.get_end())
 	%cardSkill.text = parse_card_text(effect_text)
