@@ -1,18 +1,21 @@
-[gd_scene load_steps=39 format=3 uid="uid://c3kn87u2lnjlx"]
+[gd_scene format=3 uid="uid://c3kn87u2lnjlx"]
 
 [ext_resource type="Script" uid="uid://dbxnrbs17ldxf" path="res://scenes/cardTemplates/CardVisuals.gd" id="1_jgaw7"]
 [ext_resource type="Texture2D" uid="uid://b1f2r0svmhmej" path="res://assets/textTexture.png" id="2_c7xu5"]
 [ext_resource type="Texture2D" uid="uid://bgcxb5kcqfo72" path="res://assets/foilmaps/abstractWizard.png" id="3_l3iak"]
 [ext_resource type="Texture2D" uid="uid://cnynonhm320bh" path="res://assets/rainbowGrad.tres" id="4_284i8"]
-[ext_resource type="Shader" uid="uid://brh53fytjw03j" path="res://shader/blendModes.gdshader" id="5_1alqn"]
+[ext_resource type="Texture2D" uid="uid://hokfqkirtuk4" path="res://assets/art/set1/cursedOrb.png" id="5_l3iak"]
 [ext_resource type="FontFile" uid="uid://rhkjenklfug8" path="res://assets/fonts/AveriaLibre-Regular.ttf" id="6_ycqcm"]
 [ext_resource type="FontFile" uid="uid://1kd62leqiy8y" path="res://assets/fonts/AveriaLibre-Bold.ttf" id="7_j5mr0"]
 [ext_resource type="Script" uid="uid://daittco86fdj2" path="res://src/bbcode/triggerEffect.gd" id="8_6lhvh"]
-[ext_resource type="Texture2D" uid="uid://cdev3qnqbr6xp" path="res://assets/forceBG.png" id="9_ck8nc"]
-[ext_resource type="Texture2D" uid="uid://de5nr31l6262q" path="res://assets/unitIcon5.png" id="10_wrh1s"]
-[ext_resource type="Texture2D" uid="uid://bsidin4i266kj" path="res://assets/levelIcon.png" id="11_t4iac"]
-[ext_resource type="FontFile" uid="uid://d0fdt2wdmpnnu" path="res://assets/fonts/MedodicaRegular.otf" id="12_x0y4r"]
+[ext_resource type="Texture2D" uid="uid://bn262v2s4cdbl" path="res://assets/lvlIcon.png" id="11_284i8"]
+[ext_resource type="FontFile" uid="uid://e00osudo2hxd" path="res://assets/fonts/ModernDOS8x16.ttf" id="12_1alqn"]
+[ext_resource type="Texture2D" uid="uid://ump2f6eoto6o" path="res://assets/lvlGlow2.png" id="12_ycqcm"]
 [ext_resource type="Texture2D" uid="uid://dmhctqok0ncxr" path="res://assets/r_basic1.png" id="13_43hsm"]
+[ext_resource type="Texture2D" uid="uid://bl88fg4v5w5nc" path="res://assets/forceicon4.png" id="13_ycqcm"]
+[ext_resource type="Texture2D" uid="uid://dn8cpjwclxhnx" path="res://assets/typebanners/defbanner.png" id="14_j5mr0"]
+[ext_resource type="Texture2D" uid="uid://beyvk03vhyiu4" path="res://cardRef.png" id="15_j5mr0"]
+[ext_resource type="Texture2D" uid="uid://cuu133b04377x" path="res://assets/bloodDrip.png" id="16_6lhvh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3h312"]
 bg_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
@@ -84,39 +87,6 @@ shader_parameter/noise_speed = 2.8570001357075
 shader_parameter/shimmer_speed = 1.65600007866
 shader_parameter/shimmer_strength = 0.5350000254125
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_10mgu"]
-resource_local_to_scene = true
-shader = ExtResource("5_1alqn")
-shader_parameter/mode = 0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jv68f"]
-resource_local_to_scene = true
-bg_color = Color(0.6, 0.6, 0.6, 0)
-draw_center = false
-border_width_left = 50
-border_width_top = 50
-border_width_right = 50
-border_width_bottom = 50
-border_color = Color(0.43529412, 0.43529412, 0.43529412, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gidb"]
-draw_center = false
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-corner_detail = 12
-shadow_color = Color(0, 0, 0, 1)
-shadow_size = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ja440"]
-bg_color = Color(0, 0, 0, 0.5882353)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4cas"]
 content_margin_left = 10.0
 content_margin_right = 10.0
@@ -128,12 +98,12 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3ai7"]
 bg_color = Color(0, 0, 0, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-shadow_color = Color(0, 0, 0, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.5882353)
+shadow_color = Color(0, 0, 0, 0.39215687)
 shadow_size = 10
 shadow_offset = Vector2(4, 4)
 
@@ -150,25 +120,26 @@ fill_to = Vector2(1, 0.22649573)
 script = ExtResource("8_6lhvh")
 metadata/_custom_type_script = "uid://daittco86fdj2"
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jgaw7"]
+[sub_resource type="Gradient" id="Gradient_284i8"]
+colors = PackedColorArray(0.5803922, 0.17254902, 0.3882353, 1, 0.20784314, 0, 0.48235294, 0.6)
 
-[sub_resource type="Gradient" id="Gradient_ja440"]
-offsets = PackedFloat32Array(0, 0.8773006)
-colors = PackedColorArray(0.89411765, 0.8589644, 0.8562938, 1, 0.41960785, 0.27058825, 0.6117647, 0.6)
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ycqcm"]
+gradient = SubResource("Gradient_284i8")
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4ay7h"]
-gradient = SubResource("Gradient_ja440")
-fill_from = Vector2(0, 0.62393165)
-fill_to = Vector2(1, 0.22649573)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1alqn"]
+content_margin_top = 5.0
+texture = SubResource("GradientTexture1D_ycqcm")
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="Gradient" id="Gradient_y3ai7"]
-offsets = PackedFloat32Array(0.20973782, 0.7715356)
-colors = PackedColorArray(0.6431373, 0.27058825, 0.6, 1, 0.89, 0.89, 0.89, 1)
+colors = PackedColorArray(0, 0, 0, 0.78431374, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1t38k"]
 gradient = SubResource("Gradient_y3ai7")
-fill_from = Vector2(0.36324787, 1)
-fill_to = Vector2(0.7393162, 0.012820513)
+fill_from = Vector2(0, 0.47435898)
+fill_to = Vector2(1, 0.67094016)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ir3pi"]
 content_margin_left = 10.0
@@ -177,59 +148,73 @@ content_margin_right = 10.0
 content_margin_bottom = 0.0
 texture = SubResource("GradientTexture2D_1t38k")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10mgu"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7wmna"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3ai7"]
+font = ExtResource("12_1alqn")
+font_size = 72
+font_color = Color(0.91, 0.91, 0.91, 1)
+outline_size = 8
+outline_color = Color(0, 0.33333334, 0.7529412, 1)
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wmna"]
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycqcm"]
+font = ExtResource("12_1alqn")
+font_size = 20
+font_color = Color(0.91, 0.91, 0.91, 1)
+outline_size = 4
+outline_color = Color(0, 0.33191365, 0.7523438, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir3pi"]
 draw_center = false
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
-border_blend = true
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
 shadow_color = Color(0, 0, 0, 1)
-shadow_size = 4
-shadow_offset = Vector2(2, 2)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ay7h"]
-bg_color = Color(1, 0, 0.85604095, 1)
-draw_center = false
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0, 0, 0, 1)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir3pi"]
-draw_center = false
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-shadow_color = Color(0.14, 0.1134, 0.1134, 1)
 shadow_size = 10
+shadow_offset = Vector2(0, 2)
 
-[sub_resource type="Gradient" id="Gradient_0gidb"]
-colors = PackedColorArray(0.23921569, 0.23921569, 0.23921569, 1, 0.10980392, 0.10980392, 0.10980392, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ja440"]
+bg_color = Color(0, 0, 0, 0.5882353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_y3ai7"]
-gradient = SubResource("Gradient_0gidb")
-
-[sub_resource type="LabelSettings" id="LabelSettings_y3ai7"]
-font = ExtResource("12_x0y4r")
-font_size = 80
+[sub_resource type="LabelSettings" id="LabelSettings_6lhvh"]
+font = ExtResource("12_1alqn")
+font_size = 72
 font_color = Color(0.91, 0.91, 0.91, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.38515627, 0.024072267, 0, 1)
 shadow_size = 15
-shadow_color = Color(0.23485918, 0.74897057, 0.87058824, 0.60784316)
+shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(2, 2)
 
-[node name="cardVisuals" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_1alqn"]
+font = ExtResource("12_1alqn")
+font_size = 20
+font_color = Color(0.91, 0.91, 0.91, 1)
+outline_size = 4
+outline_color = Color(0.38515627, 0.024072267, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="cardVisuals" type="Control" unique_id=1798176646]
 custom_minimum_size = Vector2(750, 1050)
 layout_mode = 3
 anchor_right = 0.390625
@@ -239,21 +224,21 @@ size_flags_vertical = 4
 script = ExtResource("1_jgaw7")
 metadata/_edit_use_anchors_ = true
 
-[node name="cardShape" type="PanelContainer" parent="."]
+[node name="cardShape" type="PanelContainer" parent="." unique_id=1609093855]
 unique_name_in_owner = true
 clip_children = 2
-clip_contents = true
 custom_minimum_size = Vector2(750, 1050)
+clip_contents = true
 layout_mode = 0
 offset_right = 750.0
 offset_bottom = 1050.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3h312")
 
-[node name="cardBackground" type="TextureRect" parent="cardShape"]
+[node name="cardBackground" type="TextureRect" parent="cardShape" unique_id=1567508128]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="dots" type="TextureRect" parent="cardShape"]
+[node name="dots" type="TextureRect" parent="cardShape" unique_id=2123789797]
 modulate = Color(1, 1, 1, 0.11764706)
 material = SubResource("CanvasItemMaterial_y3ai7")
 layout_mode = 2
@@ -261,26 +246,13 @@ texture = ExtResource("2_c7xu5")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="visual" type="Control" parent="."]
+[node name="visual" type="Control" parent="cardShape" unique_id=658870406]
 z_index = 1
-clip_contents = true
 custom_minimum_size = Vector2(680, 980)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -340.0
-offset_top = -490.0
-offset_right = 340.0
-offset_bottom = 490.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+clip_contents = true
+layout_mode = 2
 
-[node name="cardArt" type="TextureRect" parent="visual"]
+[node name="cardArt" type="TextureRect" parent="cardShape/visual" unique_id=1578524648]
 unique_name_in_owner = true
 z_index = -1
 material = SubResource("ShaderMaterial_jlkag")
@@ -290,106 +262,63 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-expand_mode = 1
+texture = ExtResource("5_l3iak")
 
-[node name="shadow" type="Panel" parent="visual"]
-unique_name_in_owner = true
-material = SubResource("ShaderMaterial_10mgu")
+[node name="MarginContainer" type="MarginContainer" parent="cardShape/visual" unique_id=1383873082]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jv68f")
+size_flags_vertical = 10
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 45
 
-[node name="border" type="Panel" parent="visual"]
+[node name="bottomInfo" type="VBoxContainer" parent="cardShape/visual/MarginContainer" unique_id=746821493]
 unique_name_in_owner = true
-self_modulate = Color(0.72156864, 0.4117647, 0.6666667, 1)
-custom_minimum_size = Vector2(600, 900)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -445.0
-offset_right = 300.0
-offset_bottom = 451.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0gidb")
+layout_mode = 2
+size_flags_vertical = 8
 
-[node name="bottomInfo" type="Control" parent="visual/border"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="visual/border/bottomInfo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="text" type="VBoxContainer" parent="visual/border/bottomInfo/MarginContainer"]
+[node name="text" type="VBoxContainer" parent="cardShape/visual/MarginContainer/bottomInfo" unique_id=306980055]
 layout_mode = 2
 size_flags_vertical = 8
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="visual/border/bottomInfo/MarginContainer/text"]
+[node name="HBoxContainer" type="HBoxContainer" parent="cardShape/visual/MarginContainer/bottomInfo/text" unique_id=770551654]
 layout_mode = 2
 
-[node name="cardType" type="Label" parent="visual/border/bottomInfo/MarginContainer/text/HBoxContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_ja440")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="cardKeywords" type="RichTextLabel" parent="visual/border/bottomInfo/MarginContainer/text/HBoxContainer"]
+[node name="cardKeywords" type="RichTextLabel" parent="cardShape/visual/MarginContainer/bottomInfo/text/HBoxContainer" unique_id=1705540197]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 10
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/mono_font_size = 30
+size_flags_horizontal = 2
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_m4cas")
 bbcode_enabled = true
-text = "[i][color=ffa500ff]"
+text = "[i][color=ffa500ff]Leech"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 2
 
-[node name="textContainer" type="PanelContainer" parent="visual/border/bottomInfo/MarginContainer/text"]
+[node name="textContainer" type="PanelContainer" parent="cardShape/visual/MarginContainer/bottomInfo/text" unique_id=44154525]
 unique_name_in_owner = true
-self_modulate = Color(0.72156864, 0.4117647, 0.6666667, 1)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_y3ai7")
 
-[node name="bg" type="TextureRect" parent="visual/border/bottomInfo/MarginContainer/text/textContainer"]
+[node name="bg" type="TextureRect" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer" unique_id=464475779]
 modulate = Color(1, 1, 1, 0.8)
 show_behind_parent = true
 layout_mode = 2
 texture = SubResource("GradientTexture2D_0gidb")
 
-[node name="dots" type="TextureRect" parent="visual/border/bottomInfo/MarginContainer/text/textContainer"]
+[node name="dots" type="TextureRect" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer" unique_id=390742538]
 modulate = Color(1, 1, 1, 0.11764706)
 material = SubResource("CanvasItemMaterial_y3ai7")
 layout_mode = 2
@@ -397,82 +326,53 @@ texture = ExtResource("2_c7xu5")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="MarginContainer" type="MarginContainer" parent="visual/border/bottomInfo/MarginContainer/text/textContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer" unique_id=1125299871]
 layout_mode = 2
-theme_override_constants/margin_left = 5
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="visual/border/bottomInfo/MarginContainer/text/textContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer" unique_id=2077658816]
 layout_mode = 2
 
-[node name="cardText" type="RichTextLabel" parent="visual/border/bottomInfo/MarginContainer/text/textContainer/MarginContainer/VBoxContainer"]
+[node name="cardText" type="RichTextLabel" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer/VBoxContainer" unique_id=749740734]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("6_ycqcm")
 theme_override_fonts/bold_font = ExtResource("7_j5mr0")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/mono_font_size = 30
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
 text = "insert dummy text here!"
 fit_content = true
 vertical_alignment = 1
 custom_effects = [SubResource("RichTextEffect_ir3pi")]
 
-[node name="skillContainer" type="PanelContainer" parent="visual/border/bottomInfo/MarginContainer/text"]
+[node name="skillContainer" type="PanelContainer" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer/VBoxContainer" unique_id=1164443159]
 unique_name_in_owner = true
-visible = false
-self_modulate = Color(0.89411765, 0.25882354, 0.59607846, 1)
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_y3ai7")
+theme_override_styles/panel = SubResource("StyleBoxTexture_1alqn")
 
-[node name="dots" type="TextureRect" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer"]
-modulate = Color(1, 1, 1, 0.11764706)
-material = SubResource("CanvasItemMaterial_jgaw7")
+[node name="VBoxContainer" type="VBoxContainer" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer/VBoxContainer/skillContainer" unique_id=453472461]
 layout_mode = 2
-texture = ExtResource("2_c7xu5")
-expand_mode = 1
-stretch_mode = 6
 
-[node name="skillBG" type="TextureRect" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer"]
+[node name="skillName" type="RichTextLabel" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer/VBoxContainer/skillContainer/VBoxContainer" unique_id=742435565]
 unique_name_in_owner = true
-modulate = Color(0.89411765, 0.25882354, 0.59607846, 1)
-self_modulate = Color(2.454227, 2.454227, 2.454227, 1)
-show_behind_parent = true
-layout_mode = 2
-texture = SubResource("GradientTexture2D_4ay7h")
-
-[node name="MarginContainer" type="MarginContainer" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="VBoxContainer" type="VBoxContainer" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="skillName" type="RichTextLabel" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-visible = false
 clip_contents = false
 layout_mode = 2
-size_flags_horizontal = 0
 theme_override_colors/font_shadow_color = Color(0.13346595, 0.15180609, 0.30312502, 1)
 bbcode_enabled = true
-text = "[bgcolor=e44298ff]★DIPPY DOG[/bgcolor]"
+text = "[color=#ffe4a8]★S[font_size=18]KILL [i](Expend this ready card to activate this effect.)"
 fit_content = true
 autowrap_mode = 0
 
-[node name="grad" type="Panel" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer/MarginContainer/VBoxContainer/skillName"]
-visible = false
-modulate = Color(0.08627451, 0.6627451, 0.56078434, 1)
+[node name="grad" type="Panel" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer/VBoxContainer/skillContainer/VBoxContainer/skillName" unique_id=216727151]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -482,53 +382,98 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ir3pi")
 
-[node name="Panel" type="Panel" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer/MarginContainer/VBoxContainer/skillName"]
-visible = false
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_10mgu")
-
-[node name="cardSkill" type="RichTextLabel" parent="visual/border/bottomInfo/MarginContainer/text/skillContainer/MarginContainer/VBoxContainer"]
+[node name="cardSkill" type="RichTextLabel" parent="cardShape/visual/MarginContainer/bottomInfo/text/textContainer/MarginContainer/VBoxContainer/skillContainer/VBoxContainer" unique_id=1624189403]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("6_ycqcm")
 theme_override_fonts/bold_font = ExtResource("7_j5mr0")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
-text = "{skill:} "
+text = "insert dummy text here!"
 fit_content = true
 vertical_alignment = 1
 
-[node name="force" type="Panel" parent="visual/border/bottomInfo"]
+[node name="extraInfo" type="HBoxContainer" parent="cardShape/visual/MarginContainer/bottomInfo" unique_id=1146423143]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(96, 48)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -22.0
-offset_right = 48.0
-offset_bottom = 26.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_4ay7h")
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="visual/border/bottomInfo/force"]
+[node name="setnum" type="Label" parent="cardShape/visual/MarginContainer/bottomInfo/extraInfo" unique_id=1858226673]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Cole Smith-Evans 2026"
+
+[node name="rarity" type="TextureRect" parent="cardShape/visual/MarginContainer/bottomInfo/extraInfo" unique_id=1252896143]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("13_43hsm")
+expand_mode = 1
+
+[node name="topBar" type="HBoxContainer" parent="cardShape/visual" unique_id=805017639]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 50.0
+offset_top = 48.0
+offset_right = -51.0
+offset_bottom = 148.0
+grow_horizontal = 2
+
+[node name="lvlIcon" type="TextureRect" parent="cardShape/visual/topBar" unique_id=1243540564]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("11_284i8")
+expand_mode = 2
+
+[node name="lvlGlow" type="TextureRect" parent="cardShape/visual/topBar/lvlIcon" unique_id=1587112190]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_7wmna")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -78.0
+offset_right = 78.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_ycqcm")
+expand_mode = 1
+
+[node name="cardLVL" type="Label" parent="cardShape/visual/topBar/lvlIcon" unique_id=1521605827]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 21.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+label_settings = SubResource("LabelSettings_y3ai7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="shadow" type="Panel" parent="cardShape/visual/topBar/lvlIcon" unique_id=1238278723]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -536,75 +481,61 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("9_ck8nc")
-expand_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_7wmna")
 
-[node name="cardForce" type="Label" parent="visual/border/bottomInfo/force/TextureRect"]
-unique_name_in_owner = true
+[node name="label" type="Label" parent="cardShape/visual/topBar/lvlIcon" unique_id=1592215900]
 clip_contents = true
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -19.5
-offset_bottom = 19.5
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 48
-text = "0"
+text = "LEVEL"
+label_settings = SubResource("LabelSettings_ycqcm")
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="topBar" type="HBoxContainer" parent="visual"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 132)
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 64.0
-grow_horizontal = 2
-
-[node name="cardTypeIcon" type="TextureRect" parent="visual/topBar"]
-unique_name_in_owner = true
+[node name="info" type="VBoxContainer" parent="cardShape/visual/topBar" unique_id=1855803793]
+custom_minimum_size = Vector2(456, 100)
 layout_mode = 2
-texture = ExtResource("10_wrh1s")
-expand_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
 
-[node name="info" type="VBoxContainer" parent="visual/topBar"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-
-[node name="nameContainer" type="PanelContainer" parent="visual/topBar/info"]
+[node name="nameContainer" type="PanelContainer" parent="cardShape/visual/topBar/info" unique_id=2051526816]
 unique_name_in_owner = true
-self_modulate = Color(0.72156864, 0.4117647, 0.6666667, 1)
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_ir3pi")
 
-[node name="nameBackground" type="TextureRect" parent="visual/topBar/info/nameContainer"]
+[node name="nameBackground" type="TextureRect" parent="cardShape/visual/topBar/info/nameContainer" unique_id=256026190]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 2
-texture = SubResource("GradientTexture1D_y3ai7")
-expand_mode = 2
+texture = ExtResource("14_j5mr0")
+expand_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="visual/topBar/info/nameContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="cardShape/visual/topBar/info/nameContainer" unique_id=594433293]
 layout_mode = 2
 alignment = 1
 
-[node name="cardName" type="RichTextLabel" parent="visual/topBar/info/nameContainer/HBoxContainer"]
+[node name="cardName" type="RichTextLabel" parent="cardShape/visual/topBar/info/nameContainer/HBoxContainer" unique_id=1044894536]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 38
+theme_override_constants/shadow_outline_size = 8
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("12_1alqn")
+theme_override_fonts/bold_font = ExtResource("12_1alqn")
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "Dummy"
 fit_content = true
@@ -612,7 +543,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="dots" type="TextureRect" parent="visual/topBar/info/nameContainer"]
+[node name="dots" type="TextureRect" parent="cardShape/visual/topBar/info/nameContainer" unique_id=1181415075]
 modulate = Color(1, 1, 1, 0.11764706)
 material = SubResource("CanvasItemMaterial_y3ai7")
 clip_contents = true
@@ -621,53 +552,96 @@ texture = ExtResource("2_c7xu5")
 expand_mode = 3
 stretch_mode = 6
 
-[node name="lvlIcon" type="TextureRect" parent="visual/topBar"]
+[node name="cardType" type="Label" parent="cardShape/visual/topBar/info" unique_id=730835220]
 unique_name_in_owner = true
 layout_mode = 2
-texture = ExtResource("11_t4iac")
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ja440")
+text = "Dark/Object"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="forceIcon" type="TextureRect" parent="cardShape/visual/topBar" unique_id=1778099108]
+show_behind_parent = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("13_ycqcm")
 expand_mode = 2
 
-[node name="cardLVL" type="Label" parent="visual/topBar/lvlIcon"]
+[node name="cardForce" type="Label" parent="cardShape/visual/topBar/forceIcon" unique_id=1850140509]
 unique_name_in_owner = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 21.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+text = "3"
+label_settings = SubResource("LabelSettings_6lhvh")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="label" type="Label" parent="cardShape/visual/topBar/forceIcon" unique_id=898394030]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+text = "FORCE"
+label_settings = SubResource("LabelSettings_1alqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="cardShape/visual/topBar/forceIcon" unique_id=2147429715]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -84.0
+offset_top = 44.0
+offset_right = 160.0
+offset_bottom = 274.0
+texture = ExtResource("16_6lhvh")
+expand_mode = 1
+
+[node name="shadow" type="Panel" parent="cardShape/visual/topBar/forceIcon" unique_id=183683174]
+show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "1"
-label_settings = SubResource("LabelSettings_y3ai7")
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_7wmna")
 
-[node name="extraInfo" type="HBoxContainer" parent="visual"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -295.0
-offset_top = -48.0
-offset_right = 297.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 0
-alignment = 2
+[node name="borderCutout" type="Node2D" parent="cardShape" unique_id=181743269]
+modulate = Color(0, 0, 0, 1)
 
-[node name="setnum" type="Label" parent="visual/extraInfo"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 16
-text = "Cole Smith-Evans 1/220"
+[node name="Polygon2D2" type="Polygon2D" parent="cardShape/borderCutout" unique_id=1926145667]
+position = Vector2(711, 0)
+polygon = PackedVector2Array(0, 880, 39, 861, 39, 1050, 0, 1050)
 
-[node name="rarity" type="TextureRect" parent="visual/extraInfo"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-texture = ExtResource("13_43hsm")
-expand_mode = 1
+[node name="Polygon2D" type="Polygon2D" parent="cardShape/borderCutout" unique_id=1587182350]
+polygon = PackedVector2Array(0, 861, 39, 880, 39, 1050, 0, 1050)
+
+[node name="Polygon2D3" type="Polygon2D" parent="cardShape/borderCutout" unique_id=1566285749]
+polygon = PackedVector2Array(39, 1012, 39, 1050, 711, 1050, 711, 1012)
+
+[node name="CardRef" type="Sprite2D" parent="." unique_id=258255836]
+visible = false
+texture = ExtResource("15_j5mr0")
+centered = false
