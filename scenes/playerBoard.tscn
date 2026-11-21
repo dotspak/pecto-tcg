@@ -206,7 +206,7 @@ drag_strategy = SubResource("Resource_nx7c6")
 
 [node name="Deck" type="Node3D" parent="DragController" unique_id=1023903991]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2.25, 0)
 script = ExtResource("7_25awo")
 card_layout_strategy = SubResource("Resource_tttxe")
 drag_strategy = SubResource("Resource_ti0og")
@@ -225,7 +225,7 @@ _drop_zone_collision_shape_3d = NodePath("../DropZone/CollisionShape3D")
 
 [node name="Discard" type="Node3D" parent="DragController" unique_id=1761859373]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -6.25, 0)
 script = ExtResource("7_25awo")
 card_layout_strategy = SubResource("Resource_g72on")
 drag_strategy = SubResource("Resource_ti0og")
@@ -244,7 +244,7 @@ _drop_zone_collision_shape_3d = NodePath("../DropZone/CollisionShape3D")
 
 [node name="Void" type="Node3D" parent="DragController" unique_id=776762854]
 unique_name_in_owner = true
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7, -6, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2.25, -0.5)
 script = ExtResource("7_25awo")
 card_layout_strategy = SubResource("Resource_bg0yk")
 drag_strategy = SubResource("Resource_ti0og")
@@ -306,7 +306,7 @@ mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 
 [node name="deck" type="MeshInstance3D" parent="slotMeshes" unique_id=1713778581]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2.25, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_svpld")
@@ -321,14 +321,44 @@ text = "20"
 font_size = 196
 outline_size = 10
 
-[node name="void" type="MeshInstance3D" parent="slotMeshes" unique_id=1479328571]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -6, 0)
+[node name="discard" type="MeshInstance3D" parent="slotMeshes" unique_id=1479328571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -6.25, 0)
 mesh = SubResource("PlaneMesh_1i8jf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yt3ua")
 
-[node name="voidCount" type="Label3D" parent="slotMeshes/void" unique_id=432868349]
+[node name="voidCount" type="Label3D" parent="slotMeshes/discard" unique_id=432868349]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8131065, 0.5)
+visible = false
+billboard = 1
+modulate = Color(0, 0, 0, 1)
+text = "0"
+font_size = 196
+outline_size = 10
+
+[node name="void" type="MeshInstance3D" parent="slotMeshes" unique_id=1941149257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2.25, 0)
+mesh = SubResource("PlaneMesh_1i8jf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yt3ua")
+
+[node name="voidCount" type="Label3D" parent="slotMeshes/void" unique_id=1477358659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8131065, 0.5)
+visible = false
+billboard = 1
+modulate = Color(0, 0, 0, 1)
+text = "0"
+font_size = 196
+outline_size = 10
+
+[node name="extra" type="MeshInstance3D" parent="slotMeshes" unique_id=593655518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -6.25, 0)
+mesh = SubResource("PlaneMesh_1i8jf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yt3ua")
+
+[node name="voidCount" type="Label3D" parent="slotMeshes/extra" unique_id=1455565835]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8131065, 0.5)
 visible = false
 billboard = 1

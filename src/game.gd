@@ -32,7 +32,7 @@ var currentLvl : int = 1 :
 	set(val):
 		if val != currentLvl: animate_icon(lvlLabel)
 		currentLvl = clamp(val, 1, 99)
-		lvlLabel.text = str(currentLvl)
+		#lvlLabel.text = str(currentLvl)
 		
 
 var currentFloating : int = 0 :
