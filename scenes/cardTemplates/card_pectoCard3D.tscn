@@ -698,6 +698,14 @@ size_2d_override_stretch = true
 render_target_update_mode = 1
 
 [node name="PectoCard" parent="frontFace" index="0" unique_id=537563881 instance=ExtResource("6_828uu")]
+ID = ""
+cardName = "Dummy"
+force = 1
+lvl = 0
+types = Array[String]([])
+text = "insert dummy text here!"
+activationText = ""
+art = null
 
 [node name="backFace" type="SubViewport" parent="." index="3" unique_id=110852307]
 unique_name_in_owner = true

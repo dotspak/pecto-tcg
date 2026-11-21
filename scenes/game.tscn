@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4tsfi8b8vdnw" path="res://assets/art/set1/moo.png" id="4_gee14"]
 [ext_resource type="Texture2D" uid="uid://c8qk8km7h4a3b" path="res://assets/icon_pullOut.png" id="5_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://yv0ay28yfo7i" path="res://addons/kenney_particle_pack/magic_05.png" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://uqcqlr8xi5yc" path="res://scenes/cardTemplates/card_pectoCard.tscn" id="6_dinhu"]
 [ext_resource type="Texture2D" uid="uid://d02ta7h21ospj" path="res://assets/avatars/pfp_seasick.png" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://cbj46tvlq801k" path="res://assets/icon_confirm.png" id="12_264po"]
 [ext_resource type="Texture2D" uid="uid://c0ohl5etrs7l0" path="res://assets/icon_pass.png" id="12_rysoc"]
@@ -717,6 +718,17 @@ offset_bottom = 40.0
 scale = Vector2(0.6, 0.6)
 alignment = 2
 
+[node name="PectoCard" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/card/cardContainer" unique_id=537563881 instance=ExtResource("6_dinhu")]
+layout_mode = 2
+ID = ""
+cardName = "Dummy"
+force = 1
+lvl = 0
+types = Array[String]([])
+text = "insert dummy text here!"
+activationText = ""
+art = null
+
 [node name="pullOutInfo" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel" unique_id=2145960559]
 z_index = 2
 texture_filter = 1
@@ -879,8 +891,7 @@ boardSide = 1
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1604640208]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -2, -1, 20)
-projection = 1
+transform = Transform3D(1, 0, 0, 0, 0.9659259, -0.25881904, 0, 0.25881904, 0.9659259, -2, -5, 13)
 current = true
 size = 26.0
 

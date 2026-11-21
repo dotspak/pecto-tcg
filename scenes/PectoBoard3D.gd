@@ -59,9 +59,10 @@ signal targettingComplete
 
 func _process(_delta):
 	if !Engine.is_editor_hint():
-		%deckCount.text = str(deck.cards.size())
-		%discardCount.text = str(discard.cards.size())
-		%voidCount.text = str(cardVoid.cards.size())
+		#%deckCount.text = str(deck.cards.size())
+		#%discardCount.text = str(discard.cards.size())
+		#%voidCount.text = str(cardVoid.cards.size())
+		pass
 
 
 func start_game() -> void:

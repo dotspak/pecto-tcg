@@ -69,7 +69,6 @@ func _ready():
 	opponentPlayer.hand.drag_strategy.can_remove = false
 	opponentPlayer.hand.drag_strategy.can_insert = false
 
-
 	povPlayer.start_game()
 	await povPlayer.finishedSetup
 

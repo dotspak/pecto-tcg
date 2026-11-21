@@ -89,6 +89,8 @@ var cardVisuals : CardVisuals
 @export var cardLogicNode : Node
 @export var skill : Node
 
+signal cardUpdated
+
 signal enter(card : PectoCard)
 signal victor(card : PectoCard, target : Node)
 signal perish(card : PectoCard, condition : String)
@@ -293,6 +295,8 @@ func update_card_data(_updateScenePath : bool = false) -> void:
 	if FileAccess.file_exists("res://assets/art/set1/" + data["art"]):
 		art = load("res://assets/art/set1/" + data["art"])
 
+	cardUpdated.emit()
+
 
 func reset_card_data() -> void:
 	ID = ""
@@ -323,6 +327,8 @@ func update_card_visuals() -> void:
 
 	visuals.art = art
 	visuals.show()
+
+	cardUpdated.emit()
 
 #endregion
 

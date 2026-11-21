@@ -1,6 +1,7 @@
 extends Node
 
 const DB_PATH : String = "res://data/pectoDB.json"
+const CARD_SCENE : String = "res://scenes/cardTemplates/card_pectoCard.tscn"
 
 var gameScene : Game
 var playerBoards : Array[PectoBoard3D]
@@ -26,9 +27,7 @@ func save_DB() -> void:
 
 
 func fetch_card(cardID : String) -> PectoCard:
-	var card : PectoCard = null
-	if DB["cards"][cardID]:
-		var cardSet : String = DB["cards"][cardID]["set"]
-		var fileName : String = "res://data/cards/%s/%s.tscn"% [cardSet, cardID]
-		card = load(fileName).instantiate()
+	var card : PectoCard = load(CARD_SCENE).instantiate()
+	card.reset_card_data()
+	if DB["cards"][cardID]: PectoCard.get_card_data_by_id(card)
 	return card
