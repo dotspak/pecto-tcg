@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://div7g6bqp4a4k"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_rrmx7"]
+
+[node name="CheshireCat" type="Control" unique_id=774097425]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rrmx7")
+ID = "set1:037"
+cardName = "Cheshire Cat"

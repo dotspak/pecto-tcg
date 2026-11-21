@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://137u7jbn31cj"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_40hir"]
+
+[node name="GodlessVessel" type="Control" unique_id=1605422365]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_40hir")
+ID = "set1:223"
+cardName = "Godless Vessel"

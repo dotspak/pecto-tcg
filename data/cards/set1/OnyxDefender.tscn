@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wwx4cbj7gbov"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_62vvk"]
+
+[node name="OnyxDefender" type="Control" unique_id=664126638]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_62vvk")
+ID = "set1:168"
+cardName = "Onyx Defender"

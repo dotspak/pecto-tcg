@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0vv7edrnli7c"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_jxore"]
+
+[node name="Arbiter" type="Control" unique_id=1918332343]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jxore")
+ID = "set1:163"
+cardName = "Arbiter"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b0a8m44u7mvmo"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_v56tr"]
+
+[node name="NullandCreation" type="Control" unique_id=1447461497]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_v56tr")
+ID = "set1:153"
+cardName = "Null and Creation"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6l5da7sa43xs"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_vwyms"]
+
+[node name="WitheringShrine" type="Control" unique_id=1465841814]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vwyms")
+ID = "set1:176"
+cardName = "Withering Shrine"

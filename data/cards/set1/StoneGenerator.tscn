@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bx7fgqu105eak"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_shs65"]
+
+[node name="StoneGenerator" type="Control" unique_id=2102316928]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_shs65")
+ID = "set1:066"
+cardName = "Stone Generator"

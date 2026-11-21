@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b883ub7hvd4l7"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_m8nh7"]
+
+[node name="LivingHome" type="Control" unique_id=236332019]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m8nh7")
+ID = "set1:172"
+cardName = "Living Home"

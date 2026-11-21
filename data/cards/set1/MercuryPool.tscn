@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://drvfri1cvq84x"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_42bou"]
+
+[node name="MercuryPool" type="Control" unique_id=1792048309]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_42bou")
+ID = "set1:053"
+cardName = "Mercury Pool"

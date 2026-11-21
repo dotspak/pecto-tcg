@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cli524hudgkds"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fdscg"]
+
+[node name="Stingling" type="Control" unique_id=367500117]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fdscg")
+ID = "set1:185"
+cardName = "Stingling"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://fgcd2pp3occb"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_7s73y"]
+
+[node name="LastMass" type="Control" unique_id=412723541]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7s73y")
+ID = "set1:183"
+cardName = "Last Mass"

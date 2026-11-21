@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://do151vht18pys"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_22nnx"]
+
+[node name="Portal" type="Control" unique_id=215228913]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_22nnx")
+ID = "set1:169"
+cardName = "Portal"

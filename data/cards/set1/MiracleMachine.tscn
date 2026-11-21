@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://djto52wtvvun8"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ymps0"]
+
+[node name="MiracleMachine" type="Control" unique_id=1447973755]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ymps0")
+ID = "set1:132"
+cardName = "Miracle Machine"

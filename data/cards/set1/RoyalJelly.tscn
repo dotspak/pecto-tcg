@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://celcl3gaoiege"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_yqb02"]
+
+[node name="RoyalJelly" type="Control" unique_id=836187638]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yqb02")
+ID = "set1:047"
+cardName = "Royal Jelly"

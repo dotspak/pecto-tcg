@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://y5dqm22lrl30"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_up2qw"]
+
+[node name="Transmogrify" type="Control" unique_id=24527838]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_up2qw")
+ID = "set1:119"
+cardName = "Transmogrify"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://j6hgap3p85d1"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8h75h"]
+
+[node name="GluttonousGrouper" type="Control" unique_id=706626734]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8h75h")
+ID = "set1:114"
+cardName = "Gluttonous Grouper"

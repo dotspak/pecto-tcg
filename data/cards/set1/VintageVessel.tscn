@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cdycvx0x7lhx0"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6tr4w"]
+
+[node name="VintageVessel" type="Control" unique_id=2099605492]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6tr4w")
+ID = "set1:055"
+cardName = "Vintage Vessel"

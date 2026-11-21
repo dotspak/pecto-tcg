@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dl1p06koe6jvu"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_jiq07"]
+
+[node name="SunBox" type="Control" unique_id=1215867889]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jiq07")
+ID = "set1:198"
+cardName = "Sun Box"

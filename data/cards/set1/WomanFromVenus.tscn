@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://duppwyevpv3fe"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_0gmw0"]
+
+[node name="WomanFromVenus" type="Control" unique_id=216193916]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0gmw0")
+ID = "set1:068"
+cardName = "Woman From Venus"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c70r8oy6hb2p"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_i4nqg"]
+
+[node name="Hematem" type="Control" unique_id=364195333]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i4nqg")
+ID = "set1:093"
+cardName = "Hematem"

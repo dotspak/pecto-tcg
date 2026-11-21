@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://doeyo6tbo70yc"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_lv4b4"]
+
+[node name="MechanicalMessiah" type="Control" unique_id=926995868]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lv4b4")
+ID = "set1:224"
+cardName = "Mechanical Messiah"

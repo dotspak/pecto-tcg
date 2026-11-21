@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ftwqr8pmki34"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_hwu3g"]
+
+[node name="ForceMimic" type="Control" unique_id=1219530198]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hwu3g")
+ID = "set1:021"
+cardName = "Force Mimic"

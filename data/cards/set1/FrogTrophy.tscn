@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0v55akgcjin6"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_r718p"]
+
+[node name="FrogTrophy" type="Control" unique_id=1697519317]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r718p")
+ID = "set1:171"
+cardName = "Frog Trophy"

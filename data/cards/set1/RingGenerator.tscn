@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bx8qnnu11yh6h"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_7jhq4"]
+
+[node name="RingGenerator" type="Control" unique_id=1228915266]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7jhq4")
+ID = "set1:006"
+cardName = "Ring Generator"

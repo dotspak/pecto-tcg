@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dj2n65y4gnajr"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5615v"]
+
+[node name="SpecularGolem" type="Control" unique_id=1384701937]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5615v")
+ID = "set1:134"
+cardName = "Specular Golem"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://gifbjy5tp8ln"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_tccr6"]
+
+[node name="PaleMask" type="Control" unique_id=1235676365]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tccr6")
+ID = "set1:138"
+cardName = "Pale Mask"

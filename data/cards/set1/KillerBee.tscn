@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b883inuk3yyrh"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5lu7l"]
+
+[node name="KillerBee" type="Control" unique_id=1473892447]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5lu7l")
+ID = "set1:100"
+cardName = "Killer Bee"

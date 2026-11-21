@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" uid="uid://krrob1jjjfjs" path="res://src/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://do6yql4uw2cjr" path="res://scenes/playerBoard.tscn" id="1_lnu2h"]
-[ext_resource type="FontFile" uid="uid://fpqgiu5d1pkr" path="res://assets/fonts/Higher Jump.ttf" id="2_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://bsidin4i266kj" path="res://assets/levelIcon.png" id="3_iywne"]
+[ext_resource type="Texture2D" uid="uid://bl88fg4v5w5nc" path="res://assets/forceicon4.png" id="3_dinhu"]
+[ext_resource type="FontVariation" uid="uid://dyc3a6ucgwv6p" path="res://assets/fonts/DOS_bold.tres" id="3_trtic"]
 [ext_resource type="Texture2D" uid="uid://4tsfi8b8vdnw" path="res://assets/art/set1/moo.png" id="4_gee14"]
-[ext_resource type="FontFile" uid="uid://d0fdt2wdmpnnu" path="res://assets/fonts/MedodicaRegular.otf" id="4_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://c8qk8km7h4a3b" path="res://assets/icon_pullOut.png" id="5_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://cdev3qnqbr6xp" path="res://assets/forceBG.png" id="5_dinhu"]
 [ext_resource type="Texture2D" uid="uid://yv0ay28yfo7i" path="res://addons/kenney_particle_pack/magic_05.png" id="5_iywne"]
-[ext_resource type="PackedScene" uid="uid://d0oo3nh8tyxfh" path="res://data/cards/baseSet/monolith.tscn" id="6_kvuet"]
+[ext_resource type="Texture2D" uid="uid://d02ta7h21ospj" path="res://assets/avatars/pfp_seasick.png" id="7_ir15t"]
 [ext_resource type="Texture2D" uid="uid://cbj46tvlq801k" path="res://assets/icon_confirm.png" id="12_264po"]
 [ext_resource type="Texture2D" uid="uid://c0ohl5etrs7l0" path="res://assets/icon_pass.png" id="12_rysoc"]
 [ext_resource type="Texture2D" uid="uid://blkrus3hcauee" path="res://assets/icon_cancel.png" id="13_1kice"]
@@ -26,11 +24,11 @@ border_color = Color(0.43529412, 0.43529412, 0.43529412, 1)
 border_blend = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_u5sy4"]
-font = ExtResource("4_kvpfn")
-font_size = 96
+font = ExtResource("3_trtic")
+font_size = 72
 font_color = Color(0.91, 0.91, 0.91, 1)
 outline_size = 10
-outline_color = Color(0, 0, 0, 1)
+outline_color = Color(0.40392157, 0, 0, 1)
 shadow_size = 10
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(5, 5)
@@ -39,24 +37,6 @@ shadow_offset = Vector2(5, 5)
 shadow_color = Color(0, 0, 0, 1)
 shadow_size = 4
 shadow_offset = Vector2(2, 2)
-
-[sub_resource type="LabelSettings" id="LabelSettings_gee14"]
-font = ExtResource("2_lbhrr")
-font_size = 24
-font_color = Color(0.91, 0.91, 0.91, 1)
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
-shadow_color = Color(0.2010927, 0.5673567, 0.8666667, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
-font = ExtResource("4_kvpfn")
-font_size = 48
-font_color = Color(0.91, 0.91, 0.91, 1)
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 5
-shadow_color = Color(0.2010927, 0.5673567, 0.8666667, 1)
-shadow_offset = Vector2(3, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 content_margin_left = 10.0
@@ -394,15 +374,15 @@ particles_anim_loop = false
 [sub_resource type="QuadMesh" id="QuadMesh_gee14"]
 material = SubResource("StandardMaterial3D_u5sy4")
 
-[node name="Game" type="Node3D"]
+[node name="Game" type="Node3D" unique_id=179944189]
 script = ExtResource("1_lbhrr")
 
-[node name="cardViewport" type="SubViewport" parent="."]
+[node name="cardViewport" type="SubViewport" parent="." unique_id=649798511]
 disable_3d = true
 transparent_bg = true
 size = Vector2i(5000, 2500)
 
-[node name="vbox" type="VBoxContainer" parent="cardViewport"]
+[node name="vbox" type="VBoxContainer" parent="cardViewport" unique_id=376109748]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -414,26 +394,26 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="units" type="HBoxContainer" parent="cardViewport/vbox"]
+[node name="units" type="HBoxContainer" parent="cardViewport/vbox" unique_id=69154274]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="offsites" type="HBoxContainer" parent="cardViewport/vbox"]
+[node name="offsites" type="HBoxContainer" parent="cardViewport/vbox" unique_id=811871289]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="spells" type="HBoxContainer" parent="cardViewport/vbox"]
+[node name="spells" type="HBoxContainer" parent="cardViewport/vbox" unique_id=1412385904]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="tokens" type="HBoxContainer" parent="cardViewport/vbox"]
+[node name="tokens" type="HBoxContainer" parent="cardViewport/vbox" unique_id=301197871]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1669553091]
 layer = 100
 
-[node name="mainHUD" type="Control" parent="UI"]
+[node name="mainHUD" type="Control" parent="UI" unique_id=26703471]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -442,7 +422,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="shadow" type="Panel" parent="UI/mainHUD"]
+[node name="shadow" type="Panel" parent="UI/mainHUD" unique_id=1903347101]
 visible = false
 material = SubResource("CanvasItemMaterial_ca42v")
 layout_mode = 1
@@ -455,7 +435,7 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 metadata/_edit_lock_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/mainHUD"]
+[node name="MarginContainer" type="MarginContainer" parent="UI/mainHUD" unique_id=1011430839]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -467,27 +447,27 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer" unique_id=404329921]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer" unique_id=170476701]
 layout_mode = 2
 size_flags_horizontal = 0
 alignment = 1
 
-[node name="opponentHUD" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="opponentHUD" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1835078543]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="playerName" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD"]
+[node name="playerName" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD" unique_id=2134785172]
 clip_contents = true
 layout_mode = 2
 text = "fissy"
 
-[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/playerName"]
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/playerName" unique_id=325403287]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -496,21 +476,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD" unique_id=224955362]
 layout_mode = 2
 
-[node name="opponentLife" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer"]
+[node name="avatar" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer" unique_id=218735148]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("5_dinhu")
+size_flags_vertical = 4
+texture = ExtResource("7_ir15t")
+expand_mode = 1
 
-[node name="life2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/opponentLife"]
+[node name="opponentLife" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer" unique_id=1675723709]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_dinhu")
+expand_mode = 1
+
+[node name="life2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/opponentLife" unique_id=704048896]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "10"
@@ -518,7 +508,7 @@ label_settings = SubResource("LabelSettings_u5sy4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/opponentLife"]
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/opponentLife" unique_id=1471217711]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -528,71 +518,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
 
-[node name="influenceIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer"]
-custom_minimum_size = Vector2(96, 96)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture = ExtResource("3_iywne")
-expand_mode = 1
-
-[node name="floatIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/influenceIcon"]
-visible = false
-modulate = Color(0.5431912, 0.7049651, 1, 1)
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -128.0
-offset_bottom = 128.0
-grow_horizontal = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-texture = ExtResource("3_iywne")
-expand_mode = 1
-
-[node name="floatingLVL2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/influenceIcon/floatIcon"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "0"
-label_settings = SubResource("LabelSettings_gee14")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="totalLVL2" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/opponentHUD/HBoxContainer/influenceIcon"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-theme_override_font_sizes/font_size = 48
-text = "1"
-label_settings = SubResource("LabelSettings_0tnpc")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="playerHUD" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="playerHUD" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=43665551]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 theme_override_constants/separation = 0
 alignment = 2
 
-[node name="playerName" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD"]
+[node name="playerName" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD" unique_id=315776683]
 clip_contents = true
 layout_mode = 2
 text = "dotspak"
 
-[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/playerName"]
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/playerName" unique_id=1199014614]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -601,21 +539,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD" unique_id=1522071870]
 layout_mode = 2
 
-[node name="lifeIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer"]
+[node name="avatar" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer" unique_id=432273902]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("5_dinhu")
+size_flags_vertical = 4
+texture = ExtResource("7_ir15t")
+expand_mode = 1
 
-[node name="life" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/lifeIcon"]
+[node name="lifeIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer" unique_id=2032150493]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_dinhu")
+expand_mode = 1
+
+[node name="life" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/lifeIcon" unique_id=1081754596]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "10"
@@ -623,7 +571,7 @@ label_settings = SubResource("LabelSettings_u5sy4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/lifeIcon"]
+[node name="Panel" type="Panel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/lifeIcon" unique_id=1570732785]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -633,67 +581,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
 
-[node name="influenceIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer"]
-custom_minimum_size = Vector2(96, 96)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture = ExtResource("3_iywne")
-expand_mode = 1
-
-[node name="floatIcon" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/influenceIcon"]
-visible = false
-modulate = Color(0.5431912, 0.7049651, 1, 1)
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -128.0
-grow_horizontal = 0
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-texture = ExtResource("3_iywne")
-expand_mode = 1
-
-[node name="floatingLVL" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/influenceIcon/floatIcon"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "0"
-label_settings = SubResource("LabelSettings_gee14")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="totalLVL" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer2/playerHUD/HBoxContainer/influenceIcon"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-theme_override_font_sizes/font_size = 48
-text = "1"
-label_settings = SubResource("LabelSettings_0tnpc")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Control" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer" unique_id=812352810]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 
-[node name="searchPanel" type="PanelContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control"]
+[node name="searchPanel" type="PanelContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control" unique_id=1666548309]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -705,29 +598,29 @@ size_flags_horizontal = 3
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel"]
+[node name="MarginContainer" type="MarginContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel" unique_id=1553959230]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Control" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel/MarginContainer"]
+[node name="Control" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel/MarginContainer" unique_id=1019974716]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel/MarginContainer/Control"]
+[node name="GridContainer" type="GridContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/Control/searchPanel/MarginContainer/Control" unique_id=304906438]
 layout_mode = 1
 offset_right = 4520.0
 offset_bottom = 2104.0
 scale = Vector2(0.211, 0.211)
 columns = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer" unique_id=317372492]
 custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="infoPanel" type="PanelContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="infoPanel" type="PanelContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1078628883]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
@@ -735,12 +628,12 @@ size_flags_horizontal = 8
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_kvuet")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel" unique_id=1367008242]
 visible = false
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="infoName" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+[node name="infoName" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer" unique_id=1962431042]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0tnpc")
@@ -750,16 +643,16 @@ fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer" unique_id=612520413]
 clip_children = 1
 custom_minimum_size = Vector2(0, 350)
 layout_mode = 2
 texture = SubResource("GradientTexture2D_vtaks")
 
-[node name="infoArt" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer/TextureRect"]
+[node name="infoArt" type="TextureRect" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer/TextureRect" unique_id=2142950391]
 unique_name_in_owner = true
-clip_contents = true
 custom_minimum_size = Vector2(0, 350)
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -770,7 +663,7 @@ texture = ExtResource("4_gee14")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="infoType" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer/TextureRect"]
+[node name="infoType" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer/TextureRect" unique_id=186419749]
 unique_name_in_owner = true
 z_index = 1
 layout_mode = 1
@@ -786,7 +679,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_qnb83")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="infoKeyword" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+[node name="infoKeyword" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer" unique_id=2127313747]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
@@ -794,7 +687,7 @@ text = "Sealed"
 fit_content = true
 autowrap_mode = 2
 
-[node name="infoText" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+[node name="infoText" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer" unique_id=1895199210]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_kvpfn")
@@ -803,7 +696,7 @@ text = "yoyoyo so what the heck is going on here anyways?I'm not quite sure what
 fit_content = true
 autowrap_mode = 2
 
-[node name="infoSkill" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer"]
+[node name="infoSkill" type="RichTextLabel" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/VBoxContainer" unique_id=1047479088]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_kvpfn")
@@ -812,11 +705,11 @@ text = "yoyoyo so what the heck is going on here anyways?I'm not quite sure what
 fit_content = true
 autowrap_mode = 2
 
-[node name="card" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel"]
+[node name="card" type="Control" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel" unique_id=1891389212]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="cardContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/card"]
+[node name="cardContainer" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/card" unique_id=593558942]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
@@ -824,10 +717,7 @@ offset_bottom = 40.0
 scale = Vector2(0.6, 0.6)
 alignment = 2
 
-[node name="monolith" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel/card/cardContainer" instance=ExtResource("6_kvuet")]
-layout_mode = 2
-
-[node name="pullOutInfo" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel"]
+[node name="pullOutInfo" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/infoPanel" unique_id=2145960559]
 z_index = 2
 texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
@@ -839,7 +729,7 @@ icon_alignment = 1
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="pass" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="pass" type="VBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer" unique_id=172570295]
 custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -847,7 +737,7 @@ size_flags_vertical = 10
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="interactButtons" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+[node name="interactButtons" type="HBoxContainer" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass" unique_id=677753449]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -856,7 +746,7 @@ size_flags_vertical = 8
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="confirmButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/interactButtons"]
+[node name="confirmButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/interactButtons" unique_id=470369173]
 unique_name_in_owner = true
 texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
@@ -872,7 +762,7 @@ alignment = 2
 icon_alignment = 1
 expand_icon = true
 
-[node name="cancelButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/interactButtons"]
+[node name="cancelButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass/interactButtons" unique_id=955740015]
 unique_name_in_owner = true
 texture_filter = 1
 custom_minimum_size = Vector2(80, 80)
@@ -888,14 +778,14 @@ alignment = 2
 icon_alignment = 1
 expand_icon = true
 
-[node name="draw" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+[node name="draw" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass" unique_id=1487503754]
 visible = false
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Draw Card"
 
-[node name="passButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+[node name="passButton" type="Button" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass" unique_id=1984876004]
 unique_name_in_owner = true
 texture_filter = 1
 custom_minimum_size = Vector2(256, 80)
@@ -908,7 +798,7 @@ icon = ExtResource("12_rysoc")
 alignment = 2
 expand_icon = true
 
-[node name="turnCounter" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass"]
+[node name="turnCounter" type="Label" parent="UI/mainHUD/MarginContainer/HBoxContainer/VBoxContainer/pass" unique_id=322519124]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -916,7 +806,7 @@ size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 32
 text = "Turn Count: 0"
 
-[node name="turnLabel" type="Label" parent="UI/mainHUD/MarginContainer"]
+[node name="turnLabel" type="Label" parent="UI/mainHUD/MarginContainer" unique_id=38939954]
 unique_name_in_owner = true
 visible = false
 modulate = Color(0.4667135, 0.684831, 1, 1)
@@ -926,12 +816,10 @@ text = "Your Turn"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/mainHUD/MarginContainer/turnLabel"]
-libraries = {
-&"": SubResource("AnimationLibrary_rysoc")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/mainHUD/MarginContainer/turnLabel" unique_id=88828450]
+libraries/ = SubResource("AnimationLibrary_rysoc")
 
-[node name="border" type="Panel" parent="UI/mainHUD/MarginContainer"]
+[node name="border" type="Panel" parent="UI/mainHUD/MarginContainer" unique_id=1259411501]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -939,7 +827,7 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 metadata/_edit_lock_ = true
 
-[node name="guiPrompts" type="Control" parent="UI"]
+[node name="guiPrompts" type="Control" parent="UI" unique_id=1516946712]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -949,13 +837,13 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
 
-[node name="cardButtons" type="CenterContainer" parent="UI/guiPrompts"]
+[node name="cardButtons" type="CenterContainer" parent="UI/guiPrompts" unique_id=1136194719]
 unique_name_in_owner = true
 layout_mode = 1
 mouse_filter = 2
 use_top_left = true
 
-[node name="fader" type="ColorRect" parent="UI"]
+[node name="fader" type="ColorRect" parent="UI" unique_id=780953564]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
@@ -967,36 +855,36 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="Table" type="MeshInstance3D" parent="."]
+[node name="Table" type="MeshInstance3D" parent="." unique_id=1948398067]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -2)
 mesh = SubResource("PlaneMesh_lbhrr")
 surface_material_override/0 = SubResource("StandardMaterial3D_p57ef")
 metadata/_edit_lock_ = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=604511938]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 0, 40)
 shadow_enabled = true
 shadow_opacity = 0.75
 shadow_blur = 6.15
 metadata/_edit_lock_ = true
 
-[node name="playerBoard" parent="." instance=ExtResource("1_lnu2h")]
+[node name="playerBoard" parent="." unique_id=2114163275 instance=ExtResource("1_lnu2h")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
-[node name="opponentBoard" parent="." instance=ExtResource("1_lnu2h")]
+[node name="opponentBoard" parent="." unique_id=2046690267 instance=ExtResource("1_lnu2h")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, 1, -4, 0, 0)
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -3, 0, 0)
 boardSide = 1
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1604640208]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -2, -1, 20)
 projection = 1
 current = true
 size = 26.0
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="Camera3D"]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Camera3D" unique_id=863605188]
 transform = Transform3D(1, 0, 0, 0, 0.98480743, 0.17364812, 0, -0.17364812, 0.98480743, 0, 3.4777722, -14.829194)
 visible = false
 amount = 100

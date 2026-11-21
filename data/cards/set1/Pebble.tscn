@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cxkc1j3h3edrk"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_a0spt"]
+
+[node name="Pebble" type="Control" unique_id=773179776]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a0spt")
+ID = "set1:004"
+cardName = "Pebble"

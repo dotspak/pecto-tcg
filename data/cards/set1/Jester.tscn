@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://l2wmpi122kup"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_a34my"]
+
+[node name="Jester" type="Control" unique_id=1465921164]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a34my")
+ID = "set1:096"
+cardName = "Jester"

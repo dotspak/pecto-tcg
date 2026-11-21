@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ldto64pob4bo"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5as1d"]
+
+[node name="GreenImp" type="Control" unique_id=1519018852]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5as1d")
+ID = "set1:084"
+cardName = "Green Imp"

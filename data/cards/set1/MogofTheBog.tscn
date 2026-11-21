@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://lu8pgpnuj7yf"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_klq7s"]
+
+[node name="MogofTheBog" type="Control" unique_id=1967964395]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_klq7s")
+ID = "set1:142"
+cardName = "Mog of The Bog"

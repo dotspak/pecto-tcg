@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cqmbheyvgcfda"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8vjll"]
+
+[node name="JackintheBox" type="Control" unique_id=777893309]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8vjll")
+ID = "set1:156"
+cardName = "Jack in the Box"

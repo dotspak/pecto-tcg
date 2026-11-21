@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://don7r2v5ly84m"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ql312"]
+
+[node name="ClaustrophobiaDemon" type="Control" unique_id=2084607273]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ql312")
+ID = "set1:135"
+cardName = "Claustrophobia Demon"

@@ -41,7 +41,7 @@ const ACTIVATION_SETTINGS = {
 	},
 	"ASSIST" : {
 		"gradient" : "res://assets/activate_assistGrad.tres",
-		"label" : "[color=#ffe1e1]❤A[font_size=18]SSIST [i](Only activate this effect when expending this card to play a card.)",
+		"label" : "[color=#ffe1e1]♥A[font_size=18]SSIST [i](Only activate this effect when expending this card to play a card.)",
 	}
 }
 

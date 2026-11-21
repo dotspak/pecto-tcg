@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b0psuslbxktcp"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_d0pby"]
+
+[node name="SmugOrb" type="Control" unique_id=762930205]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d0pby")
+ID = "set1:017"
+cardName = "Smug Orb"

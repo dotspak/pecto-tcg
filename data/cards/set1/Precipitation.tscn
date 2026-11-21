@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cu5wlrq22oj66"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6wmhu"]
+
+[node name="Precipitation" type="Control" unique_id=429311954]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6wmhu")
+ID = "set1:116"
+cardName = "Precipitation"

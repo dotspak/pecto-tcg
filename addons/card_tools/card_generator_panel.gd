@@ -26,6 +26,8 @@ func _on_generate_pressed():
         return
     
     var matchingCards = []
+    
+    ## cardID = set1:00X
     for cardID : String in cardData.keys():
         if cardData[cardID]["set"] == setName:
             matchingCards.append(cardID)
@@ -57,23 +59,24 @@ func _load_json() -> Dictionary:
 
 
 func _create_scene(ID : String, data : Dictionary, folder : String) -> void:
-    var savePath = "%s/%s.tscn" % [folder, ID]
+    var cardName : String = data["name"].replace(" ", "")
+    var savePath = "%s/%s.tscn" % [folder, cardName]
     var card : PectoCard
 
     # find the card if it exists, create a new one if not
     if FileAccess.file_exists(savePath):
         if skipButton.pressed: return
         card = load(savePath).instantiate()
-        _log("Updating %s (existing scene)" % ID)
+        _log("Updating %s (existing scene)" % cardName)
     else:
         card = PectoCard.new()
-        _log("Creating new card: %s" % ID)
+        _log("Creating new card: %s" % cardName)
 
     # load the card data
     card.db = DB
     card.data = data
     card.ID = ID
-    card.name = ID
+    card.name = cardName
 
     if "update_card_data" in card: card.update_card_data(false)
     else: _log("Base Scene missing update_card_data()")

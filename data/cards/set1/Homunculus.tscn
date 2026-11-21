@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://nn3uw4f5emhy"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_xudcw"]
+
+[node name="Homunculus" type="Control" unique_id=709715638]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xudcw")
+ID = "set1:147"
+cardName = "Homunculus"

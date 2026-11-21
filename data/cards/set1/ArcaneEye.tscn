@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0brlugl0otcg"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_gd2mp"]
+
+[node name="ArcaneEye" type="Control" unique_id=1664125650]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gd2mp")
+ID = "set1:061"
+cardName = "Arcane Eye"

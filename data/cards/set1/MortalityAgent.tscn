@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ypg58bxilwtu"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_p2frs"]
+
+[node name="MortalityAgent" type="Control" unique_id=547152971]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_p2frs")
+ID = "set1:022"
+cardName = "Mortality Agent"

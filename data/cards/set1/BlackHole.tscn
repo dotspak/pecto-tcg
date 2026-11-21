@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dv605h5g1tdmt"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_668rj"]
+
+[node name="BlackHole" type="Control" unique_id=2012365384]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_668rj")
+ID = "set1:206"
+cardName = "Black Hole"

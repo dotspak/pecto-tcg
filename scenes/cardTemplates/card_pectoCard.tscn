@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uqcqlr8xi5yc"]
 
 [ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_y3ai7"]
-[ext_resource type="Texture2D" uid="uid://c5mpr0gs53fah" path="res://assets/art/set1/ashMoth2.png" id="2_1p4pg"]
+[ext_resource type="Texture2D" uid="uid://b3724i5j0upq7" path="res://assets/art/set1/nyx.png" id="2_1p4pg"]
 
 [node name="PectoCard" type="Control" unique_id=537563881]
 custom_minimum_size = Vector2(750, 1050)
@@ -10,10 +10,12 @@ anchors_preset = 0
 offset_right = 750.0
 offset_bottom = 1050.0
 script = ExtResource("1_y3ai7")
-cardName = "Cursed Orb"
-lvl = 0
-types = Array[String](["bug", "object"])
-keywords = Array[String](["bleed"])
-text = "BEGIN: If you control at least 2 cards named Ash Moth: Deal 1 damage to all opponents.}"
-activationText = "REUSE: Discard 1: clone Ash Moth without any text. Cannot be used as a response."
+ID = "set1:161"
+cardName = "Nyx"
+force = 2
+lvl = 2
+types = Array[String](["monster", "magic"])
+text = "RITUAL: Sacrifice 1.
+VICTOR: If Nyx destroyed a card, clone Nyx."
+activationText = "SPELL: Destroy a back-row card."
 art = ExtResource("2_1p4pg")

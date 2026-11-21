@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cq1o4p1jauksw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ea2k5"]
+
+[node name="DoortoNowhere" type="Control" unique_id=320601243]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ea2k5")
+ID = "set1:057"
+cardName = "Door to Nowhere"

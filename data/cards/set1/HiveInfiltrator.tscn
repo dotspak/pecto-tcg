@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cumikb5si2lx0"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8c0xo"]
+
+[node name="HiveInfiltrator" type="Control" unique_id=1443950026]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8c0xo")
+ID = "set1:101"
+cardName = "Hive Infiltrator"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cls1m8b00fqh2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8v335"]
+
+[node name="Raster" type="Control" unique_id=1797114580]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8v335")
+ID = "set1:146"
+cardName = "Raster"

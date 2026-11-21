@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cc2e0ujj8hjsd"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_wbik0"]
+
+[node name="TombCrawler" type="Control" unique_id=756951839]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wbik0")
+ID = "set1:125"
+cardName = "Tomb Crawler"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dm51qjnuwd62n"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3foud"]
+
+[node name="TrickyOrb" type="Control" unique_id=804173067]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3foud")
+ID = "set1:139"
+cardName = "Tricky Orb"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://coi2mh04agr3e"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_46vye"]
+
+[node name="LastChance" type="Control" unique_id=1414685512]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_46vye")
+ID = "set1:184"
+cardName = "Last Chance"

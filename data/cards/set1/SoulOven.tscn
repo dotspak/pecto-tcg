@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ruo7vd4wcgbw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_o8o6v"]
+
+[node name="SoulOven" type="Control" unique_id=1430995809]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o8o6v")
+ID = "set1:052"
+cardName = "Soul Oven"

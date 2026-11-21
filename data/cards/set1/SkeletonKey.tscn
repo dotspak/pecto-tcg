@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dx6gyjlnnitgc"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_isjed"]
+
+[node name="SkeletonKey" type="Control" unique_id=1420774389]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_isjed")
+ID = "set1:088"
+cardName = "Skeleton Key"

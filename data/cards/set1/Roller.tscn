@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bklqmaiuuj4mc"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_vsclf"]
+
+[node name="Roller" type="Control" unique_id=522208929]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vsclf")
+ID = "set1:109"
+cardName = "Roller"

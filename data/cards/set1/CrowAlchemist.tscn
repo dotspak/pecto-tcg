@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://n0tuqt87iulw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_7id5w"]
+
+[node name="CrowAlchemist" type="Control" unique_id=839777565]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7id5w")
+ID = "set1:040"
+cardName = "Crow Alchemist"

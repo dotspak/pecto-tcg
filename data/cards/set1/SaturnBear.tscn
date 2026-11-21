@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://yblaaqf1r73s"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_rri6y"]
+
+[node name="SaturnBear" type="Control" unique_id=1183850112]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rri6y")
+ID = "set1:194"
+cardName = "Saturn Bear"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c7g4e3rqfovm8"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_lna6l"]
+
+[node name="BarrierLord" type="Control" unique_id=1507383450]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lna6l")
+ID = "set1:209"
+cardName = "Barrier Lord"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d3txkdl1h1ebc"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_omarb"]
+
+[node name="SandCube" type="Control" unique_id=591275329]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_omarb")
+ID = "set1:092"
+cardName = "Sand Cube"

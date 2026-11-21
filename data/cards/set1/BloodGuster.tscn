@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://iv55pbvibh0g"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_nwxym"]
+
+[node name="BloodGuster" type="Control" unique_id=1636891683]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nwxym")
+ID = "set1:162"
+cardName = "Blood Guster"

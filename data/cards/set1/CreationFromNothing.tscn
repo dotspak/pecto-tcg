@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bp3oj5qrltamv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_w35ht"]
+
+[node name="CreationFromNothing" type="Control" unique_id=1343611055]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_w35ht")
+ID = "set1:181"
+cardName = "Creation From Nothing"

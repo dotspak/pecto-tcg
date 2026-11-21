@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b775xhpt5bnc8"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_dkdv1"]
+
+[node name="VoodooDemon" type="Control" unique_id=1824504824]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dkdv1")
+ID = "set1:160"
+cardName = "Voodoo Demon"

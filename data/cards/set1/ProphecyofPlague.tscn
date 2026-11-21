@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cynufcqtoha78"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_1boqa"]
+
+[node name="ProphecyofPlague" type="Control" unique_id=1364902888]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1boqa")
+ID = "set1:189"
+cardName = "Prophecy of Plague"

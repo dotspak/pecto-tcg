@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dihpw42471mw1"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_jmwsu"]
+
+[node name="HelpfulHoneybee" type="Control" unique_id=31944450]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jmwsu")
+ID = "set1:079"
+cardName = "Helpful Honeybee"

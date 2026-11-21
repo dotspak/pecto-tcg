@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://u1siqwsj8c5c"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_knpyx"]
+
+[node name="PoppingPoyo" type="Control" unique_id=348444558]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_knpyx")
+ID = "set1:089"
+cardName = "Popping Poyo"

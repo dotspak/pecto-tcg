@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bqav5t6v28n2j"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_xqr5u"]
+
+[node name="Tonne" type="Control" unique_id=1211913121]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xqr5u")
+ID = "set1:002"
+cardName = "Tonne"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c6lyhemt3vexc"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_2u0gh"]
+
+[node name="ChrysalisBeast" type="Control" unique_id=920890734]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2u0gh")
+ID = "set1:155"
+cardName = "Chrysalis Beast"

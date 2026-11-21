@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://by4mfjg5iy4r2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_mkiry"]
+
+[node name="LonelyDrone" type="Control" unique_id=2011679544]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mkiry")
+ID = "set1:015"
+cardName = "Lonely Drone"

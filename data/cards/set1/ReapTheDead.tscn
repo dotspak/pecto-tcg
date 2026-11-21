@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b3of5hr2tthbb"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ggbm6"]
+
+[node name="ReapTheDead" type="Control" unique_id=1788924134]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ggbm6")
+ID = "set1:141"
+cardName = "Reap The Dead"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ct7ndn6f5mbag"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3mi0h"]
+
+[node name="WaronPluto" type="Control" unique_id=787683515]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3mi0h")
+ID = "set1:165"
+cardName = "War on Pluto"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cgcyrx0vkqioe"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3g8hn"]
+
+[node name="Mimic" type="Control" unique_id=2121154556]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3g8hn")
+ID = "set1:012"
+cardName = "Mimic"

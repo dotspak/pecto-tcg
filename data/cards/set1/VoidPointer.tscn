@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bj8u364r6fge8"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_rg1t4"]
+
+[node name="VoidPointer" type="Control" unique_id=863196371]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rg1t4")
+ID = "set1:179"
+cardName = "Void Pointer"

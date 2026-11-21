@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://muivousr3rea"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_1u3vp"]
+
+[node name="VoidSaviour" type="Control" unique_id=2003930301]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1u3vp")
+ID = "set1:219"
+cardName = "Void Saviour"

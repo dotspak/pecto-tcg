@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://lvqj45nvxs1n"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_wpqsg"]
+
+[node name="HolyPulse" type="Control" unique_id=867223925]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wpqsg")
+ID = "set1:103"
+cardName = "Holy Pulse"

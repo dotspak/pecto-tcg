@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://be3o583f05ko4"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_yi1sv"]
+
+[node name="Wretched" type="Control" unique_id=1557167677]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yi1sv")
+ID = "set1:102"
+cardName = "Wretched"

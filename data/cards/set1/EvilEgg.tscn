@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://h5dioy1ghduv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_y1opg"]
+
+[node name="EvilEgg" type="Control" unique_id=4543739]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_y1opg")
+ID = "set1:087"
+cardName = "Evil Egg"

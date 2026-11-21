@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ct82cf7c3xg8r"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_3n14x"]
+
+[node name="Repented" type="Control" unique_id=1597050536]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3n14x")
+ID = "set1:150"
+cardName = "Repented"

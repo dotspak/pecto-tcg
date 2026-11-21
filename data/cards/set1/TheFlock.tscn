@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyctvdeqs51d5"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_hjhuf"]
+
+[node name="TheFlock" type="Control" unique_id=604294305]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hjhuf")
+ID = "set1:056"
+cardName = "The Flock"

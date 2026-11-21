@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ca3f1uri6kske"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_30fdj"]
+
+[node name="Reconstruction" type="Control" unique_id=473671973]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_30fdj")
+ID = "set1:091"
+cardName = "Reconstruction"

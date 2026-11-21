@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bpq8iyhustwm1"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ds8sq"]
+
+[node name="Swarm" type="Control" unique_id=1082570664]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ds8sq")
+ID = "set1:173"
+cardName = "Swarm"

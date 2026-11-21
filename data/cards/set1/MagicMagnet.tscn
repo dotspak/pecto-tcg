@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hdashyvjxd5p"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_27e3n"]
+
+[node name="MagicMagnet" type="Control" unique_id=1305185580]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_27e3n")
+ID = "set1:026"
+cardName = "Magic Magnet"

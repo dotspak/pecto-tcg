@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c6kle68v7bon2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_k4ulb"]
+
+[node name="LordofHands" type="Control" unique_id=1500467195]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k4ulb")
+ID = "set1:216"
+cardName = "Lord of Hands"

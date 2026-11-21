@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0w7k60fyi11n"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_qsflp"]
+
+[node name="Wetaphemesis" type="Control" unique_id=276902661]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qsflp")
+ID = "set1:214"
+cardName = "Wetaphemesis"

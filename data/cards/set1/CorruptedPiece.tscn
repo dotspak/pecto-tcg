@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b7jyg74y4k6wv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_iv40g"]
+
+[node name="CorruptedPiece" type="Control" unique_id=970665571]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iv40g")
+ID = "set1:009"
+cardName = "Corrupted Piece"

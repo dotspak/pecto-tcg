@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://buedtlbdccxil"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_tkaqs"]
+
+[node name="SapSpider" type="Control" unique_id=410916575]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tkaqs")
+ID = "set1:128"
+cardName = "Sap Spider"

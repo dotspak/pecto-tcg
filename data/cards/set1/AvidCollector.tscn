@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1c10o08rqhmt"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_m2ygo"]
+
+[node name="AvidCollector" type="Control" unique_id=1449668780]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m2ygo")
+ID = "set1:121"
+cardName = "Avid Collector"

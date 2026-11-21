@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2t8bpxdy7th6"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_h2rbk"]
+
+[node name="CardDispenser" type="Control" unique_id=721901836]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h2rbk")
+ID = "set1:048"
+cardName = "Card Dispenser"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dqsceiuumjgrw"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_l4ljb"]
+
+[node name="PearlAggressor" type="Control" unique_id=1817959986]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l4ljb")
+ID = "set1:167"
+cardName = "Pearl Aggressor"

@@ -13,7 +13,8 @@ var data : Dictionary
 @export var ID : String = "" ## reference to the database's card ID for retrieving data
 @export_tool_button("Update Card")
 var updateButton = func():
-	PectoCard.get_card_data(self)
+	if !PectoCard.get_card_data_by_id(self):
+		PectoCard.get_card_data_by_name(self)
 	update_card_data(true)
 
 @export_tool_button("Reset Card")
@@ -102,8 +103,7 @@ var isReady : bool = true :
 
 func _ready():
 	custom_minimum_size = Vector2(750, 1050)
-	PectoCard.get_card_data(self)
-	update_card_data(Engine.is_editor_hint())
+	PectoCard.get_card_data_by_name(self)
 	spawn_card_template()
 
 
@@ -203,7 +203,7 @@ func acquire_target(amount : int, targettablePlayers = ["self", "opponent"],
 #endregion
 
 #region functions
-static func get_card_data(card : PectoCard) -> Dictionary:
+static func get_card_data_by_id(card : PectoCard) -> Dictionary:
 	var retrieved : Dictionary = {}
 	var msg : String = ""
 	card.db = {}
@@ -232,22 +232,66 @@ static func get_card_data(card : PectoCard) -> Dictionary:
 	return card.data
 
 
+static func get_card_data_by_name(card: PectoCard) -> Dictionary:
+	card.data = {}
+	card.db = {}
+
+	var wanted_name := card.ID.strip_edges().to_lower()
+	if wanted_name.is_empty():
+		return card.data
+
+	if Engine.is_editor_hint():
+		var db_path := "res://data/pectoDB.json"
+		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(db_path))
+		if not (parsed is Dictionary):
+			push_error("Could not load card database: " + db_path)
+			return card.data
+		card.db = parsed
+	else:
+		card.db = GameManager.DB
+
+	var cards: Dictionary = card.db.get("cards", {})
+	var matched_id := ""
+
+	for id: String in cards:
+		var entry: Dictionary = cards[id]
+		var entry_name := str(entry.get("name", "")).strip_edges().to_lower()
+		if entry_name != wanted_name:
+			continue
+
+		if not matched_id.is_empty():
+			push_warning("Multiple cards are named '%s'. Use the card ID." % card.ID)
+			return card.data
+
+		matched_id = id
+
+	if matched_id.is_empty():
+		push_warning("No card named '%s' was found." % card.ID)
+		return card.data
+
+	card.data = cards[matched_id]
+	if card.ID != matched_id:
+		card.ID = matched_id
+
+	return card.data
+
+
 func update_card_data(_updateScenePath : bool = false) -> void:
 	cardName = data["name"]
-	types = data["types"]
+
+	types.clear()
+	keywords.clear()
+	for t in data["types"]: types.append(t)
+	for k in data["keywords"]: keywords.append(k)
 
 	lvl = data["lvl"]
 	force = data["force"]
-
-	keywords = data["keywords"]
 	text = data["text"]
 
-	if data["skill"]:
-		var skillData : Dictionary = db["skills"][data["skill"]]
-		activationText = skillData["text"]
+	activationText = data["activation"]
 
-	if FileAccess.file_exists("res://assets/set1/" + data["art"]):
-		art = load("res://assets/set1/" + data["art"])
+	if FileAccess.file_exists("res://assets/art/set1/" + data["art"]):
+		art = load("res://assets/art/set1/" + data["art"])
 
 
 func reset_card_data() -> void:

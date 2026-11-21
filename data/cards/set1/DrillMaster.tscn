@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://05k17qxtkqx5"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_0g8cn"]
+
+[node name="DrillMaster" type="Control" unique_id=489682815]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0g8cn")
+ID = "set1:190"
+cardName = "Drill Master"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyc7o5xhad3uo"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_5s8f0"]
+
+[node name="Mutation" type="Control" unique_id=817046091]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5s8f0")
+ID = "set1:144"
+cardName = "Mutation"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dl2hcawipvh2s"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_r0j37"]
+
+[node name="HiveKicker" type="Control" unique_id=1748698414]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r0j37")
+ID = "set1:032"
+cardName = "Hive Kicker"

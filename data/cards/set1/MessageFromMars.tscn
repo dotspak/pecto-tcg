@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cpwe2f50pl074"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_uw8oc"]
+
+[node name="MessageFromMars" type="Control" unique_id=445322737]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uw8oc")
+ID = "set1:137"
+cardName = "Message From Mars"

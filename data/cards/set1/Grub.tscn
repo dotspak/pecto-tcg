@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dcljlvlrc5v5p"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_qam5k"]
+
+[node name="Grub" type="Control" unique_id=926602748]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qam5k")
+ID = "set1:067"
+cardName = "Grub"

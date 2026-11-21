@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://doyde703h5g2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_mlwot"]
+
+[node name="GhostSpellcaster" type="Control" unique_id=704503847]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mlwot")
+ID = "set1:010"
+cardName = "Ghost Spellcaster"

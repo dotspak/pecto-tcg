@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c3sbr3sdcwu6r"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_xh7ol"]
+
+[node name="LifePool" type="Control" unique_id=1800055593]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xh7ol")
+ID = "set1:030"
+cardName = "Life Pool"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b3tqggvadpevh"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_hqobn"]
+
+[node name="MoonAngel" type="Control" unique_id=1223174191]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hqobn")
+ID = "set1:201"
+cardName = "Moon Angel"

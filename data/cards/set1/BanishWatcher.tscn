@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c1jx3koqwow6h"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_4d6f0"]
+
+[node name="BanishWatcher" type="Control" unique_id=1941216541]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4d6f0")
+ID = "set1:054"
+cardName = "Banish Watcher"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dk2p0bomyxcd"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_k288i"]
+
+[node name="VoidCrawler" type="Control" unique_id=946809689]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k288i")
+ID = "set1:069"
+cardName = "Void Crawler"

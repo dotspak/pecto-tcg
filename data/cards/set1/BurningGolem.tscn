@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cux0ophsmptm2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_q21ah"]
+
+[node name="BurningGolem" type="Control" unique_id=1739056975]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q21ah")
+ID = "set1:123"
+cardName = "Burning Golem"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cp7beoq13k1s2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_e0nfy"]
+
+[node name="ShinyCrow" type="Control" unique_id=366238438]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e0nfy")
+ID = "set1:131"
+cardName = "Shiny Crow"

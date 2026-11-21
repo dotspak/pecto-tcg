@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cu7wgwtagr3f5"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_prwx0"]
+
+[node name="SmokeBeetle" type="Control" unique_id=405924787]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_prwx0")
+ID = "set1:007"
+cardName = "Smoke Beetle"

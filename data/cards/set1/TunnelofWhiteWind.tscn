@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://buukdtfphjorj"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_qw0nl"]
+
+[node name="TunnelofWhiteWind" type="Control" unique_id=158878074]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qw0nl")
+ID = "set1:178"
+cardName = "Tunnel of White Wind"

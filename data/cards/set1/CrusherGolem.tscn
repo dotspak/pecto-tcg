@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wuefecsnr14m"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_d03is"]
+
+[node name="CrusherGolem" type="Control" unique_id=1825105941]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d03is")
+ID = "set1:140"
+cardName = "Crusher Golem"

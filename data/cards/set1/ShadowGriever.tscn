@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://f1qbm4g8p3s6"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_d08b0"]
+
+[node name="ShadowGriever" type="Control" unique_id=1966791867]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d08b0")
+ID = "set1:110"
+cardName = "Shadow Griever"

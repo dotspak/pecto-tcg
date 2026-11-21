@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ba653i8ffr6ue"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_k6cww"]
+
+[node name="RatMother" type="Control" unique_id=2017637046]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k6cww")
+ID = "set1:192"
+cardName = "Rat Mother"

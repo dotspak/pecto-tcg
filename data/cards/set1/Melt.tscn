@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cwlf5wjaisyvb"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fhkcv"]
+
+[node name="Melt" type="Control" unique_id=1903612035]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fhkcv")
+ID = "set1:094"
+cardName = "Melt"

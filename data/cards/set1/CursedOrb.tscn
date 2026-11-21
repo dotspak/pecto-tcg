@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d38i7wnlnaeoe"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_18oq8"]
+
+[node name="CursedOrb" type="Control" unique_id=292074476]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_18oq8")
+ID = "set1:073"
+cardName = "Cursed Orb"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ckv0i2nm2o3ue"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6mjo3"]
+
+[node name="Gargoyle" type="Control" unique_id=1520909555]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6mjo3")
+ID = "set1:112"
+cardName = "Gargoyle"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://daqwbdy8qw18c"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_xwbt6"]
+
+[node name="Reaper" type="Control" unique_id=839481787]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xwbt6")
+ID = "set1:143"
+cardName = "Reaper"

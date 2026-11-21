@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0cteur7q1nhr"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_7kdbv"]
+
+[node name="Tranquility" type="Control" unique_id=2006116750]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7kdbv")
+ID = "set1:033"
+cardName = "Tranquility"

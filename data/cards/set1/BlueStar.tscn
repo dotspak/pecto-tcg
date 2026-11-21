@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cjwdej6a78a4j"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_6y63i"]
+
+[node name="BlueStar" type="Control" unique_id=1586965961]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6y63i")
+ID = "set1:063"
+cardName = "Blue Star"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b66ux10luxaus"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_kco7a"]
+
+[node name="AbyssalMaw" type="Control" unique_id=236055698]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kco7a")
+ID = "set1:204"
+cardName = "Abyssal Maw"

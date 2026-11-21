@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b28i3nowu0co6"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_q0mwu"]
+
+[node name="ShelledFiend" type="Control" unique_id=1221178627]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q0mwu")
+ID = "set1:019"
+cardName = "Shelled Fiend"

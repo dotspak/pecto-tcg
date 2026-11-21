@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dkkfsy0yb2s8q"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ytnsn"]
+
+[node name="HoneyFiend" type="Control" unique_id=1384820976]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ytnsn")
+ID = "set1:078"
+cardName = "Honey Fiend"

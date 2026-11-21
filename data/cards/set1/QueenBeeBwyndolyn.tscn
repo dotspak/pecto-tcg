@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://btsfs02p3mtqp"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_wf5pa"]
+
+[node name="QueenBeeBwyndolyn" type="Control" unique_id=1329270404]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wf5pa")
+ID = "set1:075"
+cardName = "Queen Bee Bwyndolyn"

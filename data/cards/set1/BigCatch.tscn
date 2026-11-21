@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c7ctm8tc46tw2"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_p03g7"]
+
+[node name="BigCatch" type="Control" unique_id=1491880499]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_p03g7")
+ID = "set1:154"
+cardName = "Big Catch"

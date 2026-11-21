@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bxppq80spw628"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_yt2lq"]
+
+[node name="CauldronofChaos" type="Control" unique_id=2112712949]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yt2lq")
+ID = "set1:197"
+cardName = "Cauldron of Chaos"

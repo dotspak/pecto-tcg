@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dsv71okwpkvjt"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_dcfk3"]
+
+[node name="PussBeast" type="Control" unique_id=1516975417]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dcfk3")
+ID = "set1:090"
+cardName = "Puss Beast"

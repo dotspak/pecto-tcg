@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d55wvy0eqycv"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_lchca"]
+
+[node name="AbstractMirror" type="Control" unique_id=541162663]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lchca")
+ID = "set1:001"
+cardName = "Abstract Mirror"

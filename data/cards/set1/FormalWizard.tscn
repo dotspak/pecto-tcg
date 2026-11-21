@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b5elljs8gdmhk"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ijftv"]
+
+[node name="FormalWizard" type="Control" unique_id=103172680]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ijftv")
+ID = "set1:029"
+cardName = "Formal Wizard"

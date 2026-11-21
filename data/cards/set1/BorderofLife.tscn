@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b4l3m2a133qem"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_mnjor"]
+
+[node name="BorderofLife" type="Control" unique_id=368728100]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mnjor")
+ID = "set1:191"
+cardName = "Border of Life"

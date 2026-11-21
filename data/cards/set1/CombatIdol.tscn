@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://si1b7jy3pmae"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_rgmmx"]
+
+[node name="CombatIdol" type="Control" unique_id=1382281850]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rgmmx")
+ID = "set1:207"
+cardName = "Combat Idol"

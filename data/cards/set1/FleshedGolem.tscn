@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddobqe43p1dj0"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_jfiv0"]
+
+[node name="FleshedGolem" type="Control" unique_id=1301811401]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jfiv0")
+ID = "set1:164"
+cardName = "Fleshed Golem"

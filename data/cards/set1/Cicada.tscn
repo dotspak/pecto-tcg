@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dqqtf8iffgh8n"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_a6lkp"]
+
+[node name="Cicada" type="Control" unique_id=1357164207]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a6lkp")
+ID = "set1:076"
+cardName = "Cicada"

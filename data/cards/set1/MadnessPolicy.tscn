@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1ipoq85byvq5"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_q6s5y"]
+
+[node name="MadnessPolicy" type="Control" unique_id=679133723]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q6s5y")
+ID = "set1:170"
+cardName = "Madness Policy"

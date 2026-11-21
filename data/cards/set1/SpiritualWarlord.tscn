@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dcxnvxbcka27w"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_t0dxx"]
+
+[node name="SpiritualWarlord" type="Control" unique_id=507126364]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t0dxx")
+ID = "set1:199"
+cardName = "Spiritual Warlord"

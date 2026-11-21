@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cqind31cg0xvc"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_58f4r"]
+
+[node name="Powder" type="Control" unique_id=1774771593]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_58f4r")
+ID = "set1:159"
+cardName = "Powder"

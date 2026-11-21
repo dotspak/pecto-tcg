@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hqgxikant8sg"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fm1xn"]
+
+[node name="DyingStar" type="Control" unique_id=1183597692]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fm1xn")
+ID = "set1:081"
+cardName = "Dying Star"

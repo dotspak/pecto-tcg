@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cfqlkb30hf68f"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_ugm3j"]
+
+[node name="FalseQueen\'sCarcass" type="Control" unique_id=720564024]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ugm3j")
+ID = "set1:193"
+cardName = "False Queen's Carcass"

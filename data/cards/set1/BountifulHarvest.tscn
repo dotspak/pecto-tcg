@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bchs7haebk8x0"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_kywxj"]
+
+[node name="BountifulHarvest" type="Control" unique_id=647338243]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kywxj")
+ID = "set1:041"
+cardName = "Bountiful Harvest"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ba24aa615ryry"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_k5l01"]
+
+[node name="Polygeist" type="Control" unique_id=593966793]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k5l01")
+ID = "set1:036"
+cardName = "Polygeist"

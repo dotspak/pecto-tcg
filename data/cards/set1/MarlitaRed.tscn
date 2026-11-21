@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dssp0guq8dac4"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_f5ptj"]
+
+[node name="MarlitaRed" type="Control" unique_id=1983064366]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f5ptj")
+ID = "set1:013"
+cardName = "Marlita Red"

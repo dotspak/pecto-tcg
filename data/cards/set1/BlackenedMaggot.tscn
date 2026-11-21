@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bvajm67e5jifb"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_fk1qv"]
+
+[node name="BlackenedMaggot" type="Control" unique_id=762702199]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fk1qv")
+ID = "set1:072"
+cardName = "Blackened Maggot"

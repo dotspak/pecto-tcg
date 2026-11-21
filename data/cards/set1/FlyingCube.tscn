@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://deimrw3gw81s8"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_8iowg"]
+
+[node name="FlyingCube" type="Control" unique_id=912278225]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8iowg")
+ID = "set1:122"
+cardName = "Flying Cube"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b4hi6sw6k0obu"]
+
+[ext_resource type="Script" uid="uid://dn6e7duqtsffm" path="res://src/pectoCard.gd" id="1_nwlok"]
+
+[node name="Locust" type="Control" unique_id=1647924091]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nwlok")
+ID = "set1:077"
+cardName = "Locust"
